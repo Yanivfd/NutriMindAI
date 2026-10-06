@@ -1,0 +1,22 @@
+{
+  "id": "prosciutto-melon-plate",
+  "title_he": "פרושוטו עם מלון",
+  "title_en": "Prosciutto and melon plate",
+  "prep_time_minutes": 10,
+  "meal_types": ["breakfast", "lunch", "snack"],
+  "calories": 390,
+  "protein_g": 18,
+  "carbs_g": 28,
+  "fat_g": 22,
+  "ingredients": [
+    {"name_he": "פרושוטו", "name_en": "Prosciutto", "amount": 50, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "מלון", "name_en": "Melon", "amount": 200, "unit": "g", "category": "produce", "swaps": []},
+    {"name_he": "לחם מקמח מלא", "name_en": "Whole wheat bread", "amount": 1, "unit": "slice", "category": "bakery", "swaps": []}
+  ],
+  "instructions_he": ["פורסים את המלון.", "מניחים את הפרושוטו לצד המלון.", "מגישים עם פרוסת לחם."],
+  "instructions_en": ["Cut the melon into slices.", "Lay the prosciutto beside the melon.", "Serve with a slice of bread."],
+  "cuisines": ["italian", "mediterranean"],
+  "kashrut_type": "meat",
+  "is_kosher": false,
+  "shabbat_friendly": true
+}

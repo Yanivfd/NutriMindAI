@@ -1,0 +1,23 @@
+{
+  "id": "spaghetti-carbonara",
+  "title_he": "ספגטי קרבונרה",
+  "title_en": "Spaghetti carbonara",
+  "prep_time_minutes": 20,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 610,
+  "protein_g": 28,
+  "carbs_g": 62,
+  "fat_g": 26,
+  "ingredients": [
+    {"name_he": "ספגטי", "name_en": "Spaghetti", "amount": 80, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "בייקון", "name_en": "Bacon", "amount": 30, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "ביצה", "name_en": "Egg", "amount": 1, "unit": "unit", "category": "dairy", "swaps": []},
+    {"name_he": "גבינת פרמזן", "name_en": "Parmesan cheese", "amount": 20, "unit": "g", "category": "dairy", "swaps": []}
+  ],
+  "instructions_he": ["מבשלים את הפסטה ומטגנים את הבייקון.", "טורפים ביצה עם פרמזן.", "מערבבים עם הפסטה מחוץ לאש עד שהרוטב מתעבה."],
+  "instructions_en": ["Cook the pasta and fry the bacon.", "Beat the egg with the parmesan.", "Toss with the pasta off the heat until the sauce thickens."],
+  "cuisines": ["italian"],
+  "kashrut_type": "mixed",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

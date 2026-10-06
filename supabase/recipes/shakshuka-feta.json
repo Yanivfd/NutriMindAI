@@ -1,0 +1,120 @@
+{
+  "id": "shakshuka-feta",
+  "title_he": "שקשוקה עם פטה",
+  "title_en": "Shakshuka with feta",
+  "prep_time_minutes": 15,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 510,
+  "protein_g": 28,
+  "carbs_g": 50,
+  "ingredients": [
+    {
+      "name_he": "ביצים",
+      "name_en": "Eggs",
+      "amount": 3,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבניות מרוסקות (שימורים)",
+      "name_en": "Canned crushed tomatoes",
+      "amount": 400,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [
+        {
+          "name_he": "עגבניות טריות",
+          "name_en": "Fresh tomatoes",
+          "amount": 4,
+          "unit": "unit"
+        }
+      ]
+    },
+    {
+      "name_he": "פלפל אדום",
+      "name_en": "Red bell pepper",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "גבינת פטה 5%",
+      "name_en": "Feta cheese 5%",
+      "amount": 30,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": [
+        {
+          "name_he": "גבינה בולגרית 5%",
+          "name_en": "Bulgarian cheese 5%",
+          "amount": 30,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פיתה מקמח מלא",
+      "name_en": "Whole wheat pita",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": [
+        {
+          "name_he": "לחם מקמח מלא",
+          "name_en": "Whole wheat bread",
+          "amount": 2,
+          "unit": "slice"
+        }
+      ]
+    }
+  ],
+  "instructions_he": [
+    "מחממים שמן זית במחבת ומטגנים בצל, שום ופלפל חתוכים כ-5 דקות.",
+    "מוסיפים את העגבניות המרוסקות, מתבלים במלח ופפריקה ומבשלים 5 דקות.",
+    "יוצרים 3 גומות, שוברים לתוכן את הביצים, מכסים ומבשלים עד שהחלבון מתייצב.",
+    "מפזרים פטה מפוררת ומגישים עם הפיתה."
+  ],
+  "instructions_en": [
+    "Heat the olive oil in a pan and saute the chopped onion, garlic and pepper for about 5 minutes.",
+    "Add the crushed tomatoes, season with salt and paprika and simmer for 5 minutes.",
+    "Make 3 wells, crack in the eggs, cover and cook until the whites are set.",
+    "Top with crumbled feta and serve with the pita."
+  ],
+  "cuisines": [
+    "israeli",
+    "mizrahi"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "fat_g": 22
+}

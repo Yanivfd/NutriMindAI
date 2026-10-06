@@ -1,0 +1,24 @@
+{
+  "id": "quiche-lorraine",
+  "title_he": "קיש לורן",
+  "title_en": "Quiche Lorraine",
+  "prep_time_minutes": 20,
+  "meal_types": ["breakfast", "lunch"],
+  "calories": 490,
+  "protein_g": 22,
+  "carbs_g": 28,
+  "fat_g": 32,
+  "ingredients": [
+    {"name_he": "בצק עלים", "name_en": "Puff pastry", "amount": 60, "unit": "g", "category": "bakery", "swaps": []},
+    {"name_he": "בייקון", "name_en": "Bacon", "amount": 30, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "ביצים", "name_en": "Eggs", "amount": 2, "unit": "unit", "category": "dairy", "swaps": []},
+    {"name_he": "שמנת", "name_en": "Cream", "amount": 40, "unit": "ml", "category": "dairy", "swaps": []},
+    {"name_he": "גבינה צהובה", "name_en": "Cheddar cheese", "amount": 20, "unit": "g", "category": "dairy", "swaps": []}
+  ],
+  "instructions_he": ["מרפדים תבנית קטנה בבצק ומפזרים בייקון וגבינה.", "טורפים ביצים ושמנת, יוצקים מעל ואופים 12 דקות.", "מגישים חם או בטמפרטורת החדר."],
+  "instructions_en": ["Line a small dish with the pastry and add the bacon and cheese.", "Beat the eggs with the cream, pour it over and bake for 12 minutes.", "Serve warm or at room temperature."],
+  "cuisines": ["international"],
+  "kashrut_type": "mixed",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

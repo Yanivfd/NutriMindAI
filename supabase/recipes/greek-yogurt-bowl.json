@@ -1,0 +1,85 @@
+{
+  "id": "greek-yogurt-bowl",
+  "title_he": "קערת יוגורט יווני וגרנולה",
+  "title_en": "Greek yogurt and granola bowl",
+  "prep_time_minutes": 5,
+  "meal_types": [
+    "breakfast",
+    "snack"
+  ],
+  "calories": 436,
+  "protein_g": 22,
+  "carbs_g": 60,
+  "ingredients": [
+    {
+      "name_he": "יוגורט יווני 2%",
+      "name_en": "Greek yogurt 2%",
+      "amount": 200,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": [
+        {
+          "name_he": "גבינה לבנה 5%",
+          "name_en": "White cheese 5%",
+          "amount": 200,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "גרנולה",
+      "name_en": "Granola",
+      "amount": 30,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [
+        {
+          "name_he": "שיבולת שועל",
+          "name_en": "Rolled oats",
+          "amount": 30,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "בננה",
+      "name_en": "Banana",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "דבש",
+      "name_en": "Honey",
+      "amount": 10,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אגוזי מלך",
+      "name_en": "Walnuts",
+      "amount": 10,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מעבירים את היוגורט לקערה.",
+    "מוסיפים בננה פרוסה, גרנולה ואגוזים ומזלפים דבש."
+  ],
+  "instructions_en": [
+    "Spoon the yogurt into a bowl.",
+    "Top with sliced banana, granola and walnuts and drizzle with honey."
+  ],
+  "cuisines": [
+    "international",
+    "mediterranean"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "fat_g": 12
+}

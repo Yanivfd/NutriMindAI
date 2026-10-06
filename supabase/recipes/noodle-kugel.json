@@ -1,0 +1,32 @@
+{
+  "id": "noodle-kugel",
+  "title_he": "קוגל אטריות",
+  "title_en": "Noodle kugel",
+  "prep_time_minutes": 20,
+  "meal_types": ["lunch", "dinner", "snack"],
+  "calories": 510,
+  "protein_g": 24,
+  "carbs_g": 58,
+  "fat_g": 18,
+  "ingredients": [
+    {"name_he": "אטריות ביצים", "name_en": "Egg noodles", "amount": 70, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "ביצים", "name_en": "Eggs", "amount": 2, "unit": "unit", "category": "dairy", "swaps": []},
+    {"name_he": "קוטג׳ 5%", "name_en": "Cottage cheese 5%", "amount": 100, "unit": "g", "category": "dairy", "swaps": [{"name_he": "גבינה לבנה 5%", "name_en": "White cheese 5%", "amount": 100, "unit": "g"}]},
+    {"name_he": "קינמון", "name_en": "Cinnamon", "amount": 0.5, "unit": "tsp", "category": "pantry", "swaps": []},
+    {"name_he": "שמן קנולה", "name_en": "Canola oil", "amount": 5, "unit": "ml", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "מבשלים את האטריות ומסננים.",
+    "מערבבים עם ביצים, קוטג׳, קינמון ומעט מלח.",
+    "אופים בתבנית משומנת ב-180 מעלות כ-15 דקות. אפשר להגיש בטמפרטורת החדר."
+  ],
+  "instructions_en": [
+    "Cook the noodles and drain them.",
+    "Mix with the eggs, cottage cheese, cinnamon and a little salt.",
+    "Bake in a greased dish at 180°C for about 15 minutes. It can be served at room temperature."
+  ],
+  "cuisines": ["ashkenazi"],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": true
+}

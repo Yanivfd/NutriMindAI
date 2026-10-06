@@ -1,0 +1,90 @@
+{
+  "id": "veggie-omelette-toast",
+  "title_he": "חביתת ירקות עם טוסט",
+  "title_en": "Vegetable omelette with toast",
+  "prep_time_minutes": 10,
+  "meal_types": [
+    "breakfast",
+    "lunch",
+    "dinner",
+    "snack"
+  ],
+  "calories": 399,
+  "protein_g": 27,
+  "carbs_g": 30,
+  "ingredients": [
+    {
+      "name_he": "ביצים",
+      "name_en": "Eggs",
+      "amount": 3,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל אדום",
+      "name_en": "Red bell pepper",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "תרד בייבי",
+      "name_en": "Baby spinach",
+      "amount": 30,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 5,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "לחם מקמח מלא",
+      "name_en": "Whole wheat bread",
+      "amount": 2,
+      "unit": "slice",
+      "category": "bakery",
+      "swaps": [
+        {
+          "name_he": "פיתה מקמח מלא",
+          "name_en": "Whole wheat pita",
+          "amount": 1,
+          "unit": "unit"
+        }
+      ]
+    }
+  ],
+  "instructions_he": [
+    "מטגנים בצל ופלפל קצוצים בשמן 3 דקות ומוסיפים את התרד.",
+    "טורפים את הביצים עם מלח ופלפל, יוצקים למחבת ומבשלים עד שהחביתה מתייצבת.",
+    "מגישים עם פרוסות לחם קלויות."
+  ],
+  "instructions_en": [
+    "Saute the chopped onion and pepper in the oil for 3 minutes, then add the spinach.",
+    "Beat the eggs with salt and pepper, pour into the pan and cook until set.",
+    "Serve with toasted bread slices."
+  ],
+  "cuisines": [
+    "international"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "fat_g": 19
+}

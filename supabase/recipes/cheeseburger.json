@@ -1,0 +1,24 @@
+{
+  "id": "cheeseburger",
+  "title_he": "המבורגר עם גבינה",
+  "title_en": "Cheeseburger",
+  "prep_time_minutes": 15,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 620,
+  "protein_g": 36,
+  "carbs_g": 40,
+  "fat_g": 32,
+  "ingredients": [
+    {"name_he": "בקר טחון", "name_en": "Ground beef", "amount": 150, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "גבינה צהובה", "name_en": "Cheddar cheese", "amount": 20, "unit": "g", "category": "dairy", "swaps": []},
+    {"name_he": "לחמניה", "name_en": "Burger bun", "amount": 1, "unit": "unit", "category": "bakery", "swaps": []},
+    {"name_he": "חסה", "name_en": "Lettuce", "amount": 20, "unit": "g", "category": "produce", "swaps": [], "insect_check": true},
+    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []}
+  ],
+  "instructions_he": ["יוצרים קציצה וצולים 4 דקות מכל צד.", "מניחים גבינה על הקציצה בדקה האחרונה.", "מגישים בלחמניה עם חסה ועגבנייה."],
+  "instructions_en": ["Shape a patty and cook it 4 minutes per side.", "Lay the cheese on the patty for the last minute.", "Serve in the bun with lettuce and tomato."],
+  "cuisines": ["american"],
+  "kashrut_type": "mixed",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

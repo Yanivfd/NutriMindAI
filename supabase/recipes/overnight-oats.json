@@ -1,0 +1,31 @@
+{
+  "id": "overnight-oats",
+  "title_he": "שיבולת שועל ללילה",
+  "title_en": "Overnight oats",
+  "prep_time_minutes": 5,
+  "meal_types": ["breakfast", "snack"],
+  "calories": 410,
+  "protein_g": 22,
+  "carbs_g": 52,
+  "fat_g": 10,
+  "ingredients": [
+    {"name_he": "שיבולת שועל", "name_en": "Rolled oats", "amount": 40, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "חלב 1%", "name_en": "Milk 1%", "amount": 150, "unit": "ml", "category": "dairy", "swaps": []},
+    {"name_he": "יוגורט טבעי 1.5%", "name_en": "Plain yogurt 1.5%", "amount": 100, "unit": "g", "category": "dairy", "swaps": []},
+    {"name_he": "תותים", "name_en": "Strawberries", "amount": 80, "unit": "g", "category": "produce", "swaps": [], "insect_check": true}
+  ],
+  "instructions_he": [
+    "מערבבים שיבולת שועל, חלב ויוגורט בצנצנת.",
+    "מכניסים למקרר ללילה.",
+    "מוסיפים תותים חתוכים לפני ההגשה."
+  ],
+  "instructions_en": [
+    "Stir the oats, milk and yogurt in a jar.",
+    "Refrigerate overnight.",
+    "Top with sliced strawberries before serving."
+  ],
+  "cuisines": ["international", "american"],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": true
+}

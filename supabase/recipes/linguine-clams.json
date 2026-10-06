@@ -1,0 +1,25 @@
+{
+  "id": "linguine-clams",
+  "title_he": "לינגוויני עם צדפות",
+  "title_en": "Linguine with clams",
+  "prep_time_minutes": 20,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 520,
+  "protein_g": 28,
+  "carbs_g": 64,
+  "fat_g": 14,
+  "ingredients": [
+    {"name_he": "לינגוויני", "name_en": "Linguine", "amount": 80, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "צדפות", "name_en": "Clams", "amount": 150, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "שום", "name_en": "Garlic", "amount": 2, "unit": "clove", "category": "produce", "swaps": []},
+    {"name_he": "פטרוזיליה", "name_en": "Parsley", "amount": 10, "unit": "g", "category": "produce", "swaps": [], "insect_check": true},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "לימון", "name_en": "Lemon", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []}
+  ],
+  "instructions_he": ["מבשלים את הפסטה.", "מטגנים שום בשמן, מוסיפים צדפות ומבשלים 5 דקות.", "מערבבים עם הפסטה, פטרוזיליה ומיץ לימון."],
+  "instructions_en": ["Cook the pasta.", "Fry the garlic in the oil, add the clams and cook for 5 minutes.", "Toss with the pasta, parsley and lemon juice."],
+  "cuisines": ["italian", "mediterranean"],
+  "kashrut_type": "parve",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "mujadara",
+  "title_he": "מג׳דרה עם בצל מטוגן",
+  "title_en": "Mujadara with fried onion",
+  "prep_time_minutes": 20,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 430,
+  "protein_g": 16,
+  "carbs_g": 68,
+  "fat_g": 10,
+  "ingredients": [
+    {"name_he": "אורז", "name_en": "Rice", "amount": 50, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "עדשים ירוקות", "name_en": "Green lentils", "amount": 50, "unit": "g", "category": "pantry", "swaps": [], "insect_check": true},
+    {"name_he": "בצל", "name_en": "Onion", "amount": 2, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "כמון טחון", "name_en": "Ground cumin", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "מבשלים עדשים שטופות 10 דקות, מוסיפים אורז, כמון ומים ומבשלים עוד 10 דקות.",
+    "מטגנים בצל פרוס בשמן עד שהוא זהוב.",
+    "מגישים את המג׳דרה עם הבצל מעל. טעים גם בטמפרטורת החדר."
+  ],
+  "instructions_en": [
+    "Simmer the rinsed lentils for 10 minutes, then add the rice, cumin and water and cook 10 minutes more.",
+    "Fry the sliced onion in the oil until golden.",
+    "Serve the mujadara with the onion on top. It is good at room temperature too."
+  ],
+  "cuisines": ["mizrahi", "israeli"],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true
+}

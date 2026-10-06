@@ -1,0 +1,24 @@
+{
+  "id": "chicken-alfredo",
+  "title_he": "פסטה אלפרדו עם עוף",
+  "title_en": "Chicken Alfredo pasta",
+  "prep_time_minutes": 20,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 620,
+  "protein_g": 40,
+  "carbs_g": 58,
+  "fat_g": 24,
+  "ingredients": [
+    {"name_he": "פסטה", "name_en": "Pasta", "amount": 80, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "חזה עוף", "name_en": "Chicken breast", "amount": 130, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "שמנת", "name_en": "Cream", "amount": 60, "unit": "ml", "category": "dairy", "swaps": []},
+    {"name_he": "גבינת פרמזן", "name_en": "Parmesan cheese", "amount": 15, "unit": "g", "category": "dairy", "swaps": []},
+    {"name_he": "שום", "name_en": "Garlic", "amount": 1, "unit": "clove", "category": "produce", "swaps": []}
+  ],
+  "instructions_he": ["מבשלים את הפסטה וצולים את העוף.", "מחממים שמנת, שום ופרמזן עד שהרוטב מתעבה.", "מערבבים עם הפסטה והעוף הפרוס."],
+  "instructions_en": ["Cook the pasta and cook the chicken.", "Warm the cream, garlic and parmesan until the sauce thickens.", "Toss with the pasta and sliced chicken."],
+  "cuisines": ["italian"],
+  "kashrut_type": "mixed",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

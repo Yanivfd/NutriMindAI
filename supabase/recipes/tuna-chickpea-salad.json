@@ -1,0 +1,113 @@
+{
+  "id": "tuna-chickpea-salad",
+  "title_he": "סלט טונה וחומוס",
+  "title_en": "Tuna and chickpea salad",
+  "prep_time_minutes": 10,
+  "meal_types": [
+    "lunch",
+    "dinner",
+    "snack"
+  ],
+  "calories": 400,
+  "protein_g": 38,
+  "carbs_g": 30,
+  "ingredients": [
+    {
+      "name_he": "טונה במים",
+      "name_en": "Tuna in water",
+      "amount": 160,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [
+        {
+          "name_he": "ביצים קשות",
+          "name_en": "Hard-boiled eggs",
+          "amount": 3,
+          "unit": "unit"
+        }
+      ]
+    },
+    {
+      "name_he": "גרגרי חומוס (שימורים)",
+      "name_en": "Canned chickpeas",
+      "amount": 120,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [
+        {
+          "name_he": "שעועית לבנה (שימורים)",
+          "name_en": "Canned white beans",
+          "amount": 120,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבניות שרי",
+      "name_en": "Cherry tomatoes",
+      "amount": 100,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל סגול",
+      "name_en": "Red onion",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פטרוזיליה",
+      "name_en": "Parsley",
+      "amount": 10,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מסננים את הטונה והחומוס.",
+    "קוצצים מלפפון, עגבניות שרי, בצל סגול ופטרוזיליה.",
+    "מערבבים הכל עם שמן זית, מיץ לימון, מלח ופלפל."
+  ],
+  "instructions_en": [
+    "Drain the tuna and the chickpeas.",
+    "Chop the cucumber, cherry tomatoes, red onion and parsley.",
+    "Toss everything with the olive oil, lemon juice, salt and pepper."
+  ],
+  "cuisines": [
+    "mediterranean",
+    "international"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "fat_g": 14
+}

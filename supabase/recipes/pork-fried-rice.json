@@ -1,0 +1,26 @@
+{
+  "id": "pork-fried-rice",
+  "title_he": "אורז מטוגן עם חזיר",
+  "title_en": "Pork fried rice",
+  "prep_time_minutes": 20,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 560,
+  "protein_g": 26,
+  "carbs_g": 62,
+  "fat_g": 20,
+  "ingredients": [
+    {"name_he": "אורז מבושל", "name_en": "Cooked rice", "amount": 200, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "חזיר", "name_en": "Pork", "amount": 100, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "ביצה", "name_en": "Egg", "amount": 1, "unit": "unit", "category": "dairy", "swaps": []},
+    {"name_he": "אפונה קפואה", "name_en": "Frozen peas", "amount": 40, "unit": "g", "category": "frozen", "swaps": []},
+    {"name_he": "בצל ירוק", "name_en": "Scallion", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "רוטב סויה", "name_en": "Soy sauce", "amount": 15, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "שמן קנולה", "name_en": "Canola oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": ["מטגנים את החזיר בשמן עד שהוא מוכן.", "מוסיפים ביצה, אורז ואפונה ומטגנים 5 דקות.", "מתבלים ברוטב סויה ובצל ירוק."],
+  "instructions_en": ["Fry the pork in the oil until cooked.", "Add the egg, rice and peas and stir-fry for 5 minutes.", "Season with soy sauce and scallion."],
+  "cuisines": ["asian"],
+  "kashrut_type": "meat",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

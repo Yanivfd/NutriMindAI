@@ -1,0 +1,90 @@
+{
+  "id": "red-lentil-soup",
+  "title_he": "מרק עדשים כתומות",
+  "title_en": "Red lentil soup",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 379,
+  "protein_g": 20,
+  "carbs_g": 50,
+  "ingredients": [
+    {
+      "name_he": "עדשים כתומות",
+      "name_en": "Red lentils",
+      "amount": 80,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "גזר",
+      "name_en": "Carrot",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת מרק ירקות פרווה",
+      "name_en": "Pareve vegetable soup powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מטגנים בצל, שום וגזר קצוצים בשמן זית 3 דקות.",
+    "מוסיפים עדשים שטופות, כמון, אבקת מרק ו-600 מ״ל מים.",
+    "מבשלים 15 דקות עד שהעדשים מתרככות וטוחנים במוט בלנדר."
+  ],
+  "instructions_en": [
+    "Saute the chopped onion, garlic and carrot in the olive oil for 3 minutes.",
+    "Add the rinsed lentils, cumin, soup powder and 600 ml of water.",
+    "Simmer for 15 minutes until the lentils are soft, then blend with a stick blender."
+  ],
+  "cuisines": [
+    "mizrahi",
+    "mediterranean"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "fat_g": 11
+}

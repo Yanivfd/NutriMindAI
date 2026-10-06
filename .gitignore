@@ -31,7 +31,16 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
+supabase/functions/.env
+supabase/.temp/
+supabase/.branches/
+
+# local secret scratch notes (never commit)
+supabase pass*.txt
+*pass*.txt
+*secret*.txt
 
 # typescript
 *.tsbuildinfo
@@ -39,3 +48,6 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# IDE
+.idea/

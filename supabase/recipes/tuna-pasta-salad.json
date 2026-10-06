@@ -1,0 +1,34 @@
+{
+  "id": "tuna-pasta-salad",
+  "title_he": "סלט פסטה וטונה",
+  "title_en": "Tuna pasta salad",
+  "prep_time_minutes": 15,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 480,
+  "protein_g": 32,
+  "carbs_g": 52,
+  "fat_g": 14,
+  "ingredients": [
+    {"name_he": "פסטה מקמח מלא", "name_en": "Whole wheat pasta", "amount": 70, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "טונה במים", "name_en": "Tuna in water", "amount": 100, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "מלפפון", "name_en": "Cucumber", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "עגבניות שרי", "name_en": "Cherry tomatoes", "amount": 80, "unit": "g", "category": "produce", "swaps": []},
+    {"name_he": "תירס (שימורים)", "name_en": "Canned corn", "amount": 40, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "לימון", "name_en": "Lemon", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []}
+  ],
+  "instructions_he": [
+    "מבשלים את הפסטה, מסננים ומצננים.",
+    "מערבבים עם טונה מסוננת, ירקות ותירס.",
+    "מתבלים בשמן זית ומיץ לימון. אפשר להכין מראש ולהגיש קר."
+  ],
+  "instructions_en": [
+    "Cook the pasta, drain it and let it cool.",
+    "Toss with the drained tuna, vegetables and corn.",
+    "Dress with olive oil and lemon juice. It can be made ahead and served cold."
+  ],
+  "cuisines": ["italian", "mediterranean"],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true
+}

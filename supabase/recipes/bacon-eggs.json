@@ -1,0 +1,23 @@
+{
+  "id": "bacon-eggs",
+  "title_he": "בייקון וביצים",
+  "title_en": "Bacon and eggs",
+  "prep_time_minutes": 15,
+  "meal_types": ["breakfast"],
+  "calories": 480,
+  "protein_g": 28,
+  "carbs_g": 22,
+  "fat_g": 30,
+  "ingredients": [
+    {"name_he": "בייקון", "name_en": "Bacon", "amount": 40, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "ביצים", "name_en": "Eggs", "amount": 2, "unit": "unit", "category": "dairy", "swaps": []},
+    {"name_he": "לחם מקמח מלא", "name_en": "Whole wheat bread", "amount": 1, "unit": "slice", "category": "bakery", "swaps": []},
+    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 1, "unit": "unit", "category": "produce", "swaps": []}
+  ],
+  "instructions_he": ["מטגנים את הבייקון עד שהוא פריך.", "מטגנים את הביצים באותה מחבת.", "מגישים עם לחם ועגבנייה."],
+  "instructions_en": ["Fry the bacon until crisp.", "Fry the eggs in the same pan.", "Serve with bread and tomato."],
+  "cuisines": ["american"],
+  "kashrut_type": "meat",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

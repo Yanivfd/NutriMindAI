@@ -1,0 +1,114 @@
+{
+  "id": "chicken-pita-tahini",
+  "title_he": "פיתה עוף עם טחינה וסלט",
+  "title_en": "Chicken pita with tahini and salad",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 515,
+  "protein_g": 45,
+  "carbs_g": 50,
+  "ingredients": [
+    {
+      "name_he": "חזה עוף",
+      "name_en": "Chicken breast",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": [
+        {
+          "name_he": "חזה הודו",
+          "name_en": "Turkey breast",
+          "amount": 150,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "פיתה מקמח מלא",
+      "name_en": "Whole wheat pita",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "טחינה גולמית",
+      "name_en": "Raw tahini",
+      "amount": 15,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "חסה",
+      "name_en": "Lettuce",
+      "amount": 30,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 5,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "פורסים את חזה העוף לרצועות ומתבלים בפפריקה ומלח.",
+    "צולים במחבת עם שמן זית 6-8 דקות עד שהעוף מוכן.",
+    "מערבבים טחינה עם מיץ לימון ומעט מים לרוטב חלק.",
+    "ממלאים את הפיתה בעוף, ירקות קצוצים, חסה ורוטב טחינה."
+  ],
+  "instructions_en": [
+    "Slice the chicken breast into strips and season with paprika and salt.",
+    "Sear in a pan with the olive oil for 6-8 minutes until cooked through.",
+    "Whisk the tahini with lemon juice and a little water into a smooth sauce.",
+    "Fill the pita with the chicken, chopped vegetables, lettuce and tahini sauce."
+  ],
+  "cuisines": [
+    "israeli"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "fat_g": 15
+}

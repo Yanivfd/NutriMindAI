@@ -1,0 +1,88 @@
+{
+  "id": "pasta-tomato-mozzarella",
+  "title_he": "פסטה ברוטב עגבניות ומוצרלה",
+  "title_en": "Pasta with tomato sauce and mozzarella",
+  "prep_time_minutes": 15,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 492,
+  "protein_g": 26,
+  "carbs_g": 70,
+  "ingredients": [
+    {
+      "name_he": "פסטה מקמח מלא",
+      "name_en": "Whole wheat pasta",
+      "amount": 80,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "רוטב עגבניות",
+      "name_en": "Tomato sauce",
+      "amount": 150,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "מוצרלה לייט",
+      "name_en": "Light mozzarella",
+      "amount": 50,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": [
+        {
+          "name_he": "גבינה צהובה 9%",
+          "name_en": "Yellow cheese 9%",
+          "amount": 40,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "בזיליקום טרי",
+      "name_en": "Fresh basil",
+      "amount": 5,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 1,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 5,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים את הפסטה במים רותחים ומומלחים לפי ההוראות.",
+    "מחממים שום בשמן זית, מוסיפים את רוטב העגבניות ומבשלים 3 דקות.",
+    "מערבבים את הפסטה ברוטב, מוסיפים מוצרלה קרועה ובזיליקום."
+  ],
+  "instructions_en": [
+    "Cook the pasta in boiling salted water according to the package.",
+    "Warm the garlic in the olive oil, add the tomato sauce and simmer for 3 minutes.",
+    "Toss the pasta in the sauce and top with torn mozzarella and basil."
+  ],
+  "cuisines": [
+    "italian"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "fat_g": 12
+}

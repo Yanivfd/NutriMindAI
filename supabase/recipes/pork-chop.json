@@ -1,0 +1,23 @@
+{
+  "id": "pork-chop",
+  "title_he": "צלע חזיר עם תפוח אדמה",
+  "title_en": "Pork chop with potato",
+  "prep_time_minutes": 20,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 540,
+  "protein_g": 38,
+  "carbs_g": 36,
+  "fat_g": 24,
+  "ingredients": [
+    {"name_he": "צלע חזיר", "name_en": "Pork chop", "amount": 160, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "תפוח אדמה", "name_en": "Potato", "amount": 150, "unit": "g", "category": "produce", "swaps": []},
+    {"name_he": "שמן קנולה", "name_en": "Canola oil", "amount": 5, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "פפריקה", "name_en": "Paprika", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": ["מתבלים את הצלע במלח ופפריקה וצולים 6 דקות מכל צד.", "מבשלים את תפוח האדמה במים 12 דקות.", "מגישים יחד."],
+  "instructions_en": ["Season the chop with salt and paprika and cook it 6 minutes per side.", "Boil the potato for 12 minutes.", "Serve them together."],
+  "cuisines": ["american", "international"],
+  "kashrut_type": "meat",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

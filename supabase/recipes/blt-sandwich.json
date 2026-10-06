@@ -1,0 +1,24 @@
+{
+  "id": "blt-sandwich",
+  "title_he": "כריך בייקון חסה ועגבנייה",
+  "title_en": "BLT sandwich",
+  "prep_time_minutes": 10,
+  "meal_types": ["breakfast", "lunch", "snack"],
+  "calories": 460,
+  "protein_g": 18,
+  "carbs_g": 36,
+  "fat_g": 26,
+  "ingredients": [
+    {"name_he": "לחם מקמח מלא", "name_en": "Whole wheat bread", "amount": 2, "unit": "slice", "category": "bakery", "swaps": []},
+    {"name_he": "בייקון", "name_en": "Bacon", "amount": 40, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "חסה", "name_en": "Lettuce", "amount": 20, "unit": "g", "category": "produce", "swaps": [], "insect_check": true},
+    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "מיונז", "name_en": "Mayonnaise", "amount": 15, "unit": "g", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": ["מטגנים את הבייקון עד שהוא פריך.", "מורחים מיונז על הלחם.", "מרכיבים עם חסה, עגבנייה ובייקון."],
+  "instructions_en": ["Fry the bacon until crisp.", "Spread mayonnaise on the bread.", "Layer lettuce, tomato and bacon."],
+  "cuisines": ["american"],
+  "kashrut_type": "meat",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

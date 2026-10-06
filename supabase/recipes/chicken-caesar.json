@@ -1,0 +1,24 @@
+{
+  "id": "chicken-caesar",
+  "title_he": "סלט קיסר עם עוף",
+  "title_en": "Chicken Caesar salad",
+  "prep_time_minutes": 15,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 490,
+  "protein_g": 40,
+  "carbs_g": 18,
+  "fat_g": 28,
+  "ingredients": [
+    {"name_he": "חזה עוף", "name_en": "Chicken breast", "amount": 140, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "חסה", "name_en": "Lettuce", "amount": 80, "unit": "g", "category": "produce", "swaps": [], "insect_check": true},
+    {"name_he": "גבינת פרמזן", "name_en": "Parmesan cheese", "amount": 15, "unit": "g", "category": "dairy", "swaps": []},
+    {"name_he": "לחם מקמח מלא", "name_en": "Whole wheat bread", "amount": 1, "unit": "slice", "category": "bakery", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": ["צולים את העוף ופורסים אותו.", "קורעים את החסה ומפזרים פרמזן.", "מתבלים בשמן ומגישים עם קוביות לחם."],
+  "instructions_en": ["Cook the chicken and slice it.", "Tear the lettuce and sprinkle on the parmesan.", "Dress with oil and serve with bread cubes."],
+  "cuisines": ["american", "mediterranean"],
+  "kashrut_type": "mixed",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

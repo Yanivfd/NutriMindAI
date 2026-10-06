@@ -1,0 +1,25 @@
+{
+  "id": "beef-stroganoff",
+  "title_he": "בקר סטרוגנוף",
+  "title_en": "Beef stroganoff",
+  "prep_time_minutes": 20,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 560,
+  "protein_g": 36,
+  "carbs_g": 46,
+  "fat_g": 22,
+  "ingredients": [
+    {"name_he": "רצועות בקר", "name_en": "Beef strips", "amount": 140, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "אטריות ביצים", "name_en": "Egg noodles", "amount": 70, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "שמנת חמוצה", "name_en": "Sour cream", "amount": 40, "unit": "g", "category": "dairy", "swaps": []},
+    {"name_he": "בצל", "name_en": "Onion", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "פטריות", "name_en": "Mushrooms", "amount": 80, "unit": "g", "category": "produce", "swaps": []},
+    {"name_he": "שמן קנולה", "name_en": "Canola oil", "amount": 5, "unit": "ml", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": ["מבשלים את האטריות.", "מטגנים בצל, פטריות ובקר בשמן 8 דקות.", "מערבבים שמנת חמוצה מחוץ לאש ומגישים על האטריות."],
+  "instructions_en": ["Cook the noodles.", "Fry the onion, mushrooms and beef in the oil for 8 minutes.", "Stir in the sour cream off the heat and serve over the noodles."],
+  "cuisines": ["international", "american"],
+  "kashrut_type": "mixed",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

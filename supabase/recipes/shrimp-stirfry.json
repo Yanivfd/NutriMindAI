@@ -1,0 +1,25 @@
+{
+  "id": "shrimp-stirfry",
+  "title_he": "מוקפץ שרימפס וירקות",
+  "title_en": "Shrimp and vegetable stir-fry",
+  "prep_time_minutes": 15,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 430,
+  "protein_g": 32,
+  "carbs_g": 42,
+  "fat_g": 12,
+  "ingredients": [
+    {"name_he": "שרימפס", "name_en": "Shrimp", "amount": 150, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "אורז", "name_en": "Rice", "amount": 50, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "פלפל אדום", "name_en": "Red bell pepper", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שום", "name_en": "Garlic", "amount": 2, "unit": "clove", "category": "produce", "swaps": []},
+    {"name_he": "רוטב סויה", "name_en": "Soy sauce", "amount": 15, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "שמן קנולה", "name_en": "Canola oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": ["מבשלים את האורז.", "מטגנים שום, פלפל ושרימפס בשמן 4 דקות.", "מתבלים ברוטב סויה ומגישים על האורז."],
+  "instructions_en": ["Cook the rice.", "Stir-fry the garlic, pepper and shrimp in the oil for 4 minutes.", "Season with soy sauce and serve over the rice."],
+  "cuisines": ["asian"],
+  "kashrut_type": "parve",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

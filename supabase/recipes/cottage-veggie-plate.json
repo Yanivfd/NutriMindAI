@@ -1,0 +1,87 @@
+{
+  "id": "cottage-veggie-plate",
+  "title_he": "צלחת קוטג׳ וירקות",
+  "title_en": "Cottage cheese and vegetable plate",
+  "prep_time_minutes": 5,
+  "meal_types": [
+    "breakfast",
+    "lunch",
+    "dinner",
+    "snack"
+  ],
+  "calories": 410,
+  "protein_g": 35,
+  "carbs_g": 38,
+  "ingredients": [
+    {
+      "name_he": "קוטג׳ 5%",
+      "name_en": "Cottage cheese 5%",
+      "amount": 250,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": [
+        {
+          "name_he": "גבינה לבנה 5%",
+          "name_en": "White cheese 5%",
+          "amount": 250,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "לחם מקמח מלא",
+      "name_en": "Whole wheat bread",
+      "amount": 2,
+      "unit": "slice",
+      "category": "bakery",
+      "swaps": [
+        {
+          "name_he": "פיתה מקמח מלא",
+          "name_en": "Whole wheat pita",
+          "amount": 1,
+          "unit": "unit"
+        }
+      ]
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל אדום",
+      "name_en": "Red bell pepper",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "חותכים את הירקות לרצועות.",
+    "מגישים את הקוטג׳ עם הירקות ופרוסות הלחם."
+  ],
+  "instructions_en": [
+    "Cut the vegetables into sticks.",
+    "Serve the cottage cheese with the vegetables and bread slices."
+  ],
+  "cuisines": [
+    "israeli",
+    "international"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "fat_g": 13
+}
