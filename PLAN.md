@@ -35,6 +35,10 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 
 - Connect the app to a supermarket service so the weekly ingredients list can
   automatically create a shopping cart ready for the user to review and buy.
+- **Export grocery list** — share the week’s shopping list to WhatsApp, Google Keep,
+  or the system share sheet (plain text / checklist), so users can shop without
+  keeping the app open. Prefer Android share intent first; add Keep/WhatsApp-specific
+  deep links only if the generic share UX is not enough.
 
 ### Personalized calorie targets (brainstorm — not started)
 
