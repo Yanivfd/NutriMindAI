@@ -131,7 +131,8 @@ The Application is **not intended for children under 18** (or under a higher age
 ### Opt-out and account deletion
 
 - You can stop further collection by uninstalling the Application. Uninstalling does not by itself delete data already stored on our servers.
-- To delete your account or personal data, email [yanivfd@gmail.com](mailto:yanivfd@gmail.com). We will verify your request and respond within the time required by applicable law.
+- **In the app:** Settings → Delete account.
+- **Web instructions / email request:** see [Account deletion](./ACCOUNT_DELETION.md) or email [yanivfd@gmail.com](mailto:yanivfd@gmail.com). We will verify your request and respond within the time required by applicable law.
 
 ### GDPR rights (where applicable)
 
