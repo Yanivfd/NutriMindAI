@@ -2,6 +2,8 @@ import type { Session } from '@supabase/supabase-js';
 import { createContext, useContext, useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 
+import { useGroceryStore } from '@/store/useGroceryStore';
+
 import { supabase } from './supabase';
 
 type AuthState =
@@ -72,4 +74,22 @@ export async function verifyPhoneCode(phone: string, token: string): Promise<voi
 export async function signOut(): Promise<void> {
   const { error } = await supabase.auth.signOut();
   if (error) throw error;
+}
+
+/**
+ * Permanently deletes the signed-in auth user and cascaded app data, then signs out
+ * and clears grocery check state stored on device.
+ */
+export async function deleteAccount(): Promise<void> {
+  const { data, error } = await supabase.functions.invoke<{ ok?: boolean; error?: string }>(
+    'delete-account',
+    { body: {} }
+  );
+  if (error || !data?.ok) throw error ?? new Error(data?.error ?? 'DELETE_FAILED');
+  useGroceryStore.getState().resetAll();
+  // Prefer a full sign-out; fall back to clearing local session if the auth user is already gone.
+  const { error: signOutError } = await supabase.auth.signOut();
+  if (signOutError) {
+    await supabase.auth.signOut({ scope: 'local' });
+  }
 }

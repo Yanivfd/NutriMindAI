@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { KeyboardAvoidingView, ScrollView } from 'react-native';
+import { Alert, KeyboardAvoidingView, ScrollView } from 'react-native';
 
 import { ProfileForm } from '@/components/ProfileForm';
 import { TargetSummary } from '@/components/TargetSummary';
@@ -10,6 +10,7 @@ import { useT } from '@/lib/i18n';
 import { buildProfileInput, profileToFormValues } from '@/lib/profileForm';
 import type { ProfileFormValues } from '@/lib/profileForm';
 import { todayLocal } from '@/lib/week';
+import { deleteAccount } from '@/services/auth';
 import { useProfile, useSaveProfile } from '@/services/menuApi';
 import type { Profile } from '@/types/db';
 
@@ -17,6 +18,8 @@ function SettingsEditor({ profile }: { profile: Profile }) {
   const t = useT();
   const [values, setValues] = useState<ProfileFormValues>(() => profileToFormValues(profile));
   const [showErrors, setShowErrors] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [deleteError, setDeleteError] = useState(false);
   const result = useMemo(
     () => buildProfileInput(values, todayLocal(), profile),
     [values, profile]
@@ -29,6 +32,24 @@ function SettingsEditor({ profile }: { profile: Profile }) {
       return;
     }
     save.mutate(result.input, { onSuccess: () => router.back() });
+  };
+
+  const onDeleteAccount = () => {
+    Alert.alert(t('profile.deleteAccount'), t('profile.deleteAccountConfirm'), [
+      { text: t('common.cancel'), style: 'cancel' },
+      {
+        text: t('profile.deleteAccount'),
+        style: 'destructive',
+        onPress: () => {
+          setDeleteError(false);
+          setDeleting(true);
+          deleteAccount().catch(() => {
+            setDeleting(false);
+            setDeleteError(true);
+          });
+        },
+      },
+    ]);
   };
 
   return (
@@ -45,6 +66,15 @@ function SettingsEditor({ profile }: { profile: Profile }) {
         )}
         {save.isError && <Text className="text-center text-meat">{t('common.genericError')}</Text>}
         <Button label={t('common.save')} onPress={onSave} loading={save.isPending} />
+        {deleteError && <Text className="text-center text-meat">{t('common.genericError')}</Text>}
+        <Button
+          label={t('profile.deleteAccount')}
+          variant="danger"
+          icon="account-remove-outline"
+          onPress={onDeleteAccount}
+          loading={deleting}
+          disabled={save.isPending}
+        />
       </ScrollView>
     </KeyboardAvoidingView>
   );

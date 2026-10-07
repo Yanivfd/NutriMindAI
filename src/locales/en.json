@@ -288,6 +288,8 @@
     "blockedHint": "These stay out of the next week you create.",
     "invalidWeight": "Enter a weight between 30 and 400 kg.",
     "signOut": "Sign out",
+    "deleteAccount": "Delete account",
+    "deleteAccountConfirm": "This permanently deletes your account, meal plans, weight logs, and all other data. This cannot be undone.",
     "averageLabel": "kg · 7-entry average",
     "targetLabel": "Target %{kg} kg",
     "toGo": "%{kg} kg to go",

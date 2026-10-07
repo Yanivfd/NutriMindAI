@@ -18,6 +18,8 @@ interface GroceryState {
   planOrder: string[];
   toggle: (planId: string, itemKey: string) => void;
   clear: (planId: string) => void;
+  /** Clears all checked items (e.g. after account deletion). */
+  resetAll: () => void;
 }
 
 export const useGroceryStore = create<GroceryState>()(
@@ -41,6 +43,7 @@ export const useGroceryStore = create<GroceryState>()(
         }),
       clear: (planId) =>
         set((state) => ({ checkedByPlan: { ...state.checkedByPlan, [planId]: [] } })),
+      resetAll: () => set({ checkedByPlan: {}, planOrder: [] }),
     }),
     { name: 'grocery-checks', storage: createJSONStorage(() => AsyncStorage) }
   )
