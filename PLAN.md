@@ -36,6 +36,48 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 - Connect the app to a supermarket service so the weekly ingredients list can
   automatically create a shopping cart ready for the user to review and buy.
 
+### Personalized calorie targets (brainstorm — not started)
+
+Today: Mifflin–St Jeor BMR × activity → maintenance (TDEE), then a fixed deficit
+(500 kcal if ≥5 kg to lose, 350 if <5 kg, 0 if at goal), minus coffee with
+milk/sugar. Saved on `profiles.daily_calorie_target` / `weekly_cheat_bank` via
+`src/lib/tdee.ts` + `buildProfileInput`. Gemini does **not** compute the target;
+it only picks recipes near slot budgets.
+
+Goal: feel more like a coach, still clearly “estimate, not medical advice.”
+
+#### Priority ideas
+
+1. **Pace / deficit choice** — slow / normal / aggressive (e.g. 250 / 350 / 500),
+   or “kg per month” → derive deficit. Keep safe floors (1200F / 1500M).
+2. **Suggested + editable target** — show the calculated number; let the user
+   override (dietitian / doctor / preference). Clamp to safe bounds.
+3. **Auto-adjust from weight trend** — after 2–3 weeks of weigh-ins (+ optional
+   meal check-ins): if weight is flat, nudge food target down a little; if losing
+   too fast, raise it. Highest “true personalization” without labs.
+4. **Free-text lifestyle / food notes** — optional box: night shifts, vegetarian,
+   “I walk a lot,” hated foods. Use for **meal planning constraints** (rules +
+   Gemini context), not as a silent medical calorie recalculation from prose.
+5. **Blood tests / labs (later, careful)** — high liability and privacy cost.
+   Prefer structured flags (“thyroid issue — talk to doctor”) or
+   “my doctor set my calories” override. If free-text/PDF ever exists: use only
+   for meal hints (e.g. low sodium), strong disclaimer, sensitive-data handling
+   in privacy policy + Play Data safety. Do **not** invent BMR from lab paste.
+
+#### Out of scope / avoid for v2 unless reviewed
+
+- Claiming clinical accuracy or diagnosing from labs
+- Sending full PHI (labs, conditions) to Gemini without explicit consent + minimization
+- Removing the formula entirely in favor of unconstrained AI calorie numbers
+
+#### Implementation sketch (when we pick this up)
+
+- UI: onboarding/settings — pace picker + optional override + optional notes field
+- Schema: e.g. `deficit_pace`, `calorie_target_override`, `planning_notes` (text)
+- Logic: extend `calorieTargets` / weekly adjust job from `weight_logs`
+- Planner: pass notes/constraints into edge function context; keep portion math in code
+- Copy: “Estimate only — not medical advice” in onboarding and target summary
+
 ## Environment
 
 - Node must be **20+** (latest Expo SDK). Machine currently has v18.12.0.
