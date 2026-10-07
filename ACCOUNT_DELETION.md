@@ -4,7 +4,7 @@ This page explains how to delete your NutriMind account and the personal data li
 
 **App:** NutriMind (Android)  
 **Developer:** Yaniv Fried  
-**Contact:** [yanivfd@gmail.com](mailto:yanivfd@gmail.com)
+**Contact:** [nutrimind.support@gmail.com](mailto:nutrimind.support@gmail.com)
 
 ## Option 1 — Delete in the app (fastest)
 
@@ -17,7 +17,7 @@ This page explains how to delete your NutriMind account and the personal data li
 
 If you cannot open the app, email us:
 
-**To:** [yanivfd@gmail.com](mailto:yanivfd@gmail.com)  
+**To:** [nutrimind.support@gmail.com](mailto:nutrimind.support@gmail.com)  
 **Subject:** NutriMind account deletion request
 
 Include:
@@ -47,4 +47,4 @@ Uninstalling the app alone does **not** delete your account on our servers. Use 
 
 ## Questions
 
-Email [yanivfd@gmail.com](mailto:yanivfd@gmail.com).
+Email [nutrimind.support@gmail.com](mailto:nutrimind.support@gmail.com).
