@@ -47,4 +47,4 @@ Uninstalling the app alone does **not** delete your account on our servers. Use 
 
 ## Questions
 
-Email [yanivfd@gmail.com](mailto:yanivfd@gmail.com).
+Email [nutrimind.support@gmail.com](mailto:nutrimind.support@gmail.com).
