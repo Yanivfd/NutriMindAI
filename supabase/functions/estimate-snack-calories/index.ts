@@ -64,7 +64,7 @@ Deno.serve(async (req: Request): Promise<Response> => {
             },
             required: ['food', 'calories'],
           },
-          temperature: 0.2,
+          thinkingConfig: { thinkingLevel: 'low' },
         },
       });
       const parsed = parseSnackEstimate(JSON.parse(response.text ?? ''));

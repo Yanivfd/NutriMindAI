@@ -113,7 +113,7 @@ export async function suggestSchedule(params: SuggestParams): Promise<SuggestRes
           systemInstruction: SYSTEM_PROMPT,
           responseMimeType: 'application/json',
           responseJsonSchema,
-          temperature: 0.7,
+          thinkingConfig: { thinkingLevel: 'medium' },
         },
       });
       const suggestions = parseSuggestions(JSON.parse(response.text ?? ''), validIds);
