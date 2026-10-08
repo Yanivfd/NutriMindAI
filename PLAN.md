@@ -8,13 +8,13 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 - [x] 1. Environment check, init Expo TS app, install dependencies
 - [x] 2. Supabase migration (spec DDL + weight_logs, cheat_logs, is_active, sex/activity) with RLS
 - [x] 3. `seed.sql` with 10 quick bilingual recipes and categorized ingredients/swaps
-  - Recipes now live in `supabase/recipes/*.json`. `npm run recipes:seed` validates them and rewrites `supabase/seed.sql`. Each dish has `cuisines`; the profile stores `preferred_cuisines` (language picks the first choice). The planner prefers a matching kitchen and still fills a slot from any valid recipe.
+  - Recipes now live in `supabase/recipes/*.json`. `npm run recipes:seed` validates them and rewrites `supabase/seed.sql`. Each dish has `cuisines`; the profile stores `preferred_cuisines` (langua[...]
 - [x] 4. `generate-weekly-menu` Edge Function (Gemini responseSchema, ID validation, deterministic grocery aggregation, calorie check, upsert)
 - [x] 5. Configure NativeWind v4, expo-router, `app.json` (RTL, Android AdMob), `.env.example`
 - [x] 6. Core: services (supabase, menuApi hooks), i18n + locales he/en, Zustand grocery store, root layout providers
   - RTL reload uses `reloadAppAsync()` from `expo` (works in dev and release), so `expo-updates` was dropped.
 - [x] 7. Screens: auth (login, onboarding w/ TDEE), tabs (dashboard, grocery, bank, profile), recipe detail, components
-  - Routing: `login.tsx` and `onboarding.tsx` sit at the app root (not an `(auth)` group); the root `Stack` uses `Stack.Protected` guards: signed out -> login, no profile -> onboarding, otherwise tabs, `recipe/[id]` and `settings`.
+  - Routing: `login.tsx` and `onboarding.tsx` sit at the app root (not an `(auth)` group); the root `Stack` uses `Stack.Protected` guards: signed out -> login, no profile -> onboarding, otherwise [...]
   - `settings.tsx` reuses the onboarding form; targets are recalculated on save and apply to the next generated week.
   - Login uses a 6-digit email code: `supabase/templates/otp_code.html` (he/en) is wired in `config.toml`; hosted projects need the same template in the dashboard.
   - Ads: interstitial while generating, banner on dashboard/grocery, non-personalized requests, no-op in Expo Go. The rewarded "extra swap" is deferred (the backend has no meal-swap yet).
@@ -35,10 +35,15 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 
 - Connect the app to a supermarket service so the weekly ingredients list can
   automatically create a shopping cart ready for the user to review and buy.
-- **Export grocery list** — share the week’s shopping list to WhatsApp, Google Keep,
+- **Export grocery list** — share the week's shopping list to WhatsApp, Google Keep,
   or the system share sheet (plain text / checklist), so users can shop without
   keeping the app open. Prefer Android share intent first; add Keep/WhatsApp-specific
   deep links only if the generic share UX is not enough.
+- **Dynamic calorie target according to current weight** — automatically recalculate
+  the daily calorie target based on the user's current weight (from weight logs),
+  instead of keeping it fixed until profile edit. After each weight log entry, check
+  if the distance to target weight has changed enough to adjust the deficit. This makes
+  the app feel more responsive to actual progress.
 
 ### Personalized calorie targets (brainstorm — not started)
 
@@ -48,23 +53,23 @@ milk/sugar. Saved on `profiles.daily_calorie_target` / `weekly_cheat_bank` via
 `src/lib/tdee.ts` + `buildProfileInput`. Gemini does **not** compute the target;
 it only picks recipes near slot budgets.
 
-Goal: feel more like a coach, still clearly “estimate, not medical advice.”
+Goal: feel more like a coach, still clearly "estimate, not medical advice."
 
 #### Priority ideas
 
 1. **Pace / deficit choice** — slow / normal / aggressive (e.g. 250 / 350 / 500),
-   or “kg per month” → derive deficit. Keep safe floors (1200F / 1500M).
+   or "kg per month" → derive deficit. Keep safe floors (1200F / 1500M).
 2. **Suggested + editable target** — show the calculated number; let the user
    override (dietitian / doctor / preference). Clamp to safe bounds.
 3. **Auto-adjust from weight trend** — after 2–3 weeks of weigh-ins (+ optional
    meal check-ins): if weight is flat, nudge food target down a little; if losing
-   too fast, raise it. Highest “true personalization” without labs.
+   too fast, raise it. Highest "true personalization" without labs.
 4. **Free-text lifestyle / food notes** — optional box: night shifts, vegetarian,
-   “I walk a lot,” hated foods. Use for **meal planning constraints** (rules +
+   "I walk a lot," hated foods. Use for **meal planning constraints** (rules +
    Gemini context), not as a silent medical calorie recalculation from prose.
 5. **Blood tests / labs (later, careful)** — high liability and privacy cost.
-   Prefer structured flags (“thyroid issue — talk to doctor”) or
-   “my doctor set my calories” override. If free-text/PDF ever exists: use only
+   Prefer structured flags ("thyroid issue — talk to doctor") or
+   "my doctor set my calories" override. If free-text/PDF ever exists: use only
    for meal hints (e.g. low sodium), strong disclaimer, sensitive-data handling
    in privacy policy + Play Data safety. Do **not** invent BMR from lab paste.
 
@@ -80,14 +85,14 @@ Goal: feel more like a coach, still clearly “estimate, not medical advice.”
 - Schema: e.g. `deficit_pace`, `calorie_target_override`, `planning_notes` (text)
 - Logic: extend `calorieTargets` / weekly adjust job from `weight_logs`
 - Planner: pass notes/constraints into edge function context; keep portion math in code
-- Copy: “Estimate only — not medical advice” in onboarding and target summary
+- Copy: "Estimate only — not medical advice" in onboarding and target summary
 
 ## Environment
 
 - Node must be **20+** (latest Expo SDK). Machine currently has v18.12.0.
 - Android SDK: `C:\Users\friedy2\AppData\Local\Android\Sdk` (present). Set `ANDROID_HOME` to it.
 - JDK: use Android Studio's bundled JBR: `C:\Program Files\Android\Android Studio\jbr`. Set `JAVA_HOME` to it.
-- AI model: Gemini 1.5 Flash is retired. Model name read from `GEMINI_MODEL` env, default `gemini-flash-latest` (alias; `gemini-2.5-flash` is closed to new users), via `npm:@google/genai` in Deno. Use the paid tier before launch (health data in prompts).
+- AI model: Gemini 1.5 Flash is retired. Model name read from `GEMINI_MODEL` env, default `gemini-flash-latest` (alias; `gemini-2.5-flash` is closed to new users), via `npm:@google/genai` in Deno.[...]
 - AdMob (`react-native-google-mobile-ads`) does not run in Expo Go. Develop in Expo Go first (ads wrapped as no-op), then use a local dev build: `npx expo run:android`.
 
 ## Spec gaps filled
@@ -97,7 +102,7 @@ Goal: feel more like a coach, still clearly “estimate, not medical advice.”
 - `profiles.sex`, `profiles.activity_level`, `profiles.skips_breakfast boolean default true` (needed for TDEE).
 - `cheat_logs` for the Bank tab: `user_id`, `logged_at`, `kind` ('sweet'|'beer'|'other'), `calories`, `note`.
 - RLS: explicit `with check` on write policies; recipes readable by authenticated users.
-- Grocery aggregation done **deterministically in the Edge Function** from DB ingredients x portion multiplier. Gemini only returns the schedule (day, slot, `recipe_id`, `portion_multiplier`, type). Daily calorie totals are verified in code, not trusted from the model.
+- Grocery aggregation done **deterministically in the Edge Function** from DB ingredients x portion multiplier. Gemini only returns the schedule (day, slot, `recipe_id`, `portion_multiplier`, typ[...]
 
 ## Kosher support (added)
 
@@ -107,21 +112,21 @@ Goal: feel more like a coach, still clearly “estimate, not medical advice.”
 - Ingredient `insect_check: true` on leafy greens, herbs, broccoli, legumes -> grocery hint (check or buy certified insect-free brands).
 - Edge Function rules for kosher users:
   - Only `is_kosher` recipes are offered to the model (enforced in code, not trusted to the model).
-  - No dairy meal within `meat_dairy_wait_hours` after a meat meal on the same day; validated in code using nominal slot times (breakfast 08:00, lunch 13:00, snack 16:30, dinner 19:30). On violation, the later meal is swapped for a parve/meat alternative.
+  - No dairy meal within `meat_dairy_wait_hours` after a meat meal on the same day; validated in code using nominal slot times (breakfast 08:00, lunch 13:00, snack 16:30, dinner 19:30). On violat[...]
   - Office-day takeaway guidance: order only from kosher-certified (or mehadrin) restaurants on Cibus/10bis.
 - Grocery list for `mehadrin`: hint to buy products with mehadrin certification (e.g. Badatz) and chalav Yisrael dairy.
 - Meal times are per user (`profiles.breakfast_time`, `lunch_time`, `snack_time`, `dinner_time`), editable in settings; the wait rule uses them.
-- Shabbat (kosher users): Friday dinner and all Saturday meals use `recipes.shabbat_friendly` recipes (prepared before Shabbat, served cold or at room temperature) and are flagged `prepare_before_shabbat` in the plan so the app can show a "prepare on Friday" badge. Saturday is never a takeaway day.
+- Shabbat (kosher users): Friday dinner and all Saturday meals use `recipes.shabbat_friendly` recipes (prepared before Shabbat, served cold or at room temperature) and are flagged `prepare_before[...]
 - Office-day takeaway is treated as meat for the wait rule (conservative).
 
 ## Generator implementation notes (step 4)
 
 - The model returns only `{day, slot, recipe_id}`; portions are computed in code to hit the daily food target (within ~5%).
-- `chooseRecipes` (`_shared/planRules.ts`) is the single gatekeeper: kashrut/Shabbat rules are never relaxed; max 3 uses per recipe per week and no repeat within a day are relaxed only when nothing else fits. If a meat meal makes a later slot impossible, the day is re-planned with meat banned in that slot.
-- Models are tried in order: `GEMINI_MODEL` (default `gemini-3.8-flash`), then `GEMINI_FALLBACK_MODELS` (default `gemini-3.7-flash,gemini-3.5-flash,gemini-flash-latest`), one attempt each, within a 40s total budget. `plan.model` records the model that answered. Free-tier keys allow 20 requests/day per model, so backups matter in development.
+- `chooseRecipes` (`_shared/planRules.ts`) is the single gatekeeper: kashrut/Shabbat rules are never relaxed; max 3 uses per recipe per week and no repeat within a day are relaxed only when nothi[...]
+- Models are tried in order: `GEMINI_MODEL` (default `gemini-3.8-flash`), then `GEMINI_FALLBACK_MODELS` (default `gemini-3.7-flash,gemini-3.5-flash,gemini-flash-latest`), one attempt each, within[...]
 - If every model fails or `GEMINI_API_KEY` is unset, the same rules build a deterministic plan (`source: 'fallback'`).
 - Only calorie targets, slot times and the recipe catalog are sent to Gemini (no age, weight or other profile data).
-- Request body `{ week_start_date? }` must be the current or next Sunday (Asia/Jerusalem). Response: `{ plan_id, plan: WeeklyPlanPayload }`. Errors: 401 `UNAUTHORIZED`, 400 `INVALID_WEEK`, 409 `PROFILE_REQUIRED`, 503 `NO_RECIPES`, 500 `INTERNAL`.
+- Request body `{ week_start_date? }` must be the current or next Sunday (Asia/Jerusalem). Response: `{ plan_id, plan: WeeklyPlanPayload }`. Errors: 401 `UNAUTHORIZED`, 400 `INVALID_WEEK`, 409 `P[...]
 - Tests: `npm run test:functions` (Node's built-in runner; Deno not required). Typecheck: `npm run typecheck`.
 
 ## Architecture
@@ -140,8 +145,8 @@ flowchart LR
 ## Supabase backend (`supabase/`)
 
 - `supabase/config.toml` via `npx supabase init`.
-- `supabase/migrations/20261004000001_init.sql`: DDL + gap fixes, indexes (`weekly_plans(user_id, week_start_date)` unique, `weight_logs(user_id, logged_on)`), RLS policies. Profile is created in onboarding.
-- `supabase/seed.sql`: 10 quick recipes (<=20 min, 350-650 kcal, lunch/dinner/snack, Israeli-supermarket ingredients) with `ingredients` JSONB `{name_he, name_en, amount, unit, category, swaps[]}`. Categories: `produce, dairy, meat_fish, bakery, pantry, frozen, beverages`.
+- `supabase/migrations/20261004000001_init.sql`: DDL + gap fixes, indexes (`weekly_plans(user_id, week_start_date)` unique, `weight_logs(user_id, logged_on)`), RLS policies. Profile is created in[...]
+- `supabase/seed.sql`: 10 quick recipes (<=20 min, 350-650 kcal, lunch/dinner/snack, Israeli-supermarket ingredients) with `ingredients` JSONB `{name_he, name_en, amount, unit, category, swaps[]}[...]
 - `supabase/functions/generate-weekly-menu/index.ts`:
   1. CORS + require `Authorization`; `supabase.auth.getUser()` to verify JWT.
   2. Load profile; compute daily target (minus cheat bank spread across week).
@@ -156,9 +161,9 @@ flowchart LR
 
 ## Mobile app (`C:\my-diet-app\src`)
 
-App code lives under `src/` (Expo default): `src/app/` for routes, and `src/components`, `src/services`, `src/store`, `src/lib`, `src/locales`, `src/types` beside it. Paths below are relative to `src/`. Config files (`app.json`, `tailwind.config.js`, `babel.config.js`, `metro.config.js`, `global.css`) stay at the repo root.
+App code lives under `src/` (Expo default): `src/app/` for routes, and `src/components`, `src/services`, `src/store`, `src/lib`, `src/locales`, `src/types` beside it. Paths below are relative to [...]
 
-- Init: `npx create-expo-app@latest . --template blank-typescript`, then add `expo-router`, `nativewind` + `tailwindcss`, `@supabase/supabase-js`, `@react-native-async-storage/async-storage`, `@tanstack/react-query` + persister, `zustand`, `i18n-js`, `expo-localization`, `react-native-google-mobile-ads`, `expo-dev-client`.
+- Init: `npx create-expo-app@latest . --template blank-typescript`, then add `expo-router`, `nativewind` + `tailwindcss`, `@supabase/supabase-js`, `@react-native-async-storage/async-storage`, `@t[...]
 - `app/_layout.tsx` - QueryClient (24h staleTime/gcTime, AsyncStorage persister), AuthProvider, i18n init, auth redirect.
 - `app/(auth)/login.tsx` (email OTP), `app/(auth)/onboarding.tsx` (metrics; Mifflin-St Jeor TDEE minus 350-500 kcal).
 - `app/(tabs)/index.tsx` - week strip + `MealCard`s, "Generate week" (interstitial), rewarded ad for extra swap.
