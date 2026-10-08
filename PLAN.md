@@ -44,6 +44,13 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
   instead of keeping it fixed until profile edit. After each weight log entry, check
   if the distance to target weight has changed enough to adjust the deficit. This makes
   the app feel more responsive to actual progress.
+- **Weekly AI insights & recap** — at end of week, Gemini analyzes meals eaten, cheat logs, and weight change. Generates personalized feedback on what to preserve, what to improve, meals that worked well, meals to avoid, and patterns to notice. Suggests adjustments for next week's meal plan. Stores insights in a new `weekly_insights` table (`user_id`, `week_start_date`, `insights_text`, `created_at`).
+- **Meal overflow handling** — when user logs a meal significantly over daily calorie budget, the planner automatically adjusts future meals in the same week to rebalance toward the weekly target (more aggressive deficit the following days or weekend). Keeps the week on track without guilt.
+- **Weight-based calorie recalculation** — if user's weight trend shows consistent loss/plateau over 2–3 weeks, the app auto-recalculates the calorie target using Mifflin–St Jeor and updated weight. Notifies user of the new daily target and applies it to the next week's plan.
+- **Personalized eating guidelines** — after 2–3 weeks of data (meals, weight, cheat logs), Gemini generates a custom "eat / avoid" rules card based on actual history: "You're under goal when you skip coffee swaps" or "Dinners work better than lunch swaps for you." Stores in a new `eating_guidelines` table and refreshes weekly.
+- **Achievement badges & motivation** — users who hit weekly calorie targets unlock a "Balanced week" badge. Users close to target (within 3%) get an encouraging message. Non-achievers receive a supportive nudge: "You got 82% there — let's try a slower pace next week?"
+- **Visual overflow alert** — days with meals exceeding daily calorie target are marked with a red circle / alert indicator on the day strip. Tap to see the overage and (optionally) adjust a meal or view auto-rebalanced suggestions.
+- **Aggressiveness preference** — at onboarding or settings, let users choose loss pace: "Easy (250 kcal/day)" / "Steady (350 kcal/day)" / "Fast (500 kcal/day)". Store as `deficit_pace` in profiles; use in TDEE calculation and in weekly rebalancing logic. Safe floors remain (1200F / 1500M).
 
 ### Personalized calorie targets (brainstorm — not started)
 
