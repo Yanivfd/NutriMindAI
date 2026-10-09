@@ -2,6 +2,7 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { Stack, router, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
 import { Image, ScrollView, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { DislikeSheet } from '@/components/DislikeSheet';
 import { KashrutBadge, NotKosherBadge } from '@/components/KashrutBadge';
@@ -47,6 +48,7 @@ function Macro({ label, value }: { label: string; value: string }) {
 export default function RecipeScreen() {
   const t = useT();
   const lang = useLanguage();
+  const insets = useSafeAreaInsets();
   const params = useLocalSearchParams<{
     id: string;
     portion?: string;
@@ -86,7 +88,10 @@ export default function RecipeScreen() {
   };
 
   return (
-    <ScrollView contentContainerClassName="gap-4 p-4">
+    <ScrollView
+      contentContainerClassName="gap-4 p-4"
+      contentContainerStyle={{ paddingBottom: 16 + insets.bottom }}
+    >
       <Stack.Screen options={{ title }} />
 
       {photo && (
