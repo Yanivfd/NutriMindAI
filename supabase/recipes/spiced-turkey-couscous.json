@@ -1,0 +1,103 @@
+{
+  "id": "spiced-turkey-couscous",
+  "title_he": "קוסקוס הודו מתובל",
+  "title_en": "Spiced turkey couscous",
+  "prep_time_minutes": 18,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 520,
+  "protein_g": 40,
+  "carbs_g": 52,
+  "fat_g": 14,
+  "cuisines": [
+    "mediterranean",
+    "mizrahi"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "חזה הודו",
+      "name_en": "Turkey breast",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "קוסקוס",
+      "name_en": "Couscous",
+      "amount": 60,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "קישוא",
+      "name_en": "Zucchini",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בהרט",
+      "name_en": "Baharat",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כוסברה טחונה",
+      "name_en": "Ground coriander",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "קינמון",
+      "name_en": "Cinnamon",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מכינים קוסקוס. מתבלים הודו בכל התבלינים וצולים.",
+    "מוסיפים קישוא מוקפץ ומגישים יחד."
+  ],
+  "instructions_en": [
+    "Prepare couscous. Season turkey with all spices and cook through.",
+    "Add sauteed zucchini and serve together."
+  ]
+}

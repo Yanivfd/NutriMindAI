@@ -3,20 +3,87 @@
   "title_he": "טוסט חזה חזיר וגבינה",
   "title_en": "Ham and cheese toast",
   "prep_time_minutes": 10,
-  "meal_types": ["breakfast", "lunch", "snack"],
+  "meal_types": [
+    "breakfast",
+    "lunch",
+    "snack"
+  ],
   "calories": 450,
   "protein_g": 24,
   "carbs_g": 36,
   "fat_g": 22,
   "ingredients": [
-    {"name_he": "לחם מקמח מלא", "name_en": "Whole wheat bread", "amount": 2, "unit": "slice", "category": "bakery", "swaps": []},
-    {"name_he": "חזה חזיר", "name_en": "Ham", "amount": 40, "unit": "g", "category": "meat_fish", "swaps": []},
-    {"name_he": "גבינה צהובה", "name_en": "Cheddar cheese", "amount": 20, "unit": "g", "category": "dairy", "swaps": []},
-    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []}
+    {
+      "name_he": "לחם מקמח מלא",
+      "name_en": "Whole wheat bread",
+      "amount": 2,
+      "unit": "slice",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "חזה חזיר",
+      "name_en": "Ham",
+      "amount": 40,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "גבינה צהובה",
+      "name_en": "Cheddar cheese",
+      "amount": 20,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
-  "instructions_he": ["מניחים חזה חזיר, גבינה ועגבנייה בין שתי פרוסות לחם.", "קולים או מחממים במחבת עד שהגבינה נמסה.", "מגישים חם."],
-  "instructions_en": ["Layer ham, cheese and tomato between the bread slices.", "Toast or cook in a pan until the cheese melts.", "Serve warm."],
-  "cuisines": ["american", "international"],
+  "instructions_he": [
+    "מניחים חזה חזיר, גבינה ועגבנייה בין שתי פרוסות לחם.",
+    "קולים או מחממים במחבת עד שהגבינה נמסה.",
+    "מגישים חם. מתבלים באורגנו, פלפל שחור, אבקת שום."
+  ],
+  "instructions_en": [
+    "Layer ham, cheese and tomato between the bread slices.",
+    "Toast or cook in a pan until the cheese melts.",
+    "Serve warm. Season with oregano, black pepper, garlic powder."
+  ],
+  "cuisines": [
+    "american",
+    "international"
+  ],
   "kashrut_type": "mixed",
   "is_kosher": false,
   "shabbat_friendly": false

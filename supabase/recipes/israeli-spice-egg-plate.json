@@ -1,0 +1,103 @@
+{
+  "id": "israeli-spice-egg-plate",
+  "title_he": "צלחת ביצים ישראליות מתובלות",
+  "title_en": "Israeli spiced egg plate",
+  "prep_time_minutes": 12,
+  "meal_types": [
+    "breakfast",
+    "lunch",
+    "snack"
+  ],
+  "calories": 420,
+  "protein_g": 24,
+  "carbs_g": 38,
+  "fat_g": 18,
+  "cuisines": [
+    "israeli"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "ביצים קשות",
+      "name_en": "Hard-boiled eggs",
+      "amount": 3,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "פיתה מקמח מלא",
+      "name_en": "Whole wheat pita",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "חומוס מוכן",
+      "name_en": "Prepared hummus",
+      "amount": 40,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "סומאק",
+      "name_en": "Sumac",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "פורסים ביצים קשות ומפזרים זעתר, כמון, פפריקה וסומאק.",
+    "מגישים עם פיתה, חומוס וסלט ירקות."
+  ],
+  "instructions_en": [
+    "Slice hard-boiled eggs and dust with zaatar, cumin, paprika and sumac.",
+    "Serve with pita, hummus and chopped salad."
+  ]
+}

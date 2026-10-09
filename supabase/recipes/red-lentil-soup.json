@@ -67,6 +67,30 @@
       "unit": "tsp",
       "category": "pantry",
       "swaps": []
+    },
+    {
+      "name_he": "כורכום",
+      "name_en": "Turmeric",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כוסברה טחונה",
+      "name_en": "Ground coriander",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
     }
   ],
   "instructions_he": [

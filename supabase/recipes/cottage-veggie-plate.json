@@ -66,15 +66,39 @@
       "unit": "unit",
       "category": "produce",
       "swaps": []
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
     }
   ],
   "instructions_he": [
     "חותכים את הירקות לרצועות.",
-    "מגישים את הקוטג׳ עם הירקות ופרוסות הלחם."
+    "מגישים את הקוטג׳ עם הירקות ופרוסות הלחם. מתבלים בזעתר, פפריקה, פלפל שחור."
   ],
   "instructions_en": [
     "Cut the vegetables into sticks.",
-    "Serve the cottage cheese with the vegetables and bread slices."
+    "Serve the cottage cheese with the vegetables and bread slices. Season with zaatar, paprika, black pepper."
   ],
   "cuisines": [
     "israeli",

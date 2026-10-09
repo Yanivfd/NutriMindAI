@@ -1,0 +1,97 @@
+{
+  "id": "spicy-coleslaw-tuna",
+  "title_he": "סלט כרוב חריף עם טונה",
+  "title_en": "Spicy coleslaw with tuna",
+  "prep_time_minutes": 10,
+  "meal_types": [
+    "lunch",
+    "snack",
+    "dinner"
+  ],
+  "calories": 400,
+  "protein_g": 32,
+  "carbs_g": 24,
+  "fat_g": 18,
+  "cuisines": [
+    "international",
+    "american"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "טונה במים",
+      "name_en": "Tuna in water",
+      "amount": 120,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כרוב לבן קצוץ",
+      "name_en": "Shredded white cabbage",
+      "amount": 150,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "גזר",
+      "name_en": "Carrot",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "מיונז צמחי",
+      "name_en": "Plant-based mayonnaise",
+      "amount": 20,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת צ׳ילי",
+      "name_en": "Chili powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מערבבים כרוב וגזר מגורד עם מיונז וכל התבלינים.",
+    "מוסיפים טונה מסוננת ומגישים קר."
+  ],
+  "instructions_en": [
+    "Toss shredded cabbage and grated carrot with mayonnaise and all spices.",
+    "Fold in drained tuna and serve cold."
+  ]
+}

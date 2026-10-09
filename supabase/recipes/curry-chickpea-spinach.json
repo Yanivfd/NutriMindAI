@@ -1,0 +1,123 @@
+{
+  "id": "curry-chickpea-spinach",
+  "title_he": "קארי חומוס ותרד",
+  "title_en": "Chickpea spinach curry",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 440,
+  "protein_g": 18,
+  "carbs_g": 58,
+  "fat_g": 14,
+  "cuisines": [
+    "asian",
+    "international"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "גרגירי חומוס מבושלים",
+      "name_en": "Cooked chickpeas",
+      "amount": 200,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "תרד קפוא",
+      "name_en": "Frozen spinach",
+      "amount": 120,
+      "unit": "g",
+      "category": "frozen",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 50,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "חלב קוקוס קל",
+      "name_en": "Light coconut beverage",
+      "amount": 80,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת קארי",
+      "name_en": "Curry powder",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כורכום",
+      "name_en": "Turmeric",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים אורז. מטגנים בצל ושום, מוסיפים תבלינים ומטגנים דקה.",
+    "מוסיפים חומוס, תרד וחלב קוקוס ומבשלים 8 דקות.",
+    "מגישים מעל האורז."
+  ],
+  "instructions_en": [
+    "Cook the rice. Saute onion and garlic, then toast the spices for a minute.",
+    "Add chickpeas, spinach and coconut milk; simmer 8 minutes.",
+    "Serve over the rice."
+  ]
+}

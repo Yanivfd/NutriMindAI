@@ -1,0 +1,95 @@
+{
+  "id": "harissa-salmon-veg",
+  "title_he": "סלמון בהריסה וירקות",
+  "title_en": "Harissa salmon with vegetables",
+  "prep_time_minutes": 18,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 520,
+  "protein_g": 38,
+  "carbs_g": 32,
+  "fat_g": 26,
+  "cuisines": [
+    "mizrahi",
+    "mediterranean"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "פילה סלמון",
+      "name_en": "Salmon fillet",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "קישוא",
+      "name_en": "Zucchini",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל אדום",
+      "name_en": "Red bell pepper",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "הריסה",
+      "name_en": "Harissa paste",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כורכום",
+      "name_en": "Turmeric",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מורחים על הסלמון הריסה, כמון, כורכום ואבקת שום.",
+    "צולים סלמון וירקות במחבת עם שמן כ-8 דקות."
+  ],
+  "instructions_en": [
+    "Rub the salmon with harissa, cumin, turmeric and garlic powder.",
+    "Cook salmon and vegetables in oil about 8 minutes."
+  ]
+}

@@ -3,20 +3,104 @@
   "title_he": "סלט יווני עם טונה",
   "title_en": "Greek salad with tuna",
   "prep_time_minutes": 10,
-  "meal_types": ["lunch", "dinner", "snack"],
+  "meal_types": [
+    "lunch",
+    "dinner",
+    "snack"
+  ],
   "calories": 390,
   "protein_g": 32,
   "carbs_g": 18,
   "fat_g": 20,
   "ingredients": [
-    {"name_he": "טונה במים", "name_en": "Tuna in water", "amount": 120, "unit": "g", "category": "pantry", "swaps": []},
-    {"name_he": "מלפפון", "name_en": "Cucumber", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 2, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "פלפל ירוק", "name_en": "Green bell pepper", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "בצל סגול", "name_en": "Red onion", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "זיתים ירוקים", "name_en": "Green olives", "amount": 30, "unit": "g", "category": "pantry", "swaps": []},
-    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
-    {"name_he": "לימון", "name_en": "Lemon", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []}
+    {
+      "name_he": "טונה במים",
+      "name_en": "Tuna in water",
+      "amount": 120,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 2,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל ירוק",
+      "name_en": "Green bell pepper",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל סגול",
+      "name_en": "Red onion",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "זיתים ירוקים",
+      "name_en": "Green olives",
+      "amount": 30,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "סומאק",
+      "name_en": "Sumac",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
   "instructions_he": [
     "חותכים את הירקות לקוביות גסות.",
@@ -26,9 +110,11 @@
   "instructions_en": [
     "Cut the vegetables into large chunks.",
     "Drain the tuna and add it to the vegetables with the olives.",
-    "Dress with olive oil, lemon juice, salt and oregano."
+    "Dress with olive oil, lemon juice, salt and oregano. Season with oregano, sumac, black pepper."
   ],
-  "cuisines": ["mediterranean"],
+  "cuisines": [
+    "mediterranean"
+  ],
   "kashrut_type": "parve",
   "is_kosher": true,
   "shabbat_friendly": true

@@ -1,0 +1,103 @@
+{
+  "id": "spicy-shrimp-garlic-rice",
+  "title_he": "שרימפס חריף בשום עם אורז",
+  "title_en": "Spicy garlic shrimp with rice",
+  "prep_time_minutes": 18,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 500,
+  "protein_g": 34,
+  "carbs_g": 52,
+  "fat_g": 14,
+  "cuisines": [
+    "asian",
+    "international"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": false,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "שרימפס קפוא",
+      "name_en": "Frozen shrimp",
+      "amount": 160,
+      "unit": "g",
+      "category": "frozen",
+      "swaps": []
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 55,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 4,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל אדום",
+      "name_en": "Red bell pepper",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת ג׳ינג׳ר",
+      "name_en": "Ground ginger",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים אורז. מקפיצים שרימפס עם שום, צ׳ילי ופפריקה.",
+    "מוסיפים פלפל ומגישים מעל האורז."
+  ],
+  "instructions_en": [
+    "Cook the rice. Stir-fry shrimp with garlic, chili and paprika.",
+    "Add bell pepper and serve over rice."
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "ginger-salmon-rice",
+  "title_he": "סלמון בג׳ינג׳ר עם אורז",
+  "title_en": "Ginger salmon with rice",
+  "prep_time_minutes": 18,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 540,
+  "protein_g": 36,
+  "carbs_g": 48,
+  "fat_g": 22,
+  "cuisines": [
+    "asian"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "פילה סלמון",
+      "name_en": "Salmon fillet",
+      "amount": 140,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 55,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "ברוקולי קפוא",
+      "name_en": "Frozen broccoli",
+      "amount": 100,
+      "unit": "g",
+      "category": "frozen",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "רוטב סויה",
+      "name_en": "Soy sauce",
+      "amount": 15,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 8,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת ג׳ינג׳ר",
+      "name_en": "Ground ginger",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים אורז. מתבלים סלמון בג׳ינג׳ר, אבקת שום וצ׳ילי וצולים.",
+    "מוסיפים ברוקולי ורוטב סויה ומגישים מעל האורז."
+  ],
+  "instructions_en": [
+    "Cook the rice. Season salmon with ginger, garlic powder and chili; sear.",
+    "Add broccoli and soy sauce; serve over rice."
+  ]
+}

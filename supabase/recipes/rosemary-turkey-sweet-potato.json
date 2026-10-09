@@ -1,0 +1,97 @@
+{
+  "id": "rosemary-turkey-sweet-potato",
+  "title_he": "הודו ברוזמרין ובטטה",
+  "title_en": "Rosemary turkey with sweet potato",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 490,
+  "protein_g": 40,
+  "carbs_g": 45,
+  "fat_g": 14,
+  "cuisines": [
+    "mediterranean",
+    "international"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "חזה הודו",
+      "name_en": "Turkey breast",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "בטטה",
+      "name_en": "Sweet potato",
+      "amount": 200,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 12,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "רוזמרין",
+      "name_en": "Rosemary",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "טימין",
+      "name_en": "Thyme",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "חותכים בטטה לקוביות וצולים במחבת עם שמן עד ריכוך.",
+    "מתבלים הודו ברוזמרין, טימין, אבקת שום ופפריקה וצולים.",
+    "מגישים יחד."
+  ],
+  "instructions_en": [
+    "Cube the sweet potato and cook in oil until tender.",
+    "Season turkey with rosemary, thyme, garlic powder and paprika; sear.",
+    "Serve together."
+  ]
+}

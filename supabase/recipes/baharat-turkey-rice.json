@@ -1,0 +1,105 @@
+{
+  "id": "baharat-turkey-rice",
+  "title_he": "הודו בבהרט עם אורז",
+  "title_en": "Baharat turkey with rice",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 520,
+  "protein_g": 40,
+  "carbs_g": 55,
+  "fat_g": 14,
+  "cuisines": [
+    "mizrahi",
+    "israeli"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "חזה הודו",
+      "name_en": "Turkey breast",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 55,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בהרט",
+      "name_en": "Baharat",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "קינמון",
+      "name_en": "Cinnamon",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים את האורז. חותכים הודו לרצועות ומתבלים בבהרט, כמון, קינמון ופפריקה.",
+    "מטגנים בצל ושום בשמן, מוסיפים את ההודו ומבשלים עד שהוא מוכן.",
+    "מגישים מעל האורז."
+  ],
+  "instructions_en": [
+    "Cook the rice. Slice the turkey and season with baharat, cumin, cinnamon and paprika.",
+    "Saute onion and garlic in oil, add the turkey and cook through.",
+    "Serve over the rice."
+  ]
+}

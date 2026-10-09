@@ -3,22 +3,110 @@
   "title_he": "עוף בחמאה עם אורז",
   "title_en": "Butter chicken with rice",
   "prep_time_minutes": 20,
-  "meal_types": ["lunch", "dinner"],
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
   "calories": 560,
   "protein_g": 36,
   "carbs_g": 48,
   "fat_g": 22,
   "ingredients": [
-    {"name_he": "חזה עוף", "name_en": "Chicken breast", "amount": 140, "unit": "g", "category": "meat_fish", "swaps": []},
-    {"name_he": "אורז", "name_en": "Rice", "amount": 60, "unit": "g", "category": "pantry", "swaps": []},
-    {"name_he": "חמאה", "name_en": "Butter", "amount": 10, "unit": "g", "category": "dairy", "swaps": []},
-    {"name_he": "שמנת", "name_en": "Cream", "amount": 30, "unit": "ml", "category": "dairy", "swaps": []},
-    {"name_he": "רוטב עגבניות", "name_en": "Tomato sauce", "amount": 40, "unit": "g", "category": "pantry", "swaps": []},
-    {"name_he": "שום", "name_en": "Garlic", "amount": 1, "unit": "clove", "category": "produce", "swaps": []}
+    {
+      "name_he": "חזה עוף",
+      "name_en": "Chicken breast",
+      "amount": 140,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 60,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "חמאה",
+      "name_en": "Butter",
+      "amount": 10,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "שמנת",
+      "name_en": "Cream",
+      "amount": 30,
+      "unit": "ml",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "רוטב עגבניות",
+      "name_en": "Tomato sauce",
+      "amount": 40,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 1,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "גראם מסאלה",
+      "name_en": "Garam masala",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כורכום",
+      "name_en": "Turmeric",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
-  "instructions_he": ["מבשלים את האורז.", "מטגנים את העוף והשום בחמאה ומוסיפים רוטב ושמנת.", "מבשלים 8 דקות ומגישים על האורז."],
-  "instructions_en": ["Cook the rice.", "Fry the chicken and garlic in the butter, then add the sauce and cream.", "Simmer for 8 minutes and serve over the rice."],
-  "cuisines": ["asian", "international"],
+  "instructions_he": [
+    "מבשלים את האורז.",
+    "מטגנים את העוף והשום בחמאה ומוסיפים רוטב ושמנת.",
+    "מבשלים 8 דקות ומגישים על האורז. מתבלים בגראם מסאלה, כורכום, כמון טחון, פתיתי צ׳ילי."
+  ],
+  "instructions_en": [
+    "Cook the rice.",
+    "Fry the chicken and garlic in the butter, then add the sauce and cream.",
+    "Simmer for 8 minutes and serve over the rice. Season with garam masala, turmeric, ground cumin, chili flakes."
+  ],
+  "cuisines": [
+    "asian",
+    "international"
+  ],
   "kashrut_type": "mixed",
   "is_kosher": false,
   "shabbat_friendly": false

@@ -74,19 +74,43 @@
       "unit": "ml",
       "category": "pantry",
       "swaps": []
+    },
+    {
+      "name_he": "אבקת ג׳ינג׳ר",
+      "name_en": "Ground ginger",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
     }
   ],
   "instructions_he": [
     "משרים את אטריות האורז במים רותחים לפי ההוראות ומסננים.",
     "מקפיצים את ההודו בשמן על אש גבוהה 4-5 דקות.",
     "מוסיפים שום, פלפל וברוקולי ומקפיצים עוד 4 דקות.",
-    "מוסיפים את האטריות ורוטב הסויה ומערבבים דקה."
+    "מוסיפים את האטריות ורוטב הסויה ומערבבים דקה. מתבלים באבקת ג׳ינג׳ר, פתיתי צ׳ילי, אבקת שום."
   ],
   "instructions_en": [
     "Soak the rice noodles in boiling water according to the package and drain.",
     "Stir-fry the turkey in the oil over high heat for 4-5 minutes.",
     "Add the garlic, pepper and broccoli and stir-fry for 4 more minutes.",
-    "Add the noodles and soy sauce and toss for a minute."
+    "Add the noodles and soy sauce and toss for a minute. Season with ground ginger, chili flakes, garlic powder."
   ],
   "cuisines": [
     "asian"

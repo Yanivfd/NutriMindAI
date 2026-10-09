@@ -1,0 +1,112 @@
+{
+  "id": "spicy-crab-cakes-salad",
+  "title_he": "קציצות סרטן חריפות עם סלט",
+  "title_en": "Spicy crab cakes with salad",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 480,
+  "protein_g": 28,
+  "carbs_g": 32,
+  "fat_g": 26,
+  "cuisines": [
+    "american",
+    "international"
+  ],
+  "kashrut_type": "mixed",
+  "is_kosher": false,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "בשר סרטן משומר",
+      "name_en": "Canned crab meat",
+      "amount": 120,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פירורי לחם",
+      "name_en": "Breadcrumbs",
+      "amount": 30,
+      "unit": "g",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "ביצה",
+      "name_en": "Egg",
+      "amount": 1,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "חסה",
+      "name_en": "Lettuce",
+      "amount": 60,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "מיונז",
+      "name_en": "Mayonnaise",
+      "amount": 20,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 15,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת צ׳ילי",
+      "name_en": "Chili powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מערבבים סרטן, פירורים, ביצה, מיונז ותבלינים ויוצרים קציצות.",
+    "מטגנים בשמן ומגישים מעל חסה."
+  ],
+  "instructions_en": [
+    "Mix crab, breadcrumbs, egg, mayonnaise and spices; form cakes.",
+    "Pan-fry in oil and serve over lettuce."
+  ]
+}

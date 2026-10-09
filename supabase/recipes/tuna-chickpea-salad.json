@@ -90,17 +90,41 @@
       "unit": "unit",
       "category": "produce",
       "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
     }
   ],
   "instructions_he": [
     "מסננים את הטונה והחומוס.",
     "קוצצים מלפפון, עגבניות שרי, בצל סגול ופטרוזיליה.",
-    "מערבבים הכל עם שמן זית, מיץ לימון, מלח ופלפל."
+    "מערבבים הכל עם שמן זית, מיץ לימון, מלח ופלפל. מתבלים בכמון טחון, פפריקה, אורגנו."
   ],
   "instructions_en": [
     "Drain the tuna and the chickpeas.",
     "Chop the cucumber, cherry tomatoes, red onion and parsley.",
-    "Toss everything with the olive oil, lemon juice, salt and pepper."
+    "Toss everything with the olive oil, lemon juice, salt and pepper. Season with ground cumin, paprika, oregano."
   ],
   "cuisines": [
     "mediterranean",

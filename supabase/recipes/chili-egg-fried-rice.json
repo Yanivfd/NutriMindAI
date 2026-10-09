@@ -1,0 +1,103 @@
+{
+  "id": "chili-egg-fried-rice",
+  "title_he": "אורז מטוגן עם ביצה וצ׳ילי",
+  "title_en": "Chili egg fried rice",
+  "prep_time_minutes": 15,
+  "meal_types": [
+    "lunch",
+    "dinner",
+    "breakfast"
+  ],
+  "calories": 470,
+  "protein_g": 20,
+  "carbs_g": 60,
+  "fat_g": 16,
+  "cuisines": [
+    "asian"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "אורז מבושל קר",
+      "name_en": "Cold cooked rice",
+      "amount": 200,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "ביצים",
+      "name_en": "Eggs",
+      "amount": 2,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "אפונה קפואה",
+      "name_en": "Frozen peas",
+      "amount": 80,
+      "unit": "g",
+      "category": "frozen",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "רוטב סויה",
+      "name_en": "Soy sauce",
+      "amount": 15,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 12,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת ג׳ינג׳ר",
+      "name_en": "Ground ginger",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מטגנים ביצים מורתחות ומפרידים הצידה.",
+    "מקפיצים אורז עם שום, אפונה, צ׳ילי וג׳ינג׳ר, מוסיפים סויה וביצים."
+  ],
+  "instructions_en": [
+    "Scramble the eggs and set aside.",
+    "Stir-fry rice with garlic, peas, chili and ginger; add soy sauce and eggs."
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "spiced-meatballs-tomato",
+  "title_he": "קציצות עוף מתובלות בעגבניות",
+  "title_en": "Spiced chicken meatballs in tomato",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 530,
+  "protein_g": 40,
+  "carbs_g": 42,
+  "fat_g": 20,
+  "cuisines": [
+    "mizrahi",
+    "israeli"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "בשר עוף טחון",
+      "name_en": "Ground chicken",
+      "amount": 160,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": [
+        {
+          "name_he": "בשר הודו טחון",
+          "name_en": "Ground turkey",
+          "amount": 160,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 45,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבניות מרוסקות (שימורים)",
+      "name_en": "Canned crushed tomatoes",
+      "amount": 250,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בהרט",
+      "name_en": "Baharat",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "קינמון",
+      "name_en": "Cinnamon",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מערבבים עוף טחון עם בהרט, כמון, פפריקה, קינמון ומלח ויוצרים קציצות.",
+    "צולים קלות בשמן, מוסיפים בצל, שום ועגבניות ומבשלים 10 דקות.",
+    "מגישים עם אורז."
+  ],
+  "instructions_en": [
+    "Mix ground chicken with baharat, cumin, paprika, cinnamon and salt; form meatballs.",
+    "Brown lightly in oil, add onion, garlic and tomatoes; simmer 10 minutes.",
+    "Serve with rice."
+  ]
+}

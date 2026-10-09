@@ -1,0 +1,111 @@
+{
+  "id": "smoky-chicken-quinoa-salad",
+  "title_he": "סלט קינואה ועוף מעושן",
+  "title_en": "Smoky chicken quinoa salad",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 510,
+  "protein_g": 40,
+  "carbs_g": 48,
+  "fat_g": 16,
+  "cuisines": [
+    "mediterranean",
+    "international"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "חזה עוף",
+      "name_en": "Chicken breast",
+      "amount": 140,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "קינואה",
+      "name_en": "Quinoa",
+      "amount": 55,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה שרי",
+      "name_en": "Cherry tomatoes",
+      "amount": 80,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים קינואה. מתבלים וצולים עוף, מקררים מעט ופורסים.",
+    "מערבבים עם ירקות, שמן, לימון ותבלינים נוספים לפי הטעם."
+  ],
+  "instructions_en": [
+    "Cook quinoa. Season and cook the chicken, cool slightly and slice.",
+    "Toss with vegetables, oil, lemon and a pinch more spices to taste."
+  ]
+}

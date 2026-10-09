@@ -3,19 +3,96 @@
   "title_he": "חומוס עם ביצה וסלט",
   "title_en": "Hummus with egg and salad",
   "prep_time_minutes": 10,
-  "meal_types": ["breakfast", "lunch", "snack"],
+  "meal_types": [
+    "breakfast",
+    "lunch",
+    "snack"
+  ],
   "calories": 440,
   "protein_g": 24,
   "carbs_g": 42,
   "fat_g": 18,
   "ingredients": [
-    {"name_he": "חומוס מוכן", "name_en": "Ready hummus", "amount": 120, "unit": "g", "category": "pantry", "swaps": []},
-    {"name_he": "ביצים", "name_en": "Eggs", "amount": 2, "unit": "unit", "category": "dairy", "swaps": []},
-    {"name_he": "פיתה מקמח מלא", "name_en": "Whole wheat pita", "amount": 1, "unit": "unit", "category": "bakery", "swaps": []},
-    {"name_he": "מלפפון", "name_en": "Cucumber", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 5, "unit": "ml", "category": "pantry", "swaps": []},
-    {"name_he": "פפריקה", "name_en": "Paprika", "amount": 0.5, "unit": "tsp", "category": "pantry", "swaps": []}
+    {
+      "name_he": "חומוס מוכן",
+      "name_en": "Ready hummus",
+      "amount": 120,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "ביצים",
+      "name_en": "Eggs",
+      "amount": 2,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "פיתה מקמח מלא",
+      "name_en": "Whole wheat pita",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 5,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "סומאק",
+      "name_en": "Sumac",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
   "instructions_he": [
     "מבשלים את הביצים עד שהן קשות ופורסים אותן.",
@@ -27,7 +104,9 @@
     "Spoon the hummus onto a plate, drizzle with olive oil and dust with paprika.",
     "Serve with the eggs, chopped salad and pita."
   ],
-  "cuisines": ["israeli"],
+  "cuisines": [
+    "israeli"
+  ],
   "kashrut_type": "parve",
   "is_kosher": true,
   "shabbat_friendly": true

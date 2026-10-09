@@ -1,0 +1,104 @@
+{
+  "id": "spiced-hummus-veggie-wrap",
+  "title_he": "טורטיה חומוס מתובל וירקות",
+  "title_en": "Spiced hummus veggie wrap",
+  "prep_time_minutes": 8,
+  "meal_types": [
+    "lunch",
+    "snack"
+  ],
+  "calories": 430,
+  "protein_g": 14,
+  "carbs_g": 56,
+  "fat_g": 16,
+  "cuisines": [
+    "israeli",
+    "mediterranean"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "טורטיה מקמח מלא",
+      "name_en": "Whole wheat tortilla",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "חומוס מוכן",
+      "name_en": "Prepared hummus",
+      "amount": 80,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "גזר",
+      "name_en": "Carrot",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "חסה",
+      "name_en": "Lettuce",
+      "amount": 40,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "סומאק",
+      "name_en": "Sumac",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מערבבים חומוס עם זעתר, כמון, פפריקה וסומאק.",
+    "מורחים על טורטיה, מוסיפים ירקות וגוללים."
+  ],
+  "instructions_en": [
+    "Mix hummus with zaatar, cumin, paprika and sumac.",
+    "Spread on the tortilla, add vegetables and roll up."
+  ]
+}

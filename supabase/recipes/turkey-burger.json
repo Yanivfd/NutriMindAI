@@ -3,18 +3,103 @@
   "title_he": "המבורגר הודו בלחמניה מלאה",
   "title_en": "Turkey burger on a whole wheat bun",
   "prep_time_minutes": 15,
-  "meal_types": ["lunch", "dinner"],
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
   "calories": 490,
   "protein_g": 38,
   "carbs_g": 36,
   "fat_g": 18,
   "ingredients": [
-    {"name_he": "בשר הודו טחון", "name_en": "Ground turkey", "amount": 150, "unit": "g", "category": "meat_fish", "swaps": [{"name_he": "חזה עוף טחון", "name_en": "Ground chicken breast", "amount": 150, "unit": "g"}]},
-    {"name_he": "לחמניה מקמח מלא", "name_en": "Whole wheat bun", "amount": 1, "unit": "unit", "category": "bakery", "swaps": []},
-    {"name_he": "חסה", "name_en": "Lettuce", "amount": 20, "unit": "g", "category": "produce", "swaps": [], "insect_check": true},
-    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "בצל", "name_en": "Onion", "amount": 0.25, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "שמן קנולה", "name_en": "Canola oil", "amount": 5, "unit": "ml", "category": "pantry", "swaps": []}
+    {
+      "name_he": "בשר הודו טחון",
+      "name_en": "Ground turkey",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": [
+        {
+          "name_he": "חזה עוף טחון",
+          "name_en": "Ground chicken breast",
+          "amount": 150,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "לחמניה מקמח מלא",
+      "name_en": "Whole wheat bun",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "חסה",
+      "name_en": "Lettuce",
+      "amount": 20,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 0.25,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 5,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת בצל",
+      "name_en": "Onion powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
   "instructions_he": [
     "מתבלים את ההודו במלח ופלפל ויוצרים קציצה.",
@@ -26,7 +111,9 @@
     "Cook in a pan with the oil for 4 minutes per side until cooked through.",
     "Serve in the bun with lettuce, tomato and onion."
   ],
-  "cuisines": ["american"],
+  "cuisines": [
+    "american"
+  ],
   "kashrut_type": "meat",
   "is_kosher": true,
   "shabbat_friendly": false

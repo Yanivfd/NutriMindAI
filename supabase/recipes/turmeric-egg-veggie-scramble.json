@@ -1,0 +1,104 @@
+{
+  "id": "turmeric-egg-veggie-scramble",
+  "title_he": "ביצים מורתחות בכורכום וירקות",
+  "title_en": "Turmeric veggie scramble",
+  "prep_time_minutes": 12,
+  "meal_types": [
+    "breakfast",
+    "lunch"
+  ],
+  "calories": 430,
+  "protein_g": 26,
+  "carbs_g": 32,
+  "fat_g": 22,
+  "cuisines": [
+    "israeli",
+    "international"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "ביצים",
+      "name_en": "Eggs",
+      "amount": 3,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "תרד טרי",
+      "name_en": "Fresh spinach",
+      "amount": 60,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לחם מקמח מלא",
+      "name_en": "Whole wheat bread",
+      "amount": 2,
+      "unit": "slice",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כורכום",
+      "name_en": "Turmeric",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מטגנים תרד ועגבנייה בשמן עם התבלינים.",
+    "מוסיפים ביצים טרופות ומערבבים עד מוכן. מגישים עם לחם."
+  ],
+  "instructions_en": [
+    "Saute spinach and tomato in oil with the spices.",
+    "Add beaten eggs and scramble. Serve with bread."
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "smoky-tofu-bean-salad",
+  "title_he": "סלט טופו ושעועית מעושן",
+  "title_en": "Smoky tofu bean salad",
+  "prep_time_minutes": 12,
+  "meal_types": [
+    "lunch",
+    "dinner",
+    "snack"
+  ],
+  "calories": 430,
+  "protein_g": 24,
+  "carbs_g": 42,
+  "fat_g": 16,
+  "cuisines": [
+    "international",
+    "american"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "טופו קשה",
+      "name_en": "Firm tofu",
+      "amount": 140,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שעועית שחורה מבושלת",
+      "name_en": "Cooked black beans",
+      "amount": 120,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "תירס קפוא",
+      "name_en": "Frozen corn",
+      "amount": 60,
+      "unit": "g",
+      "category": "frozen",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת צ׳ילי",
+      "name_en": "Chili powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "צולים טופו בקוביות עם פפריקה וכמון.",
+    "מערבבים עם שעועית, תירס, עגבנייה, שמן ולימון. מגישים קר."
+  ],
+  "instructions_en": [
+    "Pan-sear tofu cubes with paprika and cumin.",
+    "Toss with beans, corn, tomato, oil and lemon. Serve cold."
+  ]
+}

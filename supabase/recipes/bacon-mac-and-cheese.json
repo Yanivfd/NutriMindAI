@@ -3,20 +3,85 @@
   "title_he": "מק אנד צ׳יז עם בייקון",
   "title_en": "Bacon mac and cheese",
   "prep_time_minutes": 20,
-  "meal_types": ["lunch", "dinner"],
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
   "calories": 640,
   "protein_g": 28,
   "carbs_g": 62,
   "fat_g": 28,
   "ingredients": [
-    {"name_he": "פסטה", "name_en": "Pasta", "amount": 80, "unit": "g", "category": "pantry", "swaps": []},
-    {"name_he": "גבינה צהובה", "name_en": "Cheddar cheese", "amount": 40, "unit": "g", "category": "dairy", "swaps": []},
-    {"name_he": "חלב", "name_en": "Milk", "amount": 80, "unit": "ml", "category": "dairy", "swaps": []},
-    {"name_he": "בייקון", "name_en": "Bacon", "amount": 30, "unit": "g", "category": "meat_fish", "swaps": []}
+    {
+      "name_he": "פסטה",
+      "name_en": "Pasta",
+      "amount": 80,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "גבינה צהובה",
+      "name_en": "Cheddar cheese",
+      "amount": 40,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "חלב",
+      "name_en": "Milk",
+      "amount": 80,
+      "unit": "ml",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "בייקון",
+      "name_en": "Bacon",
+      "amount": 30,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
-  "instructions_he": ["מבשלים את הפסטה ומטגנים את הבייקון.", "ממיסים את הגבינה בחלב ומערבבים עם הפסטה.", "מפזרים בייקון מעל."],
-  "instructions_en": ["Cook the pasta and fry the bacon.", "Melt the cheese into the milk and stir it through the pasta.", "Top with the bacon."],
-  "cuisines": ["american"],
+  "instructions_he": [
+    "מבשלים את הפסטה ומטגנים את הבייקון.",
+    "ממיסים את הגבינה בחלב ומערבבים עם הפסטה.",
+    "מפזרים בייקון מעל. מתבלים בפפריקה מעושנת, אבקת שום, פלפל שחור."
+  ],
+  "instructions_en": [
+    "Cook the pasta and fry the bacon.",
+    "Melt the cheese into the milk and stir it through the pasta.",
+    "Top with the bacon. Season with smoked paprika, garlic powder, black pepper."
+  ],
+  "cuisines": [
+    "american"
+  ],
   "kashrut_type": "mixed",
   "is_kosher": false,
   "shabbat_friendly": false

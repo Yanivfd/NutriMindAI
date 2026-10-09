@@ -1,0 +1,105 @@
+{
+  "id": "miso-ginger-tofu-bowl",
+  "title_he": "קערת טופו במיסו וג׳ינג׳ר",
+  "title_en": "Miso ginger tofu bowl",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 460,
+  "protein_g": 24,
+  "carbs_g": 52,
+  "fat_g": 16,
+  "cuisines": [
+    "asian"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "טופו קשה",
+      "name_en": "Firm tofu",
+      "amount": 170,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 50,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "ברוקולי קפוא",
+      "name_en": "Frozen broccoli",
+      "amount": 120,
+      "unit": "g",
+      "category": "frozen",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "משחת מיסו",
+      "name_en": "Miso paste",
+      "amount": 15,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "רוטב סויה",
+      "name_en": "Soy sauce",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת ג׳ינג׳ר",
+      "name_en": "Ground ginger",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים אורז. צולים טופו בשמן עד הזהבה.",
+    "מערבבים מיסו, סויה, ג׳ינג׳ר, אבקת שום וצ׳ילי עם מעט מים.",
+    "מוסיפים ברוקולי והרוטב לטופו ומגישים מעל האורז."
+  ],
+  "instructions_en": [
+    "Cook the rice. Fry tofu in oil until golden.",
+    "Whisk miso, soy sauce, ginger, garlic powder and chili with a little water.",
+    "Add broccoli and sauce to the tofu; serve over rice."
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "coriander-fish-rice",
+  "title_he": "דג בכוסברה עם אורז",
+  "title_en": "Coriander spiced fish with rice",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 500,
+  "protein_g": 38,
+  "carbs_g": 50,
+  "fat_g": 14,
+  "cuisines": [
+    "mizrahi",
+    "israeli"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "פילה נסיכת הנילוס",
+      "name_en": "Tilapia fillet",
+      "amount": 160,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": [
+        {
+          "name_he": "פילה סלמון",
+          "name_en": "Salmon fillet",
+          "amount": 140,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 55,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כוסברה טחונה",
+      "name_en": "Ground coriander",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כורכום",
+      "name_en": "Turmeric",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים אורז. מתבלים את הדג בכוסברה, כמון, פפריקה וכורכום.",
+    "צולים במחבת עם שמן ושום כ-3 דקות מכל צד.",
+    "מגישים עם אורז ומיץ לימון."
+  ],
+  "instructions_en": [
+    "Cook the rice. Season the fish with coriander, cumin, paprika and turmeric.",
+    "Pan-sear with oil and garlic about 3 minutes per side.",
+    "Serve with rice and lemon juice."
+  ]
+}

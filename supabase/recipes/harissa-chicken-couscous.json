@@ -1,0 +1,114 @@
+{
+  "id": "harissa-chicken-couscous",
+  "title_he": "עוף בהריסה עם קוסקוס",
+  "title_en": "Harissa chicken with couscous",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 540,
+  "protein_g": 42,
+  "carbs_g": 52,
+  "fat_g": 16,
+  "cuisines": [
+    "mizrahi",
+    "israeli"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "חזה עוף",
+      "name_en": "Chicken breast",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": [
+        {
+          "name_he": "חזה הודו",
+          "name_en": "Turkey breast",
+          "amount": 150,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "קוסקוס",
+      "name_en": "Couscous",
+      "amount": 60,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "קישוא",
+      "name_en": "Zucchini",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "הריסה",
+      "name_en": "Harissa paste",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כורכום",
+      "name_en": "Turmeric",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "חותכים את העוף לקוביות ומתבלים בהריסה, כמון, פפריקה, כורכום ומלח.",
+    "צולים במחבת עם שמן זית ושום כ-8 דקות עד שהעוף מוכן.",
+    "מכינים קוסקוס לפי ההוראות ומוסיפים קישוא מוקפץ קלות.",
+    "מגישים את העוף החריף מעל הקוסקוס."
+  ],
+  "instructions_en": [
+    "Cube the chicken and season with harissa, cumin, smoked paprika, turmeric and salt.",
+    "Sear in a pan with olive oil and garlic for about 8 minutes until cooked through.",
+    "Prepare the couscous and toss with lightly sauteed zucchini.",
+    "Serve the spicy chicken over the couscous."
+  ]
+}

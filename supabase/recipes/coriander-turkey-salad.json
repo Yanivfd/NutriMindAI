@@ -1,0 +1,105 @@
+{
+  "id": "coriander-turkey-salad",
+  "title_he": "סלט הודו בכוסברה",
+  "title_en": "Coriander turkey salad",
+  "prep_time_minutes": 15,
+  "meal_types": [
+    "lunch",
+    "dinner",
+    "snack"
+  ],
+  "calories": 420,
+  "protein_g": 40,
+  "carbs_g": 20,
+  "fat_g": 18,
+  "cuisines": [
+    "mediterranean",
+    "israeli"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "חזה הודו",
+      "name_en": "Turkey breast",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "חסה",
+      "name_en": "Lettuce",
+      "amount": 80,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כוסברה טחונה",
+      "name_en": "Ground coriander",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "סומאק",
+      "name_en": "Sumac",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מתבלים וצולים הודו, מקררים ופורסים.",
+    "מערבבים עם סלט, שמן, לימון וסומאק."
+  ],
+  "instructions_en": [
+    "Season and cook the turkey; cool and slice.",
+    "Toss with salad greens, oil, lemon and sumac."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "spicy-tuna-pita",
+  "title_he": "פיתה טונה חריפה",
+  "title_en": "Spicy tuna pita",
+  "prep_time_minutes": 10,
+  "meal_types": [
+    "lunch",
+    "dinner",
+    "snack"
+  ],
+  "calories": 460,
+  "protein_g": 34,
+  "carbs_g": 42,
+  "fat_g": 16,
+  "cuisines": [
+    "israeli",
+    "mediterranean"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "טונה במים",
+      "name_en": "Tuna in water",
+      "amount": 120,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פיתה מקמח מלא",
+      "name_en": "Whole wheat pita",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "מיונז צמחי",
+      "name_en": "Plant-based mayonnaise",
+      "amount": 15,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 0.75,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מסננים את הטונה ומערבבים עם מיונז וכל התבלינים.",
+    "ממלאים פיתה בטונה החריפה, מלפפון ועגבנייה."
+  ],
+  "instructions_en": [
+    "Drain the tuna and mix with mayonnaise and all the spices.",
+    "Fill the pita with the spicy tuna, cucumber and tomato."
+  ]
+}

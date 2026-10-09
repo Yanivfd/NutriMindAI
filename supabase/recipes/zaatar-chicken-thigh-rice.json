@@ -1,0 +1,103 @@
+{
+  "id": "zaatar-chicken-thigh-rice",
+  "title_he": "ירך עוף בזעתר עם אורז",
+  "title_en": "Zaatar chicken thigh with rice",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 560,
+  "protein_g": 38,
+  "carbs_g": 52,
+  "fat_g": 20,
+  "cuisines": [
+    "israeli",
+    "mediterranean"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "ירך עוף ללא עור",
+      "name_en": "Skinless chicken thigh",
+      "amount": 160,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 55,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 2,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "סומאק",
+      "name_en": "Sumac",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים אורז. מתבלים ירך עוף בזעתר, סומאק, פפריקה ומלח.",
+    "צולים במחבת עם שמן ושום עד מוכן. מגישים עם לימון."
+  ],
+  "instructions_en": [
+    "Cook the rice. Season the chicken thigh with zaatar, sumac, paprika and salt.",
+    "Pan-cook with oil and garlic until done. Serve with lemon."
+  ]
+}

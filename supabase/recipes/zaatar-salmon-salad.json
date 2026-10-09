@@ -1,0 +1,107 @@
+{
+  "id": "zaatar-salmon-salad",
+  "title_he": "סלט סלמון בזעתר",
+  "title_en": "Zaatar salmon salad",
+  "prep_time_minutes": 15,
+  "meal_types": [
+    "lunch",
+    "dinner",
+    "snack"
+  ],
+  "calories": 450,
+  "protein_g": 36,
+  "carbs_g": 22,
+  "fat_g": 24,
+  "cuisines": [
+    "mediterranean",
+    "israeli"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "פילה סלמון",
+      "name_en": "Salmon fillet",
+      "amount": 140,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "חסה",
+      "name_en": "Lettuce",
+      "amount": 60,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה שרי",
+      "name_en": "Cherry tomatoes",
+      "amount": 100,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "סומאק",
+      "name_en": "Sumac",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מתבלים את הסלמון בזעתר, סומאק, מלח ופלפל.",
+    "צולים במחבת עם שמן זית כ-3 דקות מכל צד.",
+    "מגישים קר או פושר מעל חסה, מלפפון ועגבניות עם מיץ לימון."
+  ],
+  "instructions_en": [
+    "Season the salmon with zaatar, sumac, salt and black pepper.",
+    "Pan-sear in olive oil about 3 minutes per side.",
+    "Serve warm or room-temp over lettuce, cucumber and tomatoes with lemon juice."
+  ]
+}

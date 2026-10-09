@@ -1,0 +1,87 @@
+{
+  "id": "cinnamon-protein-oats",
+  "title_he": "שיבולת שועל חלבון בקינמון",
+  "title_en": "Cinnamon protein oats",
+  "prep_time_minutes": 10,
+  "meal_types": [
+    "breakfast",
+    "snack"
+  ],
+  "calories": 420,
+  "protein_g": 28,
+  "carbs_g": 52,
+  "fat_g": 10,
+  "cuisines": [
+    "international",
+    "american"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "שיבולת שועל",
+      "name_en": "Rolled oats",
+      "amount": 60,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "יוגורט יווני 5%",
+      "name_en": "Greek yogurt 5%",
+      "amount": 150,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "חלב 1%",
+      "name_en": "Milk 1%",
+      "amount": 150,
+      "unit": "ml",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "בננה",
+      "name_en": "Banana",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "קינמון",
+      "name_en": "Cinnamon",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת ג׳ינג׳ר",
+      "name_en": "Ground ginger",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אגוז מוסקט",
+      "name_en": "Nutmeg",
+      "amount": 0.125,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים שיבולת שועל בחלב עם קינמון, ג׳ינג׳ר ומוסקט.",
+    "מגישים עם יוגורט ובננה פרוסה."
+  ],
+  "instructions_en": [
+    "Cook oats in milk with cinnamon, ginger and nutmeg.",
+    "Serve topped with yogurt and sliced banana."
+  ]
+}

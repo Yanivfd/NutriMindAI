@@ -66,17 +66,41 @@
       "unit": "ml",
       "category": "pantry",
       "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
     }
   ],
   "instructions_he": [
     "מבשלים את הפסטה במים רותחים ומומלחים לפי ההוראות.",
     "מחממים שום בשמן זית, מוסיפים את רוטב העגבניות ומבשלים 3 דקות.",
-    "מערבבים את הפסטה ברוטב, מוסיפים מוצרלה קרועה ובזיליקום."
+    "מערבבים את הפסטה ברוטב, מוסיפים מוצרלה קרועה ובזיליקום. מתבלים באורגנו, אבקת שום, פתיתי צ׳ילי."
   ],
   "instructions_en": [
     "Cook the pasta in boiling salted water according to the package.",
     "Warm the garlic in the olive oil, add the tomato sauce and simmer for 3 minutes.",
-    "Toss the pasta in the sauce and top with torn mozzarella and basil."
+    "Toss the pasta in the sauce and top with torn mozzarella and basil. Season with oregano, garlic powder, chili flakes."
   ],
   "cuisines": [
     "italian"

@@ -68,17 +68,41 @@
           "unit": "unit"
         }
       ]
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
     }
   ],
   "instructions_he": [
     "מטגנים בצל ופלפל קצוצים בשמן 3 דקות ומוסיפים את התרד.",
     "טורפים את הביצים עם מלח ופלפל, יוצקים למחבת ומבשלים עד שהחביתה מתייצבת.",
-    "מגישים עם פרוסות לחם קלויות."
+    "מגישים עם פרוסות לחם קלויות. מתבלים באורגנו, פפריקה, פלפל שחור."
   ],
   "instructions_en": [
     "Saute the chopped onion and pepper in the oil for 3 minutes, then add the spinach.",
     "Beat the eggs with salt and pepper, pour into the pan and cook until set.",
-    "Serve with toasted bread slices."
+    "Serve with toasted bread slices. Season with oregano, paprika, black pepper."
   ],
   "cuisines": [
     "international"

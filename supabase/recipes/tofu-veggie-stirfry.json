@@ -3,19 +3,96 @@
   "title_he": "מוקפץ טופו וירקות",
   "title_en": "Tofu and vegetable stir-fry",
   "prep_time_minutes": 20,
-  "meal_types": ["lunch", "dinner"],
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
   "calories": 420,
   "protein_g": 24,
   "carbs_g": 40,
   "fat_g": 16,
   "ingredients": [
-    {"name_he": "טופו קשה", "name_en": "Firm tofu", "amount": 180, "unit": "g", "category": "produce", "swaps": []},
-    {"name_he": "אורז", "name_en": "Rice", "amount": 50, "unit": "g", "category": "pantry", "swaps": []},
-    {"name_he": "ברוקולי קפוא", "name_en": "Frozen broccoli", "amount": 150, "unit": "g", "category": "frozen", "swaps": [], "insect_check": true},
-    {"name_he": "פלפל אדום", "name_en": "Red bell pepper", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "שום", "name_en": "Garlic", "amount": 2, "unit": "clove", "category": "produce", "swaps": []},
-    {"name_he": "רוטב סויה", "name_en": "Soy sauce", "amount": 15, "unit": "ml", "category": "pantry", "swaps": []},
-    {"name_he": "שמן קנולה", "name_en": "Canola oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []}
+    {
+      "name_he": "טופו קשה",
+      "name_en": "Firm tofu",
+      "amount": 180,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 50,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "ברוקולי קפוא",
+      "name_en": "Frozen broccoli",
+      "amount": 150,
+      "unit": "g",
+      "category": "frozen",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "פלפל אדום",
+      "name_en": "Red bell pepper",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "רוטב סויה",
+      "name_en": "Soy sauce",
+      "amount": 15,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת ג׳ינג׳ר",
+      "name_en": "Ground ginger",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
   "instructions_he": [
     "מבשלים את האורז. מייבשים את הטופו וחותכים לקוביות.",
@@ -27,7 +104,9 @@
     "Fry the tofu in the oil until golden, then add the garlic, pepper and broccoli.",
     "Season with soy sauce and serve over the rice."
   ],
-  "cuisines": ["asian"],
+  "cuisines": [
+    "asian"
+  ],
   "kashrut_type": "parve",
   "is_kosher": true,
   "shabbat_friendly": false

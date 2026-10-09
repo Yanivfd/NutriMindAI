@@ -1,0 +1,105 @@
+{
+  "id": "falafel-spice-salad",
+  "title_he": "סלט פלאפל מתובל",
+  "title_en": "Spiced falafel salad",
+  "prep_time_minutes": 15,
+  "meal_types": [
+    "lunch",
+    "dinner",
+    "snack"
+  ],
+  "calories": 470,
+  "protein_g": 18,
+  "carbs_g": 52,
+  "fat_g": 20,
+  "cuisines": [
+    "israeli",
+    "mizrahi"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "כדורי פלאפל מוכנים",
+      "name_en": "Prepared falafel balls",
+      "amount": 4,
+      "unit": "unit",
+      "category": "frozen",
+      "swaps": []
+    },
+    {
+      "name_he": "חסה",
+      "name_en": "Lettuce",
+      "amount": 60,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "טחינה גולמית",
+      "name_en": "Raw tahini",
+      "amount": 20,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מחממים פלאפל בתנור או מחבת. מערבבים טחינה עם לימון, כמון ומים.",
+    "מגישים מעל סלט ירקות ומפזרים פפריקה וזעתר."
+  ],
+  "instructions_en": [
+    "Warm the falafel in the oven or a pan. Whisk tahini with lemon, cumin and water.",
+    "Serve over chopped salad and finish with paprika and zaatar."
+  ]
+}

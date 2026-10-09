@@ -65,19 +65,43 @@
       "unit": "clove",
       "category": "produce",
       "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
     }
   ],
   "instructions_he": [
     "חותכים את הבטטה לקוביות ומבשלים במיקרוגל בכלי מכוסה 6-8 דקות.",
     "צולים את הסלמון במחבת עם שמן זית 3-4 דקות מכל צד.",
     "מאדים את השעועית עם שום כ-5 דקות.",
-    "מגישים עם מיץ לימון, מלח ופלפל."
+    "מגישים עם מיץ לימון, מלח ופלפל. מתבלים בפפריקה מעושנת, אבקת שום, פלפל שחור."
   ],
   "instructions_en": [
     "Cube the sweet potato and microwave in a covered dish for 6-8 minutes.",
     "Pan-sear the salmon in the olive oil for 3-4 minutes per side.",
     "Steam the green beans with the garlic for about 5 minutes.",
-    "Serve with lemon juice, salt and pepper."
+    "Serve with lemon juice, salt and pepper. Season with smoked paprika, garlic powder, black pepper."
   ],
   "cuisines": [
     "mediterranean"

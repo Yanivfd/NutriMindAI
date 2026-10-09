@@ -1,0 +1,104 @@
+{
+  "id": "zaatar-feta-salad",
+  "title_he": "סלט פטה וזעתר",
+  "title_en": "Zaatar feta salad",
+  "prep_time_minutes": 8,
+  "meal_types": [
+    "lunch",
+    "snack",
+    "dinner"
+  ],
+  "calories": 410,
+  "protein_g": 18,
+  "carbs_g": 28,
+  "fat_g": 24,
+  "cuisines": [
+    "mediterranean",
+    "israeli"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "גבינת פטה 5%",
+      "name_en": "Feta cheese 5%",
+      "amount": 80,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 2,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לחם מקמח מלא",
+      "name_en": "Whole wheat bread",
+      "amount": 1,
+      "unit": "slice",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "זיתים ירוקים",
+      "name_en": "Green olives",
+      "amount": 30,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "סומאק",
+      "name_en": "Sumac",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "חותכים ירקות, מוסיפים פטה וזיתים.",
+    "מתבלים בשמן, זעתר, אורגנו וסומאק. מגישים עם לחם."
+  ],
+  "instructions_en": [
+    "Chop the vegetables; add feta and olives.",
+    "Dress with oil, zaatar, oregano and sumac. Serve with bread."
+  ]
+}

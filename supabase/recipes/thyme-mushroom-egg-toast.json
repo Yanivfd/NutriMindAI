@@ -1,0 +1,103 @@
+{
+  "id": "thyme-mushroom-egg-toast",
+  "title_he": "טוסט ביצה ופטריות בטימין",
+  "title_en": "Thyme mushroom egg toast",
+  "prep_time_minutes": 15,
+  "meal_types": [
+    "breakfast",
+    "lunch"
+  ],
+  "calories": 440,
+  "protein_g": 24,
+  "carbs_g": 36,
+  "fat_g": 20,
+  "cuisines": [
+    "mediterranean",
+    "international"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "ביצים",
+      "name_en": "Eggs",
+      "amount": 2,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "פטריות טריות",
+      "name_en": "Fresh mushrooms",
+      "amount": 150,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לחם מקמח מלא",
+      "name_en": "Whole wheat bread",
+      "amount": 2,
+      "unit": "slice",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 1,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "טימין",
+      "name_en": "Thyme",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מטגנים פטריות עם שום, טימין ואורגנו.",
+    "מטגנים ביצים ומגישים על לחם עם הפטריות."
+  ],
+  "instructions_en": [
+    "Saute mushrooms with garlic, thyme and oregano.",
+    "Cook the eggs and serve on toast with the mushrooms."
+  ]
+}

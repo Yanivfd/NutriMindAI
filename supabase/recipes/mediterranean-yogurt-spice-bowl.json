@@ -1,0 +1,103 @@
+{
+  "id": "mediterranean-yogurt-spice-bowl",
+  "title_he": "קערת יוגורט ים-תיכונית מתובלת",
+  "title_en": "Mediterranean spiced yogurt bowl",
+  "prep_time_minutes": 8,
+  "meal_types": [
+    "breakfast",
+    "snack"
+  ],
+  "calories": 380,
+  "protein_g": 26,
+  "carbs_g": 40,
+  "fat_g": 12,
+  "cuisines": [
+    "mediterranean",
+    "israeli"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "יוגורט יווני 5%",
+      "name_en": "Greek yogurt 5%",
+      "amount": 200,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה שרי",
+      "name_en": "Cherry tomatoes",
+      "amount": 80,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לחם מקמח מלא",
+      "name_en": "Whole wheat bread",
+      "amount": 1,
+      "unit": "slice",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "זיתים ירוקים",
+      "name_en": "Green olives",
+      "amount": 20,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "סומאק",
+      "name_en": "Sumac",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מערבבים יוגורט עם זעתר, סומאק ואורגנו.",
+    "מגישים עם ירקות, זיתים ולחם."
+  ],
+  "instructions_en": [
+    "Mix yogurt with zaatar, sumac and oregano.",
+    "Serve with vegetables, olives and bread."
+  ]
+}

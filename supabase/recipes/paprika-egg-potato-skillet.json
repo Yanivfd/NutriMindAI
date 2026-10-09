@@ -1,0 +1,106 @@
+{
+  "id": "paprika-egg-potato-skillet",
+  "title_he": "מחבת ביצים ותפוח אדמה בפפריקה",
+  "title_en": "Paprika egg and potato skillet",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "breakfast",
+    "lunch",
+    "dinner"
+  ],
+  "calories": 480,
+  "protein_g": 22,
+  "carbs_g": 48,
+  "fat_g": 22,
+  "cuisines": [
+    "israeli",
+    "mediterranean"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "ביצים",
+      "name_en": "Eggs",
+      "amount": 3,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "תפוח אדמה",
+      "name_en": "Potato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל אדום",
+      "name_en": "Red bell pepper",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 15,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "חותכים תפוח אדמה לקוביות ומטגנים עם בצל ופלפל עד ריכוך.",
+    "מתבלים בפפריקה, כמון, אורגנו ומלח.",
+    "שוברים ביצים מעל, מכסים ומבשלים עד שהחלבון מתייצב."
+  ],
+  "instructions_en": [
+    "Cube the potato and saute with onion and pepper until tender.",
+    "Season with paprika, cumin, oregano and salt.",
+    "Crack eggs on top, cover and cook until the whites set."
+  ]
+}

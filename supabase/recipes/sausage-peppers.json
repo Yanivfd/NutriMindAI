@@ -3,21 +3,94 @@
   "title_he": "נקניקייה עם פלפלים",
   "title_en": "Sausage and peppers",
   "prep_time_minutes": 20,
-  "meal_types": ["lunch", "dinner"],
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
   "calories": 510,
   "protein_g": 24,
   "carbs_g": 42,
   "fat_g": 26,
   "ingredients": [
-    {"name_he": "נקניקיית חזיר", "name_en": "Pork sausage", "amount": 120, "unit": "g", "category": "meat_fish", "swaps": []},
-    {"name_he": "פלפל אדום", "name_en": "Red bell pepper", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "בצל", "name_en": "Onion", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "לחמניה", "name_en": "Bread roll", "amount": 1, "unit": "unit", "category": "bakery", "swaps": []},
-    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 5, "unit": "ml", "category": "pantry", "swaps": []}
+    {
+      "name_he": "נקניקיית חזיר",
+      "name_en": "Pork sausage",
+      "amount": 120,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל אדום",
+      "name_en": "Red bell pepper",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לחמניה",
+      "name_en": "Bread roll",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 5,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
-  "instructions_he": ["פורסים את הנקניקייה ומטגנים עם בצל ופלפל בשמן 10 דקות.", "מתבלים במלח.", "מגישים בלחמניה."],
-  "instructions_en": ["Slice the sausage and fry it with the onion and pepper in the oil for 10 minutes.", "Season with salt.", "Serve in the roll."],
-  "cuisines": ["italian", "american"],
+  "instructions_he": [
+    "פורסים את הנקניקייה ומטגנים עם בצל ופלפל בשמן 10 דקות.",
+    "מתבלים במלח.",
+    "מגישים בלחמניה."
+  ],
+  "instructions_en": [
+    "Slice the sausage and fry it with the onion and pepper in the oil for 10 minutes.",
+    "Season with salt.",
+    "Serve in the roll."
+  ],
+  "cuisines": [
+    "italian",
+    "american"
+  ],
   "kashrut_type": "meat",
   "is_kosher": false,
   "shabbat_friendly": false

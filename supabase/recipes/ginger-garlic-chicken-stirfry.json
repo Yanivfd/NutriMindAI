@@ -1,0 +1,113 @@
+{
+  "id": "ginger-garlic-chicken-stirfry",
+  "title_he": "מוקפץ עוף בג׳ינג׳ר ושום",
+  "title_en": "Ginger garlic chicken stir-fry",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 500,
+  "protein_g": 42,
+  "carbs_g": 48,
+  "fat_g": 14,
+  "cuisines": [
+    "asian"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "חזה עוף",
+      "name_en": "Chicken breast",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 50,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל אדום",
+      "name_en": "Red bell pepper",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "ברוקולי קפוא",
+      "name_en": "Frozen broccoli",
+      "amount": 120,
+      "unit": "g",
+      "category": "frozen",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 3,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "רוטב סויה",
+      "name_en": "Soy sauce",
+      "amount": 20,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת ג׳ינג׳ר",
+      "name_en": "Ground ginger",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 0.75,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים אורז. מקפיצים עוף בשמן עם ג׳ינג׳ר, צ׳ילי ושום.",
+    "מוסיפים ירקות ורוטב סויה ומבשלים עד שהעוף מוכן.",
+    "מגישים מעל האורז."
+  ],
+  "instructions_en": [
+    "Cook the rice. Stir-fry chicken in oil with ginger, chili and garlic.",
+    "Add vegetables and soy sauce; cook until the chicken is done.",
+    "Serve over the rice."
+  ]
+}

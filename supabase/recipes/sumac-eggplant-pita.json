@@ -1,0 +1,104 @@
+{
+  "id": "sumac-eggplant-pita",
+  "title_he": "פיתה חציל בסומאק",
+  "title_en": "Sumac eggplant pita",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner",
+    "snack"
+  ],
+  "calories": 450,
+  "protein_g": 12,
+  "carbs_g": 58,
+  "fat_g": 18,
+  "cuisines": [
+    "israeli",
+    "mizrahi"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "חציל",
+      "name_en": "Eggplant",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פיתה מקמח מלא",
+      "name_en": "Whole wheat pita",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "טחינה גולמית",
+      "name_en": "Raw tahini",
+      "amount": 20,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 15,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "סומאק",
+      "name_en": "Sumac",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "חותכים חציל לפרוסות, מתבלים ומטגנים או צולים עד ריכוך.",
+    "ממלאים פיתה עם חציל, טחינה, עגבנייה וסומאק נוסף."
+  ],
+  "instructions_en": [
+    "Slice eggplant, season and pan-fry or roast until soft.",
+    "Fill pita with eggplant, tahini, tomato and an extra pinch of sumac."
+  ]
+}

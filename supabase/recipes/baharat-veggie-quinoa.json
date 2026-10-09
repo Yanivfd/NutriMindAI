@@ -1,0 +1,105 @@
+{
+  "id": "baharat-veggie-quinoa",
+  "title_he": "קינואה וירקות בבהרט",
+  "title_en": "Baharat vegetable quinoa",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner",
+    "snack"
+  ],
+  "calories": 430,
+  "protein_g": 16,
+  "carbs_g": 58,
+  "fat_g": 14,
+  "cuisines": [
+    "mizrahi",
+    "mediterranean"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "קינואה",
+      "name_en": "Quinoa",
+      "amount": 60,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "קישוא",
+      "name_en": "Zucchini",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל אדום",
+      "name_en": "Red bell pepper",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "גרגירי חומוס מבושלים",
+      "name_en": "Cooked chickpeas",
+      "amount": 100,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 12,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בהרט",
+      "name_en": "Baharat",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "קינמון",
+      "name_en": "Cinnamon",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים קינואה. מקפיצים ירקות וחומוס עם שמן וכל התבלינים.",
+    "מערבבים יחד. טעים גם בטמפרטורת החדר."
+  ],
+  "instructions_en": [
+    "Cook the quinoa. Saute vegetables and chickpeas with oil and all spices.",
+    "Toss together. Also good at room temperature."
+  ]
+}

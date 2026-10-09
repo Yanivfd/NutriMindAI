@@ -64,15 +64,31 @@
       "unit": "g",
       "category": "pantry",
       "swaps": []
+    },
+    {
+      "name_he": "קינמון",
+      "name_en": "Cinnamon",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת ג׳ינג׳ר",
+      "name_en": "Ground ginger",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
     }
   ],
   "instructions_he": [
     "מעבירים את היוגורט לקערה.",
-    "מוסיפים בננה פרוסה, גרנולה ואגוזים ומזלפים דבש."
+    "מוסיפים בננה פרוסה, גרנולה ואגוזים ומזלפים דבש. מתבלים בקינמון, אבקת ג׳ינג׳ר."
   ],
   "instructions_en": [
     "Spoon the yogurt into a bowl.",
-    "Top with sliced banana, granola and walnuts and drizzle with honey."
+    "Top with sliced banana, granola and walnuts and drizzle with honey. Season with cinnamon, ground ginger."
   ],
   "cuisines": [
     "international",

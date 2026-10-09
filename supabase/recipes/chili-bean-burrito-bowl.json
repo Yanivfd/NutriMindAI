@@ -1,0 +1,112 @@
+{
+  "id": "chili-bean-burrito-bowl",
+  "title_he": "קערת בוריטו שעועית חריפה",
+  "title_en": "Spicy bean burrito bowl",
+  "prep_time_minutes": 18,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 480,
+  "protein_g": 20,
+  "carbs_g": 68,
+  "fat_g": 12,
+  "cuisines": [
+    "american",
+    "international"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "שעועית שחורה מבושלת",
+      "name_en": "Cooked black beans",
+      "amount": 180,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 55,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "תירס קפוא",
+      "name_en": "Frozen corn",
+      "amount": 80,
+      "unit": "g",
+      "category": "frozen",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל סגול",
+      "name_en": "Red onion",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת צ׳ילי",
+      "name_en": "Chili powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים אורז. מחממים שעועית ותירס עם כל התבלינים.",
+    "מגישים בקערה עם עגבנייה, בצל ומיץ לימון."
+  ],
+  "instructions_en": [
+    "Cook the rice. Warm beans and corn with all the spices.",
+    "Serve in a bowl with tomato, onion and lemon juice."
+  ]
+}

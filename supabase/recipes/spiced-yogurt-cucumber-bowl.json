@@ -1,0 +1,95 @@
+{
+  "id": "spiced-yogurt-cucumber-bowl",
+  "title_he": "קערת יוגורט מלפפון מתובלת",
+  "title_en": "Spiced yogurt cucumber bowl",
+  "prep_time_minutes": 5,
+  "meal_types": [
+    "snack",
+    "breakfast"
+  ],
+  "calories": 360,
+  "protein_g": 24,
+  "carbs_g": 34,
+  "fat_g": 12,
+  "cuisines": [
+    "israeli",
+    "mediterranean"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "יוגורט יווני 5%",
+      "name_en": "Greek yogurt 5%",
+      "amount": 200,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "לחם מקמח מלא",
+      "name_en": "Whole wheat bread",
+      "amount": 1,
+      "unit": "slice",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "נענע יבשה",
+      "name_en": "Dried mint",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מערבבים יוגורט עם מלפפון קצוץ וכל התבלינים.",
+    "מגישים עם לחם."
+  ],
+  "instructions_en": [
+    "Mix yogurt with chopped cucumber and all the spices.",
+    "Serve with bread."
+  ]
+}

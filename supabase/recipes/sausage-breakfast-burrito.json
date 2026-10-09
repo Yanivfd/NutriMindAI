@@ -3,21 +3,92 @@
   "title_he": "בוריטו ארוחת בוקר",
   "title_en": "Sausage breakfast burrito",
   "prep_time_minutes": 15,
-  "meal_types": ["breakfast"],
+  "meal_types": [
+    "breakfast"
+  ],
   "calories": 540,
   "protein_g": 28,
   "carbs_g": 42,
   "fat_g": 28,
   "ingredients": [
-    {"name_he": "טורטייה", "name_en": "Flour tortilla", "amount": 1, "unit": "unit", "category": "bakery", "swaps": []},
-    {"name_he": "נקניקיית חזיר", "name_en": "Pork sausage", "amount": 60, "unit": "g", "category": "meat_fish", "swaps": []},
-    {"name_he": "ביצה", "name_en": "Egg", "amount": 2, "unit": "unit", "category": "dairy", "swaps": []},
-    {"name_he": "גבינה צהובה", "name_en": "Cheddar cheese", "amount": 20, "unit": "g", "category": "dairy", "swaps": []},
-    {"name_he": "פלפל ירוק", "name_en": "Green bell pepper", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []}
+    {
+      "name_he": "טורטייה",
+      "name_en": "Flour tortilla",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "נקניקיית חזיר",
+      "name_en": "Pork sausage",
+      "amount": 60,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "ביצה",
+      "name_en": "Egg",
+      "amount": 2,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "גבינה צהובה",
+      "name_en": "Cheddar cheese",
+      "amount": 20,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל ירוק",
+      "name_en": "Green bell pepper",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת צ׳ילי",
+      "name_en": "Chili powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
-  "instructions_he": ["מטגנים נקניקייה ופלפל, ומוסיפים ביצים טרופות.", "מפזרים גבינה ומגלגלים בטורטייה.", "מגישים חם."],
-  "instructions_en": ["Fry the sausage and pepper, then add the beaten eggs.", "Sprinkle on the cheese and roll everything in the tortilla.", "Serve warm."],
-  "cuisines": ["american"],
+  "instructions_he": [
+    "מטגנים נקניקייה ופלפל, ומוסיפים ביצים טרופות.",
+    "מפזרים גבינה ומגלגלים בטורטייה.",
+    "מגישים חם. מתבלים באבקת צ׳ילי, כמון טחון, פפריקה מעושנת."
+  ],
+  "instructions_en": [
+    "Fry the sausage and pepper, then add the beaten eggs.",
+    "Sprinkle on the cheese and roll everything in the tortilla.",
+    "Serve warm. Season with chili powder, ground cumin, smoked paprika."
+  ],
+  "cuisines": [
+    "american"
+  ],
   "kashrut_type": "mixed",
   "is_kosher": false,
   "shabbat_friendly": false

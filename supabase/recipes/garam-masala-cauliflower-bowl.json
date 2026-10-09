@@ -1,0 +1,105 @@
+{
+  "id": "garam-masala-cauliflower-bowl",
+  "title_he": "קערת כרובית בגראם מסאלה",
+  "title_en": "Garam masala cauliflower bowl",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 420,
+  "protein_g": 16,
+  "carbs_g": 58,
+  "fat_g": 14,
+  "cuisines": [
+    "asian",
+    "international"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "כרובית קפואה",
+      "name_en": "Frozen cauliflower",
+      "amount": 200,
+      "unit": "g",
+      "category": "frozen",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "גרגירי חומוס מבושלים",
+      "name_en": "Cooked chickpeas",
+      "amount": 120,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 50,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 12,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "גראם מסאלה",
+      "name_en": "Garam masala",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כורכום",
+      "name_en": "Turmeric",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים אורז. מקפיצים כרובית וחומוס עם שמן, שום וכל התבלינים.",
+    "מגישים מעל האורז."
+  ],
+  "instructions_en": [
+    "Cook the rice. Stir-fry cauliflower and chickpeas with oil, garlic and all the spices.",
+    "Serve over the rice."
+  ]
+}

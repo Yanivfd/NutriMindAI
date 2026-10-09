@@ -1,0 +1,111 @@
+{
+  "id": "spicy-sausage-pepper-pasta",
+  "title_he": "פסטה נקניקיות ופלפלים חריפה",
+  "title_en": "Spicy sausage and pepper pasta",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 580,
+  "protein_g": 28,
+  "carbs_g": 62,
+  "fat_g": 24,
+  "cuisines": [
+    "italian",
+    "american"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": false,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "נקניקיות חזיר",
+      "name_en": "Pork sausages",
+      "amount": 120,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "פסטה",
+      "name_en": "Pasta",
+      "amount": 80,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל אדום",
+      "name_en": "Red bell pepper",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבניות מרוסקות (שימורים)",
+      "name_en": "Canned crushed tomatoes",
+      "amount": 200,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בזיליקום יבש",
+      "name_en": "Dried basil",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים פסטה. מטגנים נקניקיות פרוסות עם בצל ופלפל.",
+    "מוסיפים עגבניות ותבלינים, מערבבים עם הפסטה."
+  ],
+  "instructions_en": [
+    "Cook the pasta. Brown sliced sausages with onion and pepper.",
+    "Add tomatoes and spices; toss with the pasta."
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "chili-garlic-tofu-noodles",
+  "title_he": "נודלס טופו בשום וצ׳ילי",
+  "title_en": "Chili garlic tofu noodles",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 480,
+  "protein_g": 26,
+  "carbs_g": 58,
+  "fat_g": 16,
+  "cuisines": [
+    "asian"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "טופו קשה",
+      "name_en": "Firm tofu",
+      "amount": 160,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "אטריות אורז",
+      "name_en": "Rice noodles",
+      "amount": 70,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "ברוקולי קפוא",
+      "name_en": "Frozen broccoli",
+      "amount": 120,
+      "unit": "g",
+      "category": "frozen",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 3,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "רוטב סויה",
+      "name_en": "Soy sauce",
+      "amount": 20,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת ג׳ינג׳ר",
+      "name_en": "Ground ginger",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים אטריות. צולים טופו בשמן עד הזהבה.",
+    "מוסיפים שום, ברוקולי, צ׳ילי וג׳ינג׳ר ומקפיצים דקה.",
+    "מוסיפים אטריות, רוטב סויה ופלפל ומערבבים."
+  ],
+  "instructions_en": [
+    "Cook the noodles. Fry the tofu in oil until golden.",
+    "Add garlic, broccoli, chili flakes and ginger; stir-fry briefly.",
+    "Toss with noodles, soy sauce and black pepper."
+  ]
+}

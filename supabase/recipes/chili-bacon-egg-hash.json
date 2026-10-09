@@ -1,0 +1,94 @@
+{
+  "id": "chili-bacon-egg-hash",
+  "title_he": "האש ביצים ובייקון חריף",
+  "title_en": "Chili bacon egg hash",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "breakfast",
+    "lunch"
+  ],
+  "calories": 560,
+  "protein_g": 28,
+  "carbs_g": 36,
+  "fat_g": 32,
+  "cuisines": [
+    "american"
+  ],
+  "kashrut_type": "mixed",
+  "is_kosher": false,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "בייקון",
+      "name_en": "Bacon",
+      "amount": 60,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "ביצים",
+      "name_en": "Eggs",
+      "amount": 2,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "תפוח אדמה",
+      "name_en": "Potato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת צ׳ילי",
+      "name_en": "Chili powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מטגנים בייקון, מוסיפים תפוח אדמה ובצל עם התבלינים.",
+    "שוברים ביצים מעל ומבשלים עד מוכן."
+  ],
+  "instructions_en": [
+    "Cook the bacon, then add potato and onion with the spices.",
+    "Crack eggs on top and cook until set."
+  ]
+}

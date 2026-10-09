@@ -3,22 +3,101 @@
   "title_he": "קציצות סרטן",
   "title_en": "Crab cakes",
   "prep_time_minutes": 20,
-  "meal_types": ["lunch", "dinner"],
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
   "calories": 470,
   "protein_g": 28,
   "carbs_g": 30,
   "fat_g": 24,
   "ingredients": [
-    {"name_he": "בשר סרטן", "name_en": "Crab meat", "amount": 150, "unit": "g", "category": "meat_fish", "swaps": []},
-    {"name_he": "פירורי לחם", "name_en": "Breadcrumbs", "amount": 30, "unit": "g", "category": "pantry", "swaps": []},
-    {"name_he": "ביצה", "name_en": "Egg", "amount": 1, "unit": "unit", "category": "dairy", "swaps": []},
-    {"name_he": "בצל ירוק", "name_en": "Scallion", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "שמן קנולה", "name_en": "Canola oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
-    {"name_he": "לימון", "name_en": "Lemon", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []}
+    {
+      "name_he": "בשר סרטן",
+      "name_en": "Crab meat",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "פירורי לחם",
+      "name_en": "Breadcrumbs",
+      "amount": 30,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "ביצה",
+      "name_en": "Egg",
+      "amount": 1,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל ירוק",
+      "name_en": "Scallion",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "לימון",
+      "name_en": "Lemon",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת צ׳ילי",
+      "name_en": "Chili powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
-  "instructions_he": ["מערבבים סרטן, פירורים, ביצה ובצל ירוק ויוצרים שתי קציצות.", "מטגנים בשמן 4 דקות מכל צד עד שהן זהובות.", "מגישים עם לימון."],
-  "instructions_en": ["Mix the crab, breadcrumbs, egg and scallion and shape two cakes.", "Fry them in the oil for 4 minutes per side until golden.", "Serve with lemon."],
-  "cuisines": ["american"],
+  "instructions_he": [
+    "מערבבים סרטן, פירורים, ביצה ובצל ירוק ויוצרים שתי קציצות.",
+    "מטגנים בשמן 4 דקות מכל צד עד שהן זהובות.",
+    "מגישים עם לימון. מתבלים באבקת צ׳ילי, פפריקה מעושנת, אבקת שום."
+  ],
+  "instructions_en": [
+    "Mix the crab, breadcrumbs, egg and scallion and shape two cakes.",
+    "Fry them in the oil for 4 minutes per side until golden.",
+    "Serve with lemon. Season with chili powder, smoked paprika, garlic powder."
+  ],
+  "cuisines": [
+    "american"
+  ],
   "kashrut_type": "parve",
   "is_kosher": false,
   "shabbat_friendly": false

@@ -1,0 +1,95 @@
+{
+  "id": "herbed-cottage-spice-bowl",
+  "title_he": "קערת קוטג׳ עם תבלינים",
+  "title_en": "Herbed spiced cottage bowl",
+  "prep_time_minutes": 5,
+  "meal_types": [
+    "breakfast",
+    "snack",
+    "lunch"
+  ],
+  "calories": 390,
+  "protein_g": 34,
+  "carbs_g": 32,
+  "fat_g": 12,
+  "cuisines": [
+    "israeli"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "קוטג׳ 5%",
+      "name_en": "Cottage cheese 5%",
+      "amount": 220,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "לחם מקמח מלא",
+      "name_en": "Whole wheat bread",
+      "amount": 2,
+      "unit": "slice",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה שרי",
+      "name_en": "Cherry tomatoes",
+      "amount": 80,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מערבבים קוטג׳ עם זעתר, פפריקה, אורגנו ופלפל.",
+    "מגישים עם לחם וירקות חתוכים."
+  ],
+  "instructions_en": [
+    "Mix cottage cheese with zaatar, paprika, oregano and black pepper.",
+    "Serve with bread and chopped vegetables."
+  ]
+}

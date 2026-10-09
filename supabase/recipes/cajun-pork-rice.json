@@ -1,0 +1,110 @@
+{
+  "id": "cajun-pork-rice",
+  "title_he": "חזיר קאיון עם אורז",
+  "title_en": "Cajun pork with rice",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 540,
+  "protein_g": 36,
+  "carbs_g": 50,
+  "fat_g": 20,
+  "cuisines": [
+    "american"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": false,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "נתח חזיר רזה",
+      "name_en": "Lean pork cut",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 55,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל ירוק",
+      "name_en": "Green bell pepper",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן קנולה",
+      "name_en": "Canola oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת צ׳ילי",
+      "name_en": "Chili powder",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "טימין",
+      "name_en": "Thyme",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים אורז. מתבלים חזיר בתערובת קאיון וצולים.",
+    "מוסיפים בצל ופלפל ומגישים מעל האורז."
+  ],
+  "instructions_en": [
+    "Cook the rice. Season pork with the Cajun mix and sear.",
+    "Add onion and pepper; serve over rice."
+  ]
+}

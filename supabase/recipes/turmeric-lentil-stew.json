@@ -1,0 +1,114 @@
+{
+  "id": "turmeric-lentil-stew",
+  "title_he": "תבשיל עדשים בכורכום",
+  "title_en": "Turmeric lentil stew",
+  "prep_time_minutes": 20,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 420,
+  "protein_g": 20,
+  "carbs_g": 60,
+  "fat_g": 10,
+  "cuisines": [
+    "mizrahi",
+    "israeli"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "עדשים אדומות",
+      "name_en": "Red lentils",
+      "amount": 70,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "גזר",
+      "name_en": "Carrot",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבניות מרוסקות (שימורים)",
+      "name_en": "Canned crushed tomatoes",
+      "amount": 200,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כורכום",
+      "name_en": "Turmeric",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כוסברה טחונה",
+      "name_en": "Ground coriander",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מטגנים בצל, שום וגזר בשמן עם כל התבלינים כ-3 דקות.",
+    "מוסיפים עדשים, עגבניות ומים ומבשלים כ-15 דקות עד ריכוך.",
+    "מתבלים במלח ומגישים חם או בטמפרטורת החדר."
+  ],
+  "instructions_en": [
+    "Saute onion, garlic and carrot in oil with all the spices for about 3 minutes.",
+    "Add lentils, tomatoes and water; simmer about 15 minutes until soft.",
+    "Season with salt and serve warm or at room temperature."
+  ]
+}

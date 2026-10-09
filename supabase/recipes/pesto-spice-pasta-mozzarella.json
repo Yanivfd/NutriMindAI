@@ -1,0 +1,94 @@
+{
+  "id": "pesto-spice-pasta-mozzarella",
+  "title_he": "פסטה פסטו מתובלת עם מוצרלה",
+  "title_en": "Spiced pesto pasta with mozzarella",
+  "prep_time_minutes": 15,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 560,
+  "protein_g": 24,
+  "carbs_g": 62,
+  "fat_g": 24,
+  "cuisines": [
+    "italian"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "פסטה מקמח מלא",
+      "name_en": "Whole wheat pasta",
+      "amount": 80,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "רוטב פסטו צמחי",
+      "name_en": "Plant-based pesto",
+      "amount": 30,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "מוצרלה 5%",
+      "name_en": "Mozzarella 5%",
+      "amount": 60,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה שרי",
+      "name_en": "Cherry tomatoes",
+      "amount": 100,
+      "unit": "g",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בזיליקום יבש",
+      "name_en": "Dried basil",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מבשלים פסטה. מערבבים עם פסטו, תבלינים ועגבניות שרי.",
+    "מפזרים מוצרלה מעל ומגישים."
+  ],
+  "instructions_en": [
+    "Cook the pasta. Toss with pesto, spices and cherry tomatoes.",
+    "Top with mozzarella and serve."
+  ]
+}

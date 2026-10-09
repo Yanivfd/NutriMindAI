@@ -3,32 +3,119 @@
   "title_he": "סביח בפיתה",
   "title_en": "Sabich in pita",
   "prep_time_minutes": 20,
-  "meal_types": ["lunch", "dinner"],
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
   "calories": 490,
   "protein_g": 18,
   "carbs_g": 52,
   "fat_g": 22,
   "ingredients": [
-    {"name_he": "חציל", "name_en": "Eggplant", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "ביצה", "name_en": "Egg", "amount": 1, "unit": "unit", "category": "dairy", "swaps": []},
-    {"name_he": "טחינה גולמית", "name_en": "Raw tahini", "amount": 15, "unit": "g", "category": "pantry", "swaps": []},
-    {"name_he": "פיתה מקמח מלא", "name_en": "Whole wheat pita", "amount": 1, "unit": "unit", "category": "bakery", "swaps": []},
-    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "מלפפון", "name_en": "Cucumber", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "פטרוזיליה", "name_en": "Parsley", "amount": 10, "unit": "g", "category": "produce", "swaps": [], "insect_check": true},
-    {"name_he": "אמבה", "name_en": "Mango amba", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []}
+    {
+      "name_he": "חציל",
+      "name_en": "Eggplant",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "ביצה",
+      "name_en": "Egg",
+      "amount": 1,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "טחינה גולמית",
+      "name_en": "Raw tahini",
+      "amount": 15,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פיתה מקמח מלא",
+      "name_en": "Whole wheat pita",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פטרוזיליה",
+      "name_en": "Parsley",
+      "amount": 10,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "אמבה",
+      "name_en": "Mango amba",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "הריסה",
+      "name_en": "Harissa paste",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
   "instructions_he": [
     "מטגנים פרוסות חציל במעט שמן עד שהן רכות, ומבשלים ביצה קשה.",
     "מערבבים טחינה עם מיץ לימון ומעט מים.",
-    "ממלאים את הפיתה בחציל, ביצה, סלט קצוץ, טחינה ואמבה."
+    "ממלאים את הפיתה בחציל, ביצה, סלט קצוץ, טחינה ואמבה. מתבלים בכמון טחון, פפריקה, הריסה."
   ],
   "instructions_en": [
     "Fry the eggplant slices in a little oil until soft, and hard-boil the egg.",
     "Whisk the tahini with lemon juice and a little water.",
-    "Fill the pita with eggplant, egg, chopped salad, tahini and amba."
+    "Fill the pita with eggplant, egg, chopped salad, tahini and amba. Season with ground cumin, paprika, harissa paste."
   ],
-  "cuisines": ["israeli", "mizrahi"],
+  "cuisines": [
+    "israeli",
+    "mizrahi"
+  ],
   "kashrut_type": "parve",
   "is_kosher": true,
   "shabbat_friendly": true

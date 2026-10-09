@@ -3,18 +3,94 @@
   "title_he": "עוף אפוי עם אורז וירקות",
   "title_en": "Baked chicken with rice and vegetables",
   "prep_time_minutes": 20,
-  "meal_types": ["lunch", "dinner"],
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
   "calories": 530,
   "protein_g": 42,
   "carbs_g": 48,
   "fat_g": 14,
   "ingredients": [
-    {"name_he": "חזה עוף", "name_en": "Chicken breast", "amount": 150, "unit": "g", "category": "meat_fish", "swaps": [{"name_he": "חזה הודו", "name_en": "Turkey breast", "amount": 150, "unit": "g"}]},
-    {"name_he": "אורז", "name_en": "Rice", "amount": 60, "unit": "g", "category": "pantry", "swaps": []},
-    {"name_he": "גזר", "name_en": "Carrot", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "בצל", "name_en": "Onion", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
-    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 5, "unit": "ml", "category": "pantry", "swaps": []},
-    {"name_he": "פפריקה", "name_en": "Paprika", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []}
+    {
+      "name_he": "חזה עוף",
+      "name_en": "Chicken breast",
+      "amount": 150,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": [
+        {
+          "name_he": "חזה הודו",
+          "name_en": "Turkey breast",
+          "amount": 150,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "אורז",
+      "name_en": "Rice",
+      "amount": 60,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "גזר",
+      "name_en": "Carrot",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 0.5,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 5,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כורכום",
+      "name_en": "Turmeric",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
   ],
   "instructions_he": [
     "מתבלים את העוף בפפריקה ומלח ואופים או צולים 15 דקות עד שהוא מוכן.",
@@ -26,7 +102,9 @@
     "Cook the rice with the chopped carrot and onion.",
     "Serve the chicken over the rice."
   ],
-  "cuisines": ["israeli"],
+  "cuisines": [
+    "israeli"
+  ],
   "kashrut_type": "meat",
   "is_kosher": true,
   "shabbat_friendly": false

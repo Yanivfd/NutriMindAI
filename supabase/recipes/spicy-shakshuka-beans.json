@@ -1,0 +1,123 @@
+{
+  "id": "spicy-shakshuka-beans",
+  "title_he": "שקשוקה שעועית חריפה",
+  "title_en": "Spicy bean shakshuka",
+  "prep_time_minutes": 18,
+  "meal_types": [
+    "breakfast",
+    "lunch",
+    "dinner"
+  ],
+  "calories": 490,
+  "protein_g": 26,
+  "carbs_g": 52,
+  "fat_g": 18,
+  "cuisines": [
+    "israeli",
+    "mizrahi"
+  ],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "ביצים",
+      "name_en": "Eggs",
+      "amount": 3,
+      "unit": "unit",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "שעועית לבנה מבושלת",
+      "name_en": "Cooked white beans",
+      "amount": 150,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "עגבניות מרוסקות (שימורים)",
+      "name_en": "Canned crushed tomatoes",
+      "amount": 300,
+      "unit": "g",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בצל",
+      "name_en": "Onion",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שום",
+      "name_en": "Garlic",
+      "amount": 2,
+      "unit": "clove",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "פיתה מקמח מלא",
+      "name_en": "Whole wheat pita",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "הריסה",
+      "name_en": "Harissa paste",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה",
+      "name_en": "Paprika",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כורכום",
+      "name_en": "Turmeric",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מטגנים בצל ושום, מוסיפים הריסה ותבלינים, אחר כך עגבניות ושעועית.",
+    "יוצרים גומות, שוברים ביצים ומבשלים עד התייצבות.",
+    "מגישים עם פיתה."
+  ],
+  "instructions_en": [
+    "Saute onion and garlic, add harissa and spices, then tomatoes and beans.",
+    "Make wells, crack in eggs and cook until set.",
+    "Serve with pita."
+  ]
+}

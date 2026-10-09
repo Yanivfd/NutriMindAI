@@ -1,0 +1,112 @@
+{
+  "id": "smoky-paprika-turkey-wrap",
+  "title_he": "טורטיה הודו בפפריקה מעושנת",
+  "title_en": "Smoky paprika turkey wrap",
+  "prep_time_minutes": 15,
+  "meal_types": [
+    "lunch",
+    "dinner"
+  ],
+  "calories": 510,
+  "protein_g": 40,
+  "carbs_g": 48,
+  "fat_g": 16,
+  "cuisines": [
+    "american",
+    "international"
+  ],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "חזה הודו",
+      "name_en": "Turkey breast",
+      "amount": 140,
+      "unit": "g",
+      "category": "meat_fish",
+      "swaps": []
+    },
+    {
+      "name_he": "טורטיה מקמח מלא",
+      "name_en": "Whole wheat tortilla",
+      "amount": 1,
+      "unit": "unit",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "חסה",
+      "name_en": "Lettuce",
+      "amount": 40,
+      "unit": "g",
+      "category": "produce",
+      "swaps": [],
+      "insect_check": true
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 8,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פפריקה מעושנת",
+      "name_en": "Smoked paprika",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת בצל",
+      "name_en": "Onion powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פתיתי צ׳ילי",
+      "name_en": "Chili flakes",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "כמון טחון",
+      "name_en": "Ground cumin",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "פורסים הודו ומתבלים בכל התבלינים. צולים בשמן כ-6 דקות.",
+    "ממלאים טורטיה בהודו, חסה ועגבנייה."
+  ],
+  "instructions_en": [
+    "Slice the turkey and coat with all the spices. Cook in oil about 6 minutes.",
+    "Fill the tortilla with turkey, lettuce and tomato."
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "oregano-mozzarella-toast",
+  "title_he": "טוסט מוצרלה באורגנו",
+  "title_en": "Oregano mozzarella toast",
+  "prep_time_minutes": 10,
+  "meal_types": [
+    "breakfast",
+    "lunch",
+    "snack"
+  ],
+  "calories": 450,
+  "protein_g": 26,
+  "carbs_g": 40,
+  "fat_g": 20,
+  "cuisines": [
+    "italian",
+    "mediterranean"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": false,
+  "ingredients": [
+    {
+      "name_he": "לחם מקמח מלא",
+      "name_en": "Whole wheat bread",
+      "amount": 2,
+      "unit": "slice",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "מוצרלה 5%",
+      "name_en": "Mozzarella 5%",
+      "amount": 80,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 8,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אורגנו",
+      "name_en": "Oregano",
+      "amount": 1.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "בזיליקום יבש",
+      "name_en": "Dried basil",
+      "amount": 1,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "אבקת שום",
+      "name_en": "Garlic powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "שמים על הלחם עגבנייה ומוצרלה, מפזרים תבלינים ומזלפים שמן.",
+    "מכניסים לתנור או טוסטר-אובן עד שהגבינה נמסה."
+  ],
+  "instructions_en": [
+    "Top bread with tomato and mozzarella; sprinkle spices and drizzle oil.",
+    "Bake or toast until the cheese melts."
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "zaatar-labneh-plate",
+  "title_he": "צלחת לבנה עם זעתר",
+  "title_en": "Labneh plate with zaatar",
+  "prep_time_minutes": 5,
+  "meal_types": [
+    "breakfast",
+    "snack",
+    "lunch"
+  ],
+  "calories": 400,
+  "protein_g": 22,
+  "carbs_g": 36,
+  "fat_g": 18,
+  "cuisines": [
+    "israeli",
+    "mediterranean"
+  ],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": true,
+  "ingredients": [
+    {
+      "name_he": "לבנה 5%",
+      "name_en": "Labneh 5%",
+      "amount": 180,
+      "unit": "g",
+      "category": "dairy",
+      "swaps": [
+        {
+          "name_he": "יוגורט יווני 5%",
+          "name_en": "Greek yogurt 5%",
+          "amount": 180,
+          "unit": "g"
+        }
+      ]
+    },
+    {
+      "name_he": "לחם מקמח מלא",
+      "name_en": "Whole wheat bread",
+      "amount": 2,
+      "unit": "slice",
+      "category": "bakery",
+      "swaps": []
+    },
+    {
+      "name_he": "מלפפון",
+      "name_en": "Cucumber",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "עגבנייה",
+      "name_en": "Tomato",
+      "amount": 1,
+      "unit": "unit",
+      "category": "produce",
+      "swaps": []
+    },
+    {
+      "name_he": "שמן זית",
+      "name_en": "Olive oil",
+      "amount": 10,
+      "unit": "ml",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "זעתר",
+      "name_en": "Zaatar",
+      "amount": 2,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "סומאק",
+      "name_en": "Sumac",
+      "amount": 0.5,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "פלפל שחור",
+      "name_en": "Black pepper",
+      "amount": 0.25,
+      "unit": "tsp",
+      "category": "pantry",
+      "swaps": []
+    }
+  ],
+  "instructions_he": [
+    "מורחים לבנה על הצלחת, מזלפים שמן זית ומפזרים זעתר וסומאק.",
+    "מגישים עם לחם, מלפפון ועגבנייה."
+  ],
+  "instructions_en": [
+    "Spread labneh on a plate, drizzle olive oil and sprinkle zaatar and sumac.",
+    "Serve with bread, cucumber and tomato."
+  ]
+}
