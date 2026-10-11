@@ -21,7 +21,6 @@ const MEAL_TYPES = ['breakfast', 'lunch', 'dinner', 'snack'];
 const CATEGORIES = ['produce', 'dairy', 'meat_fish', 'bakery', 'pantry', 'frozen', 'beverages'];
 const UNITS = ['g', 'ml', 'unit', 'tsp', 'clove', 'slice'];
 const MEAT_WORDS = ['chicken', 'turkey', 'beef', 'lamb', 'schnitzel'];
-const FISH_WORDS = ['salmon', 'tuna', 'fish'];
 const DAIRY_WORDS = ['cheese', 'yogurt', 'yoghurt', 'milk', 'cottage', 'mozzarella', 'feta', 'butter', 'cream'];
 const TREIF_WORDS = [
   'bacon',
@@ -55,7 +54,6 @@ function checkIngredient(recipe, item, where) {
   }
   const dairy = includesWord(item.name_en, DAIRY_WORDS);
   const meat = includesWord(item.name_en, MEAT_WORDS);
-  const fish = includesWord(item.name_en, FISH_WORDS);
   const treif = includesWord(item.name_en, TREIF_WORDS);
   // Mixed dishes combine meat and dairy, so they are never kosher. The other
   // types still have to match their ingredients, even when the dish is not kosher.
@@ -63,8 +61,9 @@ function checkIngredient(recipe, item, where) {
     if (recipe.kashrut_type === 'meat' && dairy) {
       problems.push(`${recipe.id} is meat but ${where} looks dairy (${item.name_en})`);
     }
-    if (recipe.kashrut_type === 'dairy' && (meat || fish)) {
-      problems.push(`${recipe.id} is dairy but ${where} looks like meat or fish (${item.name_en})`);
+    // Fish with dairy is allowed in kosher; only meat + dairy is forbidden.
+    if (recipe.kashrut_type === 'dairy' && meat) {
+      problems.push(`${recipe.id} is dairy but ${where} looks like meat (${item.name_en})`);
     }
     if (recipe.kashrut_type === 'parve' && (dairy || meat)) {
       problems.push(`${recipe.id} is parve but ${where} looks like meat or dairy (${item.name_en})`);

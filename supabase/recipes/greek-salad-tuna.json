@@ -1,17 +1,17 @@
 {
   "id": "greek-salad-tuna",
-  "title_he": "סלט יווני עם טונה",
-  "title_en": "Greek salad with tuna",
+  "title_he": "סלט יווני עם טונה ופטה",
+  "title_en": "Greek salad with tuna and feta",
   "prep_time_minutes": 10,
   "meal_types": [
     "lunch",
     "dinner",
     "snack"
   ],
-  "calories": 390,
-  "protein_g": 32,
-  "carbs_g": 18,
-  "fat_g": 20,
+  "calories": 510,
+  "protein_g": 43,
+  "carbs_g": 20,
+  "fat_g": 26,
   "ingredients": [
     {
       "name_he": "טונה במים",
@@ -19,6 +19,14 @@
       "amount": 120,
       "unit": "g",
       "category": "pantry",
+      "swaps": []
+    },
+    {
+      "name_he": "גבינת פטה 5%",
+      "name_en": "Feta cheese 5%",
+      "amount": 80,
+      "unit": "g",
+      "category": "dairy",
       "swaps": []
     },
     {
@@ -104,18 +112,18 @@
   ],
   "instructions_he": [
     "חותכים את הירקות לקוביות גסות.",
-    "מסננים את הטונה ומוסיפים לירקות יחד עם הזיתים.",
+    "מסננים את הטונה ומוסיפים לירקות יחד עם הזיתים והפטה המפוררת.",
     "מתבלים בשמן זית, מיץ לימון, מלח ואורגנו."
   ],
   "instructions_en": [
     "Cut the vegetables into large chunks.",
-    "Drain the tuna and add it to the vegetables with the olives.",
+    "Drain the tuna and add it to the vegetables with the olives and crumbled feta.",
     "Dress with olive oil, lemon juice, salt and oregano. Season with oregano, sumac, black pepper."
   ],
   "cuisines": [
     "mediterranean"
   ],
-  "kashrut_type": "parve",
+  "kashrut_type": "dairy",
   "is_kosher": true,
   "shabbat_friendly": true
 }
