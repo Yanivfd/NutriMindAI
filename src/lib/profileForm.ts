@@ -1,7 +1,14 @@
-import type { ActivityLevel, Profile, ProfileInput, Sex, SmokingStatus } from '../types/db.ts';
+import type {
+  ActivityLevel,
+  DeficitPace,
+  Profile,
+  ProfileInput,
+  Sex,
+  SmokingStatus,
+} from '../types/db.ts';
 import { CUISINES } from '../types/plan.ts';
 import type { Cuisine, KosherLevel, MealSlot, Weekday } from '../types/plan.ts';
-import { ageOn, calorieTargets } from './tdee.ts';
+import { ageOn, calorieTargets, DEFICIT_PACES } from './tdee.ts';
 
 export type WaitHours = 1 | 3 | 6;
 
@@ -12,6 +19,7 @@ export interface ProfileFormValues {
   currentWeightKg: string;
   targetWeightKg: string;
   activity: ActivityLevel;
+  deficitPace: DeficitPace;
   skipsBreakfast: boolean;
   officeDays: Weekday[];
   mealTimes: Record<MealSlot, string>;
@@ -47,6 +55,7 @@ export const DEFAULT_FORM_VALUES: ProfileFormValues = {
   currentWeightKg: '',
   targetWeightKg: '',
   activity: 'light',
+  deficitPace: 'steady',
   skipsBreakfast: true,
   officeDays: [],
   mealTimes: { breakfast: '08:00', lunch: '13:00', snack: '16:30', dinner: '19:30' },
@@ -83,6 +92,7 @@ export function profileToFormValues(profile: Profile): ProfileFormValues {
     currentWeightKg: String(Number(profile.current_weight_kg)),
     targetWeightKg: String(Number(profile.target_weight_kg)),
     activity: profile.activity_level,
+    deficitPace: profile.deficit_pace ?? 'steady',
     skipsBreakfast: profile.skips_breakfast,
     officeDays: profile.office_days,
     mealTimes: {
@@ -152,6 +162,7 @@ export function buildProfileInput(
   const coffeeBlackCups = clampCount(values.coffeeBlackCups, 8);
   const coffeeMilkCups = clampCount(values.coffeeMilkCups, 8);
   const coffeeSugarTsp = clampCount(values.coffeeSugarTsp, 2);
+  const deficitPace = DEFICIT_PACES.includes(values.deficitPace) ? values.deficitPace : 'steady';
   const targets = calorieTargets({
     birthDate: values.birthDate,
     sex: values.sex,
@@ -160,6 +171,7 @@ export function buildProfileInput(
     targetWeightKg: target,
     activity: values.activity,
     today,
+    deficitPace,
     smoking,
     coffeeBlackCups,
     coffeeMilkCups,
@@ -180,6 +192,7 @@ export function buildProfileInput(
       target_weight_kg: target,
       daily_calorie_target: targets.dailyTarget,
       weekly_cheat_bank: targets.weeklyCheatBank,
+      deficit_pace: deficitPace,
       skips_breakfast: values.skipsBreakfast,
       kosher_level: values.kosherLevel,
       meat_dairy_wait_hours: values.waitHours,

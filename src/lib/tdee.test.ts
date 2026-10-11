@@ -13,7 +13,7 @@ test('ageOn counts the birthday only once it has passed', () => {
   assert.equal(ageOn('1990-10-05', TODAY), 35);
 });
 
-test('calorieTargets: Mifflin-St Jeor with a 500 kcal deficit', () => {
+test('calorieTargets: Mifflin-St Jeor with steady deficit by default', () => {
   // BMR = 10*90 + 6.25*180 - 5*36 + 5 = 1850; x1.375 = 2543.75 -> 2540
   const t = calorieTargets({
     birthDate: '1990-01-01',
@@ -25,20 +25,24 @@ test('calorieTargets: Mifflin-St Jeor with a 500 kcal deficit', () => {
     today: TODAY,
   });
   assert.equal(t.maintenance, 2540);
-  assert.equal(t.dailyTarget, 2040);
-  assert.equal(t.weeklyCheatBank, 1000);
+  assert.equal(t.deficitKcal, 350);
+  assert.equal(t.dailyTarget, 2190);
+  assert.equal(t.weeklyCheatBank, 1100);
 });
 
-test('calorieTargets: smaller deficit near the goal, none when no loss is needed', () => {
+test('calorieTargets: easy / fast paces change the cut; none at goal', () => {
   const base = {
     birthDate: '1990-01-01',
     sex: 'male' as const,
     heightCm: 180,
     weightKg: 90,
+    targetWeightKg: 80,
     activity: 'light' as const,
     today: TODAY,
   };
-  assert.equal(calorieTargets({ ...base, targetWeightKg: 87 }).dailyTarget, 2190);
+  assert.equal(calorieTargets({ ...base, deficitPace: 'easy' }).dailyTarget, 2290);
+  assert.equal(calorieTargets({ ...base, deficitPace: 'fast' }).dailyTarget, 2040);
+  assert.equal(calorieTargets({ ...base, targetWeightKg: 90 }).deficitKcal, 0);
   assert.equal(calorieTargets({ ...base, targetWeightKg: 90 }).dailyTarget, 2540);
 });
 
@@ -52,6 +56,7 @@ test('calorieTargets never goes below the safe minimum', () => {
     targetWeightKg: 50,
     activity: 'sedentary',
     today: TODAY,
+    deficitPace: 'fast',
   });
   assert.equal(t.dailyTarget, 1200);
 });
@@ -86,7 +91,7 @@ test('daily smoking raises maintenance; a former smoker does not', () => {
     today: TODAY,
   };
   assert.equal(calorieTargets({ ...base, smoking: 'daily' }).maintenance, 2720);
-  assert.equal(calorieTargets({ ...base, smoking: 'daily' }).dailyTarget, 2220);
+  assert.equal(calorieTargets({ ...base, smoking: 'daily' }).dailyTarget, 2370);
   assert.equal(calorieTargets({ ...base, smoking: 'former' }).maintenance, 2540);
 });
 
@@ -114,10 +119,11 @@ const validForm: ProfileFormValues = {
   targetWeightKg: '80',
 };
 
-test('buildProfileInput stores coffee and smoking and shrinks the food target', () => {
+test('buildProfileInput stores coffee, smoking, and deficit pace', () => {
   const result = buildProfileInput(
     {
       ...validForm,
+      deficitPace: 'fast',
       smoking: 'daily',
       coffeeBlackCups: 3,
       coffeeMilkCups: 2,
@@ -127,6 +133,7 @@ test('buildProfileInput stores coffee and smoking and shrinks the food target', 
   );
   assert.ok(result.ok);
   assert.equal(result.input.smoking, 'daily');
+  assert.equal(result.input.deficit_pace, 'fast');
   assert.equal(result.input.coffee_black_cups, 3);
   assert.equal(result.input.coffee_milk_cups, 2);
   assert.equal(result.coffeeKcal, 120);
@@ -138,7 +145,8 @@ test('buildProfileInput accepts a valid form and a comma decimal', () => {
   assert.ok(result.ok);
   assert.equal(result.input.current_weight_kg, 90);
   assert.equal(result.input.start_weight_kg, 90);
-  assert.equal(result.input.daily_calorie_target, 2040);
+  assert.equal(result.input.deficit_pace, 'steady');
+  assert.equal(result.input.daily_calorie_target, 2190);
 });
 
 test('buildProfileInput keeps the original start weight when editing', () => {

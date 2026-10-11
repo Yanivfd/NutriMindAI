@@ -149,6 +149,13 @@
       "active": "Active (5+ workouts a week)",
       "very_active": "Very active (physical job or daily training)"
     },
+    "deficitPace": "How fast do you want to lose?",
+    "deficitPaceHint": "This sets how many calories we cut below maintenance each day. Safer floors still apply.",
+    "deficitPaces": {
+      "easy": "Easy — 250 kcal/day",
+      "steady": "Steady — 350 kcal/day",
+      "fast": "Fast — 500 kcal/day"
+    },
     "routine": "Your routine",
     "skipsBreakfast": "I usually skip breakfast",
     "officeDays": "Office days (takeaway lunch)",

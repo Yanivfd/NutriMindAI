@@ -4,6 +4,7 @@ import { Pressable, Switch, View } from 'react-native';
 import { useT } from '@/lib/i18n';
 import { COLORS } from '@/lib/theme';
 import type { ProfileField, ProfileFormValues, WaitHours } from '@/lib/profileForm';
+import { DEFICIT_PACES } from '@/lib/tdee';
 import type { ActivityLevel, SmokingStatus } from '@/types/db';
 import { CUISINES, MEAL_SLOTS, WEEKDAYS } from '@/types/plan';
 import type { Cuisine, KosherLevel, MealSlot } from '@/types/plan';
@@ -202,17 +203,31 @@ export function ActivitySection(props: ProfileSectionProps) {
   const t = useT();
   const { set } = formHelpers(props);
   return (
-    <Card className="gap-2">
-      <SectionTitle>{t('onboarding.activity')}</SectionTitle>
-      {ACTIVITY_LEVELS.map((level) => (
-        <OptionRow
-          key={level}
-          label={t(`onboarding.activityLevels.${level}`)}
-          selected={props.values.activity === level}
-          onPress={() => set('activity', level)}
-        />
-      ))}
-    </Card>
+    <View className="gap-4">
+      <Card className="gap-2">
+        <SectionTitle>{t('onboarding.activity')}</SectionTitle>
+        {ACTIVITY_LEVELS.map((level) => (
+          <OptionRow
+            key={level}
+            label={t(`onboarding.activityLevels.${level}`)}
+            selected={props.values.activity === level}
+            onPress={() => set('activity', level)}
+          />
+        ))}
+      </Card>
+      <Card className="gap-2">
+        <SectionTitle>{t('onboarding.deficitPace')}</SectionTitle>
+        <Text className="text-sm text-gray-600">{t('onboarding.deficitPaceHint')}</Text>
+        {DEFICIT_PACES.map((pace) => (
+          <OptionRow
+            key={pace}
+            label={t(`onboarding.deficitPaces.${pace}`)}
+            selected={props.values.deficitPace === pace}
+            onPress={() => set('deficitPace', pace)}
+          />
+        ))}
+      </Card>
+    </View>
   );
 }
 

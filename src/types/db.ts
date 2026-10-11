@@ -11,6 +11,8 @@ import type {
 export type Sex = 'male' | 'female';
 export type ActivityLevel = 'sedentary' | 'light' | 'moderate' | 'active' | 'very_active';
 export type SmokingStatus = 'no' | 'former' | 'daily';
+/** Daily calorie cut while losing weight: 250 / 350 / 500 kcal. */
+export type DeficitPace = 'easy' | 'steady' | 'fast';
 export type CheatKind = 'sweet' | 'beer' | 'other';
 export type MealLogStatus = 'planned' | 'other';
 
@@ -26,6 +28,7 @@ export interface Profile {
   target_weight_kg: number;
   daily_calorie_target: number;
   weekly_cheat_bank: number;
+  deficit_pace: DeficitPace;
   skips_breakfast: boolean;
   kosher_level: KosherLevel;
   meat_dairy_wait_hours: 1 | 3 | 6;

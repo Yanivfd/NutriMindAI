@@ -52,7 +52,9 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 - **Personalized eating guidelines** — after 2–3 weeks of data (meals, weight, cheat logs), Gemini generates a custom "eat / avoid" rules card based on actual history: "You're under goal when you skip coffee swaps" or "Dinners work better than lunch swaps for you." Stores in a new `eating_guidelines` table and refreshes weekly.
 - **Achievement badges & motivation** — users who hit weekly calorie targets unlock a "Balanced week" badge. Users close to target (within 3%) get an encouraging message. Non-achievers receive a supportive nudge: "You got 82% there — let's try a slower pace next week?"
 - **Visual overflow alert** — days with meals exceeding daily calorie target are marked with a red circle / alert indicator on the day strip. Tap to see the overage and (optionally) adjust a meal or view auto-rebalanced suggestions.
-- **Aggressiveness preference** — at onboarding or settings, let users choose loss pace: "Easy (250 kcal/day)" / "Steady (350 kcal/day)" / "Fast (500 kcal/day)". Store as `deficit_pace` in profiles; use in TDEE calculation and in weekly rebalancing logic. Safe floors remain (1200F / 1500M).
+- **Aggressiveness preference** — ✅ shipped: onboarding/settings pace picker
+  (`easy` 250 / `steady` 350 / `fast` 500) stored as `profiles.deficit_pace`, used in
+  `calorieTargets`. Safe floors remain (1200F / 1500M). Weekly rebalancing can reuse later.
 - **Pick-your-dishes week planner** — when starting next week's menu, the user chooses **auto generate** (current flow: AI picks and schedules dishes) or **manual pick**. In manual mode they browse the available dish list and select which recipes they want; a capacity counter tracks progress toward that week's meal slots (e.g. lunches + dinners + snacks, respecting skip-breakfast and office days). When selection reaches full week capacity, the app locks the dish set and AI arranges those dishes across the week (days/slots, portions, kashrut/Shabbat/repeat rules) — refining order and sizing rather than inventing new recipes. User can still deselect/swap before confirming generate. Both paths produce the same weekly plan shape.
 - **Recipe complexity & diet preferences (onboarding)** — early in the app (onboarding questions about the user), ask how difficult / rich the recipes should be on a scale from low to high (e.g. simple & light → moderate → rich & advanced). Also ask whether they follow a special diet (e.g. vegan, vegetarian, and similar options). Store both answers on the profile and use them when building personalized weekly meals (filter or bias the recipe pool and planner constraints so the week matches their skill/richness level and diet). Editable later in settings.
 - **Weekend eating preference (replaces Shabbat question)** — do not ask users about Shabbat specifically. Instead ask whether they eat more on weekends (yes / no, or a light scale). Use that answer for **all** users — kosher and non-kosher — when building the week: if they eat more on weekends, shift more calories / richer meals to Fri–Sat (and optionally Sunday); if not, keep weekday and weekend slots even. For kosher users, keep existing kashrut constraints (e.g. `shabbat_friendly` / prepare-before for Fri dinner + Saturday) as automatic rules from `kosher_level`, not as a separate user question. One weekend-eating answer covers every user type.
@@ -67,7 +69,7 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | Pri | Feature | Effort | Impact | Notes |
 | --- | --- | --- | --- | --- |
 | Done | Export grocery list (share sheet) | S | H | Shipped; category emojis in shared text |
-| P0 | Aggressiveness / deficit pace | S | H | Small settings + `tdee.ts` change; unlocks better targeting for everything else |
+| Done | Aggressiveness / deficit pace | S | H | `deficit_pace` + onboarding/settings picker |
 | P0 | Suggested + editable calorie target | S | H | Trust + flexibility; clamp to safe floors; pairs with pace |
 | P0 | Visual overflow alert (day strip) | S | M | Cheap UI signal; sets up overflow handling later |
 | P1 | Weekend eating preference | S–M | M | Replaces Shabbat question; one answer for all users; planner tweak |
@@ -85,7 +87,7 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | P3 | Google Keep native checklist | L | M | Keep API / OAuth; real checkboxes (share sheet cannot do this) |
 | P3 | Supermarket cart integration | L | H | Partner/API dependency; defer until grocery export is loved |
 
-**Suggested next slice:** Deficit pace → editable target → visual overflow alert.
+**Suggested next slice:** Visual overflow alert → (discuss) editable calorie target.
 
 ### Personalized calorie targets (brainstorm — not started)
 
@@ -99,9 +101,8 @@ Goal: feel more like a coach, still clearly "estimate, not medical advice."
 
 #### Priority ideas
 
-1. **Pace / deficit choice** (P0) — slow / normal / aggressive (e.g. 250 / 350 / 500),
-   or "kg per month" → derive deficit. Keep safe floors (1200F / 1500M).
-   Same as "Aggressiveness preference" above.
+1. **Pace / deficit choice** (Done) — easy / steady / fast (250 / 350 / 500).
+   Keep safe floors (1200F / 1500M). Same as "Aggressiveness preference" above.
 2. **Suggested + editable target** (P0) — show the calculated number; let the user
    override (dietitian / doctor / preference). Clamp to safe bounds.
 3. **Auto-adjust from weight trend** (P2) — after 2–3 weeks of weigh-ins (+ optional

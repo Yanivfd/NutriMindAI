@@ -1,4 +1,4 @@
-import type { ActivityLevel, Sex, SmokingStatus } from '../types/db.ts';
+import type { ActivityLevel, DeficitPace, Sex, SmokingStatus } from '../types/db.ts';
 
 export const ACTIVITY_FACTORS: Record<ActivityLevel, number> = {
   sedentary: 1.2,
@@ -7,6 +7,15 @@ export const ACTIVITY_FACTORS: Record<ActivityLevel, number> = {
   active: 1.725,
   very_active: 1.9,
 };
+
+/** Daily deficit (kcal) while the user still has weight to lose. */
+export const DEFICIT_PACE_KCAL: Record<DeficitPace, number> = {
+  easy: 250,
+  steady: 350,
+  fast: 500,
+};
+
+export const DEFICIT_PACES: DeficitPace[] = ['easy', 'steady', 'fast'];
 
 /** Common safe minimums for an unsupervised diet. */
 export const MIN_DAILY_CALORIES: Record<Sex, number> = { male: 1500, female: 1200 };
@@ -44,6 +53,8 @@ export interface TargetInput {
   targetWeightKg: number;
   activity: ActivityLevel;
   today: string;
+  /** Defaults to steady (350 kcal) when omitted. */
+  deficitPace?: DeficitPace;
   smoking?: SmokingStatus;
   coffeeBlackCups?: number;
   coffeeMilkCups?: number;
@@ -55,6 +66,8 @@ export interface CalorieTargets {
   maintenance: number;
   dailyTarget: number;
   weeklyCheatBank: number;
+  /** Planned cut below maintenance while losing (0 at goal). */
+  deficitKcal: number;
   /** Calories reserved for coffee with milk and sugar. Black coffee is zero. */
   coffeeKcal: number;
 }
@@ -67,8 +80,8 @@ export function coffeeCalories(milkCups: number, sugarTsp: number): number {
 }
 
 /**
- * Mifflin-St Jeor maintenance, minus 500 kcal (350 when under 5 kg to lose, none when no
- * loss is needed). Daily smoking raises the resting number by 7 percent first.
+ * Mifflin-St Jeor maintenance, minus the user's deficit pace (none when no loss is
+ * needed). Daily smoking raises the resting number by 7 percent first.
  * Coffee with milk and sugar is then reserved from the food budget.
  * Never below the safe minimum or above maintenance.
  */
@@ -80,11 +93,12 @@ export function calorieTargets(input: TargetInput): CalorieTargets {
   const maintenance = roundTo(resting * ACTIVITY_FACTORS[input.activity], 10);
   const coffeeKcal = coffeeCalories(input.coffeeMilkCups ?? 0, input.coffeeSugarTsp ?? 0);
 
+  const pace = input.deficitPace ?? 'steady';
   const toLose = input.weightKg - input.targetWeightKg;
-  const deficit = toLose <= 0 ? 0 : toLose < 5 ? 350 : 500;
+  const deficitKcal = toLose <= 0 ? 0 : DEFICIT_PACE_KCAL[pace];
   const floor = Math.min(MIN_DAILY_CALORIES[input.sex], maintenance);
   const dailyTarget = clamp(
-    Math.max(floor, maintenance - deficit - coffeeKcal),
+    Math.max(floor, maintenance - deficitKcal - coffeeKcal),
     DB_MIN_TARGET,
     DB_MAX_TARGET
   );
@@ -93,6 +107,7 @@ export function calorieTargets(input: TargetInput): CalorieTargets {
     maintenance,
     dailyTarget,
     weeklyCheatBank: roundTo(dailyTarget * CHEAT_BANK_SHARE_OF_DAY, 50),
+    deficitKcal,
     coffeeKcal,
   };
 }
