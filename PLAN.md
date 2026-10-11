@@ -57,6 +57,33 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 - **Notification preferences** — in the user profile, let the user turn each notification type on or off. The same choices are also part of the onboarding questions at the start, so they set preferences before using the app; they can change them later in profile.
 - **Photo meal scan (AI plate analysis)** — user takes a photo of what they are about to eat; Gemini (vision) estimates the dish and macros (calories, protein, carbs, fat, portion size). Compare to remaining daily budget and personal targets. Optionally return short coaching tips such as "don't eat that," "eat just a spoon of that," "half portion," or "fits your budget — go ahead." Log confirmed estimates into the day (or cheat bank when applicable). Clear disclaimer: estimate only, not lab nutrition facts. Camera + gallery pick; privacy: send image only with user action, minimize retention.
 
+### Prioritized backlog (impact × effort)
+
+> Criteria: ship high impact / low effort first. Feature explanations are in the bullets above.
+> Overlaps: pace = aggressiveness; weight-driven calories are phased (P1 then P2).
+
+| Pri | Feature | Effort | Impact | Notes |
+| --- | --- | --- | --- | --- |
+| P0 | Export grocery list (share sheet) | S | H | Immediate utility; no backend; users shop without the app open |
+| P0 | Aggressiveness / deficit pace | S | H | Small settings + `tdee.ts` change; unlocks better targeting for everything else |
+| P0 | Suggested + editable calorie target | S | H | Trust + flexibility; clamp to safe floors; pairs with pace |
+| P0 | Visual overflow alert (day strip) | S | M | Cheap UI signal; sets up overflow handling later |
+| P1 | Weekend eating preference | S–M | M | Replaces Shabbat question; one answer for all users; planner tweak |
+| P1 | Recipe complexity & diet prefs | M | H | Better week fit from day one; onboarding + recipe filter |
+| P1 | Free-text planning notes | S | M | Cheap Gemini context; no silent calorie math from prose |
+| P1 | Dynamic calories from weight logs | M | H | Phase 1: recalc after weigh-in when distance-to-goal shifts; apply next week |
+| P2 | Weight-trend auto-adjust (2–3 weeks) | M | H | Phase 2 of calorie adaptation; needs enough `weight_logs` history |
+| P2 | Notification preferences | S–M* | M | *S if channels exist; M if building push first — prefs UI alone is cheap |
+| P2 | Achievement badges & nudges | M | M | Retention / motivation; no planner risk |
+| P2 | Meal overflow rebalancing | L | H | Real weekly coach feel; needs planner + UI (builds on visual alert) |
+| P2 | Pick-your-dishes week planner | L | H | Strong agency / retention; large UX + generator path |
+| P2 | Weekly AI insights & recap | L | H | New table + Gemini job; best after 1–2 weeks of real usage data |
+| P3 | Personalized eating guidelines | L | M | Needs history; overlaps insights — ship after recap proves value |
+| P3 | Photo meal scan (vision) | L | H | Wow feature; camera, liability copy, cost — after core coach loop |
+| P3 | Supermarket cart integration | L | H | Partner/API dependency; defer until grocery export is loved |
+
+**Suggested next slice:** Export grocery list → deficit pace → editable target → visual overflow alert.
+
 ### Personalized calorie targets (brainstorm — not started)
 
 Today: Mifflin–St Jeor BMR × activity → maintenance (TDEE), then a fixed deficit
@@ -69,17 +96,19 @@ Goal: feel more like a coach, still clearly "estimate, not medical advice."
 
 #### Priority ideas
 
-1. **Pace / deficit choice** — slow / normal / aggressive (e.g. 250 / 350 / 500),
+1. **Pace / deficit choice** (P0) — slow / normal / aggressive (e.g. 250 / 350 / 500),
    or "kg per month" → derive deficit. Keep safe floors (1200F / 1500M).
-2. **Suggested + editable target** — show the calculated number; let the user
+   Same as "Aggressiveness preference" above.
+2. **Suggested + editable target** (P0) — show the calculated number; let the user
    override (dietitian / doctor / preference). Clamp to safe bounds.
-3. **Auto-adjust from weight trend** — after 2–3 weeks of weigh-ins (+ optional
+3. **Auto-adjust from weight trend** (P2) — after 2–3 weeks of weigh-ins (+ optional
    meal check-ins): if weight is flat, nudge food target down a little; if losing
    too fast, raise it. Highest "true personalization" without labs.
-4. **Free-text lifestyle / food notes** — optional box: night shifts, vegetarian,
+   Same as "Weight-based calorie recalculation" above (phase 2; phase 1 is P1).
+4. **Free-text lifestyle / food notes** (P1) — optional box: night shifts, vegetarian,
    "I walk a lot," hated foods. Use for **meal planning constraints** (rules +
    Gemini context), not as a silent medical calorie recalculation from prose.
-5. **Blood tests / labs (later, careful)** — high liability and privacy cost.
+5. **Blood tests / labs (later, careful — out of scope for v2)** — high liability and privacy cost.
    Prefer structured flags ("thyroid issue — talk to doctor") or
    "my doctor set my calories" override. If free-text/PDF ever exists: use only
    for meal hints (e.g. low sodium), strong disclaimer, sensitive-data handling
