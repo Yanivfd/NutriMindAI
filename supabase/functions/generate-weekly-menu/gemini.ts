@@ -5,9 +5,9 @@ import type { SlotSpec } from '../_shared/planRules.ts';
 import { MEAL_SLOTS, WEEKDAYS } from '../_shared/types.ts';
 import type { ModelSuggestion, PlanningProfile, Recipe } from '../_shared/types.ts';
 
-const TIMEOUT_MS = 20_000;
+const TIMEOUT_MS = 45_000;
 /** Stop trying more models after this, so the user is not left waiting. */
-const TOTAL_BUDGET_MS = 40_000;
+const TOTAL_BUDGET_MS = 90_000;
 const MIN_ATTEMPT_MS = 3_000;
 
 const SYSTEM_PROMPT = `You schedule a week of meals for a low-friction fat-loss app.
@@ -113,7 +113,7 @@ export async function suggestSchedule(params: SuggestParams): Promise<SuggestRes
           systemInstruction: SYSTEM_PROMPT,
           responseMimeType: 'application/json',
           responseJsonSchema,
-          thinkingConfig: { thinkingLevel: 'medium' },
+          thinkingConfig: { thinkingLevel: 'low' },
         },
       });
       const suggestions = parseSuggestions(JSON.parse(response.text ?? ''), validIds);
