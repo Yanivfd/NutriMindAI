@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { Alert, KeyboardAvoidingView, ScrollView } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ProfileForm } from '@/components/ProfileForm';
 import { TargetSummary } from '@/components/TargetSummary';
@@ -16,6 +17,7 @@ import type { Profile } from '@/types/db';
 
 function SettingsEditor({ profile }: { profile: Profile }) {
   const t = useT();
+  const insets = useSafeAreaInsets();
   const [values, setValues] = useState<ProfileFormValues>(() => profileToFormValues(profile));
   const [showErrors, setShowErrors] = useState(false);
   const [deleting, setDeleting] = useState(false);
@@ -54,7 +56,11 @@ function SettingsEditor({ profile }: { profile: Profile }) {
 
   return (
     <KeyboardAvoidingView behavior="padding" className="flex-1">
-      <ScrollView contentContainerClassName="gap-4 p-4" keyboardShouldPersistTaps="handled">
+      <ScrollView
+        contentContainerClassName="gap-4 p-4"
+        contentContainerStyle={{ paddingBottom: 16 + insets.bottom }}
+        keyboardShouldPersistTaps="handled"
+      >
         <ProfileForm
           values={values}
           errors={showErrors && !result.ok ? result.errors : []}
