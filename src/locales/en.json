@@ -223,8 +223,12 @@
     "mehadrinHint": "Look for mehadrin certification (e.g. Badatz) and chalav Yisrael dairy.",
     "progress": "%{checked} of %{total} items",
     "clearChecked": "Uncheck all",
-    "emptyTitle": "No shopping list yet"
+    "emptyTitle": "No shopping list yet",
+    "share": "Share list",
+    "weekOf": "Week of %{date}",
+    "shareFailed": "Could not open the share sheet. Try again."
   },
+
   "bank": {
     "title": "Treat budget",
     "remaining": "%{remaining} kcal left this week",

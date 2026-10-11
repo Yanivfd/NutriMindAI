@@ -2,9 +2,9 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { Pressable, View } from 'react-native';
 
 import { localizedName } from '@/lib/format';
+import { groceryItemKey } from '@/lib/groceryShare';
 import { useLanguage, useT } from '@/lib/i18n';
 import { COLORS } from '@/lib/theme';
-import { groceryItemKey } from '@/store/useGroceryStore';
 import type { GroceryCategory, GrocerySection as GrocerySectionData } from '@/types/plan';
 
 import { Text } from './Text';

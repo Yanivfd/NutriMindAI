@@ -35,10 +35,12 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 
 - Connect the app to a supermarket service so the weekly ingredients list can
   automatically create a shopping cart ready for the user to review and buy.
-- **Export grocery list** — share the week's shopping list to WhatsApp, Google Keep,
-  or the system share sheet (plain text / checklist), so users can shop without
-  keeping the app open. Prefer Android share intent first; add Keep/WhatsApp-specific
-  deep links only if the generic share UX is not enough.
+- **Export grocery list** — ✅ shipped via Android system share sheet (plain-text
+  checklist with category emojis). WhatsApp gets a normal message; Keep gets a text
+  note (user can tap Checkboxes in Keep for real ticks).
+- **Google Keep checklist integration (future)** — create a real Keep list note with
+  native checkboxes (Keep API / OAuth or equivalent), instead of plain text + manual
+  "Show checkboxes". Defer until generic share proves useful.
 - **Dynamic calorie target according to current weight** — automatically recalculate
   the daily calorie target based on the user's current weight (from weight logs),
   instead of keeping it fixed until profile edit. After each weight log entry, check
@@ -64,7 +66,7 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 
 | Pri | Feature | Effort | Impact | Notes |
 | --- | --- | --- | --- | --- |
-| P0 | Export grocery list (share sheet) | S | H | Immediate utility; no backend; users shop without the app open |
+| Done | Export grocery list (share sheet) | S | H | Shipped; category emojis in shared text |
 | P0 | Aggressiveness / deficit pace | S | H | Small settings + `tdee.ts` change; unlocks better targeting for everything else |
 | P0 | Suggested + editable calorie target | S | H | Trust + flexibility; clamp to safe floors; pairs with pace |
 | P0 | Visual overflow alert (day strip) | S | M | Cheap UI signal; sets up overflow handling later |
@@ -80,9 +82,10 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | P2 | Weekly AI insights & recap | L | H | New table + Gemini job; best after 1–2 weeks of real usage data |
 | P3 | Personalized eating guidelines | L | M | Needs history; overlaps insights — ship after recap proves value |
 | P3 | Photo meal scan (vision) | L | H | Wow feature; camera, liability copy, cost — after core coach loop |
+| P3 | Google Keep native checklist | L | M | Keep API / OAuth; real checkboxes (share sheet cannot do this) |
 | P3 | Supermarket cart integration | L | H | Partner/API dependency; defer until grocery export is loved |
 
-**Suggested next slice:** Export grocery list → deficit pace → editable target → visual overflow alert.
+**Suggested next slice:** Deficit pace → editable target → visual overflow alert.
 
 ### Personalized calorie targets (brainstorm — not started)
 

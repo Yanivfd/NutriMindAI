@@ -1,20 +1,24 @@
-import { useMemo } from 'react';
-import { RefreshControl, ScrollView, View } from 'react-native';
+import { useCallback, useMemo } from 'react';
+import { Alert, RefreshControl, ScrollView, Share, View } from 'react-native';
 
 import { AdBanner } from '@/components/AdBanner';
 import { GrocerySection } from '@/components/GrocerySection';
 import { Text } from '@/components/Text';
 import { Button, Card, CenteredMessage, EmptyState, Loading } from '@/components/ui';
 import { WeekToggle } from '@/components/WeekToggle';
-import { useT } from '@/lib/i18n';
+import { formatDayMonth } from '@/lib/format';
+import { formatGroceryShareText, groceryItemKey } from '@/lib/groceryShare';
+import { useLanguage, useT } from '@/lib/i18n';
 import { COLORS } from '@/lib/theme';
 import { weekStartFor } from '@/lib/week';
 import { useWeeklyPlan } from '@/services/menuApi';
-import { groceryItemKey, useCheckedItems, useGroceryStore } from '@/store/useGroceryStore';
+import { useCheckedItems, useGroceryStore } from '@/store/useGroceryStore';
 import { useWeekStore } from '@/store/useWeekStore';
+import type { GroceryCategory, Unit } from '@/types/plan';
 
 export default function GroceryScreen() {
   const t = useT();
+  const lang = useLanguage();
   const offset = useWeekStore((s) => s.offset);
   const planQuery = useWeeklyPlan(weekStartFor(offset));
   const saved = planQuery.data;
@@ -33,6 +37,26 @@ export default function GroceryScreen() {
   // Only count ticks that still match an item on the current list.
   const checkedCount = allKeys.filter((key) => checked.has(key)).length;
 
+  const shareList = useCallback(async () => {
+    if (!saved || saved.plan.grocery.length === 0) return;
+    const message = formatGroceryShareText(
+      saved.plan.grocery,
+      lang,
+      {
+        title: t('grocery.title'),
+        weekLine: t('grocery.weekOf', { date: formatDayMonth(saved.plan.week_start_date) }),
+        categoryLabel: (category: GroceryCategory) => t(`categories.${category}`),
+        unitLabel: (unit: Unit) => t(`units.${unit}`),
+      },
+      checked
+    );
+    try {
+      await Share.share({ message, title: t('grocery.title') });
+    } catch {
+      Alert.alert(t('grocery.shareFailed'));
+    }
+  }, [checked, lang, saved, t]);
+
   let body;
   if (planQuery.isPending) {
     body = <Loading />;
@@ -47,7 +71,7 @@ export default function GroceryScreen() {
     body = <EmptyState icon="cart-outline" title={t('grocery.emptyTitle')} message={t('grocery.empty')} />;
   } else {
     const planId = saved.id;
-    const share = allKeys.length > 0 ? checkedCount / allKeys.length : 0;
+    const progress = allKeys.length > 0 ? checkedCount / allKeys.length : 0;
     body = (
       <View className="gap-3">
         <Card className="gap-2">
@@ -60,8 +84,16 @@ export default function GroceryScreen() {
             )}
           </View>
           <View className="h-2 overflow-hidden rounded-full bg-brand-100">
-            <View className="h-2 rounded-full bg-brand-500" style={{ width: `${share * 100}%` }} />
+            <View className="h-2 rounded-full bg-brand-500" style={{ width: `${progress * 100}%` }} />
           </View>
+          <Button
+            label={t('grocery.share')}
+            variant="secondary"
+            icon="share-variant"
+            onPress={() => {
+              void shareList();
+            }}
+          />
         </Card>
         {saved.plan.kosher_level === 'mehadrin' && (
           <Text className="rounded-2xl border border-brand-200 bg-brand-50 p-3 text-sm text-brand-700">

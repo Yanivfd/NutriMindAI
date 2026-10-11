@@ -2,14 +2,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
-import type { GroceryItem, GrocerySection } from '@/types/plan';
+import { groceryItemKey } from '@/lib/groceryShare';
+
+export { groceryItemKey };
 
 const MAX_PLANS_KEPT = 4;
-
-/** Stable key for a grocery item within a plan. */
-export function groceryItemKey(category: GrocerySection['category'], item: GroceryItem): string {
-  return `${category}|${item.name_en.toLowerCase()}|${item.unit}`;
-}
 
 interface GroceryState {
   /** Checked item keys per plan id. Regenerating a week keeps the same plan id. */
