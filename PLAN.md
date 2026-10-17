@@ -46,7 +46,35 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
   instead of keeping it fixed until profile edit. After each weight log entry, check
   if the distance to target weight has changed enough to adjust the deficit. This makes
   the app feel more responsive to actual progress.
-- **Weekly AI insights & recap** — at end of week, Gemini analyzes meals eaten, cheat logs, and weight change. Generates personalized feedback on what to preserve, what to improve, meals that worked well, meals to avoid, and patterns to notice. Suggests adjustments for next week's meal plan. Stores insights in a new `weekly_insights` table (`user_id`, `week_start_date`, `insights_text`, `created_at`).
+- **Weekly nutritionist summary (AI recap)** — end-of-week personal coaching card in a
+  professional nutritionist tone (supportive, concrete, never shaming). Summarize the
+  week: calories eaten vs daily/weekly target (e.g. "You averaged 1,820 / 2,000 kcal"),
+  protein/carbs/fat balance when data exists, cheat-bank use, and weight change if logged.
+  **Food review:** which planned meals landed well, which days drifted, patterns worth
+  keeping. **Manual / custom dishes:** when the user typed their own meal instead of the
+  suggested dish, review that entry and give practical tips — e.g. pair with more protein,
+  add veg for volume, watch oil/sauce calories, or suggest a closer swap from the recipe
+  bank next time. Short actionable tips for the coming week (2–4 bullets). Stores in a
+  new `weekly_insights` table (`user_id`, `week_start_date`, `insights_text` / structured
+  JSON, `created_at`). Disclaimer: coaching estimate, not medical advice.
+  Companion: **Immediate tip on manual dish** (below) for per-meal coaching; this card
+  owns week-level patterns.
+- **Immediate tip on manual dish** — when the user types their own meal (check-in
+  "something else" / snack estimate), return **one short coaching tip** in the same
+  Gemini response as the calorie estimate (`estimate-snack-calories`) — no second API
+  call. Examples: "add a protein side," "watch oil/sauce," "pair with veg for volume,"
+  or "fits your remaining budget." Show under the estimate before they confirm save.
+  Professional, supportive tone; estimate-only disclaimer. Optionally persist tip on
+  `meal_logs` later; v1 can be display-only. Complements the weekly nutritionist summary
+  (patterns) with in-the-moment advice.
+- **Cook something else (dish picker)** — from a meal card (or check-in "something else"),
+  open a browsable list of other recipes the user can cook instead — instant ideas, not
+  free-text. Filter by slot (`lunch` / `dinner` / `snack`), kashrut, and roughly the
+  remaining calorie budget; show photo, title, kcal, prep time. Tap a dish to either
+  **replace the planned meal** for that slot (update the week plan + portion) or **log it
+  as eaten** with known macros (prefer this over typing). Distinct from dislike → opaque
+  AI swap, and from **Pick-your-dishes week planner** (whole week upfront). Reuses the
+  recipes catalog; no Gemini required for the list itself.
 - **Meal overflow handling** — when user logs a meal significantly over daily calorie budget, the planner automatically adjusts future meals in the same week to rebalance toward the weekly target (more aggressive deficit the following days or weekend). Keeps the week on track without guilt.
 - **Weight-based calorie recalculation** — if user's weight trend shows consistent loss/plateau over 2–3 weeks, the app auto-recalculates the calorie target using Mifflin–St Jeor and updated weight. Notifies user of the new daily target and applies it to the next week's plan.
 - **Personalized eating guidelines** — after 2–3 weeks of data (meals, weight, cheat logs), Gemini generates a custom "eat / avoid" rules card based on actual history: "You're under goal when you skip coffee swaps" or "Dinners work better than lunch swaps for you." Stores in a new `eating_guidelines` table and refreshes weekly.
@@ -74,6 +102,8 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | P0 | Visual overflow alert (day strip) | S | M | Cheap UI signal; sets up overflow handling later |
 | P1 | Weekend eating preference | S–M | M | Replaces Shabbat question; one answer for all users; planner tweak |
 | P1 | Recipe complexity & diet prefs | M | H | Better week fit from day one; onboarding + recipe filter |
+| P1 | Immediate tip on manual dish | S | H | Piggyback on `estimate-snack-calories`; one tip + UI; no new table for v1 |
+| P1 | Cook something else (dish picker) | M | H | Browse recipes for a slot; replace plan or log with known macros; no Gemini for list |
 | P1 | Free-text planning notes | S | M | Cheap Gemini context; no silent calorie math from prose |
 | P1 | Dynamic calories from weight logs | M | H | Phase 1: recalc after weigh-in when distance-to-goal shifts; apply next week |
 | P2 | Weight-trend auto-adjust (2–3 weeks) | M | H | Phase 2 of calorie adaptation; needs enough `weight_logs` history |
@@ -81,8 +111,8 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | P2 | Achievement badges & nudges | M | M | Retention / motivation; no planner risk |
 | P2 | Meal overflow rebalancing | L | H | Real weekly coach feel; needs planner + UI (builds on visual alert) |
 | P2 | Pick-your-dishes week planner | L | H | Strong agency / retention; large UX + generator path |
-| P2 | Weekly AI insights & recap | L | H | New table + Gemini job; best after 1–2 weeks of real usage data |
-| P3 | Personalized eating guidelines | L | M | Needs history; overlaps insights — ship after recap proves value |
+| P2 | Weekly nutritionist summary | L | H | Check-ins already in `meal_logs` (incl. typed `note`); L = Gemini job + `weekly_insights` + summary UI |
+| P3 | Personalized eating guidelines | L | M | Needs history; overlaps weekly summary — ship after that proves value |
 | P3 | Photo meal scan (vision) | L | H | Wow feature; camera, liability copy, cost — after core coach loop |
 | P3 | Google Keep native checklist | L | M | Keep API / OAuth; real checkboxes (share sheet cannot do this) |
 | P3 | Supermarket cart integration | L | H | Partner/API dependency; defer until grocery export is loved |
