@@ -1,8 +1,10 @@
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { useState } from 'react';
 import { Alert, View } from 'react-native';
 
 import { plannedMealCalories } from '@/lib/mealLog';
-import { useT } from '@/lib/i18n';
+import { useLanguage, useT } from '@/lib/i18n';
+import { COLORS } from '@/lib/theme';
 import { clampSnackText, MAX_SNACK_WORDS, wordCount } from '@/lib/words';
 import {
   useDeleteMealLog,
@@ -41,6 +43,7 @@ function parseLoggedCalories(raw: string): number | null {
  */
 export function MealCheckIn(props: MealCheckInProps) {
   const t = useT();
+  const language = useLanguage();
   const planned = plannedMealCalories(props.meal);
   const upsert = useUpsertMealLog(props.weekStart);
   const remove = useDeleteMealLog(props.weekStart);
@@ -49,6 +52,7 @@ export function MealCheckIn(props: MealCheckInProps) {
   const [formOpen, setFormOpen] = useState(false);
   const [note, setNote] = useState('');
   const [calories, setCalories] = useState('');
+  const [tip, setTip] = useState('');
   const [invalid, setInvalid] = useState(false);
   const [estimateFailed, setEstimateFailed] = useState(false);
 
@@ -60,6 +64,7 @@ export function MealCheckIn(props: MealCheckInProps) {
         formOpen={formOpen}
         note={note}
         calories={calories}
+        tip={tip}
         invalid={invalid}
         estimateFailed={estimateFailed}
         saving={upsert.isPending}
@@ -77,6 +82,7 @@ export function MealCheckIn(props: MealCheckInProps) {
               onSuccess: () => {
                 setChoosing(false);
                 setFormOpen(false);
+                setTip('');
               },
             }
           );
@@ -85,6 +91,7 @@ export function MealCheckIn(props: MealCheckInProps) {
           const other = props.log?.status === 'other' ? props.log : undefined;
           setNote(other?.note ?? '');
           setCalories(other ? String(other.calories) : '');
+          setTip('');
           setInvalid(false);
           setEstimateFailed(false);
           setFormOpen(true);
@@ -93,6 +100,7 @@ export function MealCheckIn(props: MealCheckInProps) {
         onChange={() => {
           setFormOpen(false);
           setChoosing(true);
+          setTip('');
         }}
         onClear={() => {
           Alert.alert(t('checkIn.clear'), t('checkIn.clearConfirm'), [
@@ -107,6 +115,7 @@ export function MealCheckIn(props: MealCheckInProps) {
                     onSuccess: () => {
                       setChoosing(false);
                       setFormOpen(false);
+                      setTip('');
                     },
                   }
                 ),
@@ -116,19 +125,25 @@ export function MealCheckIn(props: MealCheckInProps) {
         onNote={(next) => {
           setNote(clampSnackText(next));
           setEstimateFailed(false);
+          setTip('');
         }}
         onCalories={setCalories}
         onEstimate={() => {
           const description = note.trim();
           if (wordCount(description) === 0) return;
           setEstimateFailed(false);
-          estimate.mutate(description, {
-            onSuccess: (kcal) => {
-              setCalories(String(kcal));
-              setInvalid(false);
-            },
-            onError: () => setEstimateFailed(true),
-          });
+          setTip('');
+          estimate.mutate(
+            { description, language },
+            {
+              onSuccess: (result) => {
+                setCalories(String(result.calories));
+                setTip(result.tip);
+                setInvalid(false);
+              },
+              onError: () => setEstimateFailed(true),
+            }
+          );
         }}
         onSave={() => {
           const value = parseLoggedCalories(calories);
@@ -149,12 +164,14 @@ export function MealCheckIn(props: MealCheckInProps) {
               onSuccess: () => {
                 setChoosing(false);
                 setFormOpen(false);
+                setTip('');
               },
             }
           );
         }}
         onCancelForm={() => {
           setFormOpen(false);
+          setTip('');
           if (props.log) setChoosing(false);
         }}
       />
@@ -177,6 +194,7 @@ function CheckInBody(props: {
   formOpen: boolean;
   note: string;
   calories: string;
+  tip: string;
   invalid: boolean;
   estimateFailed: boolean;
   saving: boolean;
@@ -218,6 +236,16 @@ function CheckInBody(props: {
         <Text className={`text-xs ${props.estimateFailed ? 'text-meat' : 'text-gray-500'}`}>
           {props.estimateFailed ? t('checkIn.estimateFailed') : t('checkIn.estimateHint')}
         </Text>
+        {props.tip !== '' && (
+          <View className="gap-1 rounded-2xl border border-brand-200 bg-brand-50 px-3 py-2">
+            <View className="flex-row items-center gap-1.5">
+              <MaterialCommunityIcons name="lightbulb-on-outline" size={16} color={COLORS.brandDark} />
+              <Text className="text-xs font-semibold text-brand-700">{t('checkIn.tipLabel')}</Text>
+            </View>
+            <Text className="text-sm text-gray-800">{props.tip}</Text>
+            <Text className="text-xs text-gray-500">{t('checkIn.tipDisclaimer')}</Text>
+          </View>
+        )}
         <Field
           label={t('checkIn.caloriesLabel')}
           value={props.calories}

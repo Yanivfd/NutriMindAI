@@ -59,14 +59,10 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
   JSON, `created_at`). Disclaimer: coaching estimate, not medical advice.
   Companion: **Immediate tip on manual dish** (below) for per-meal coaching; this card
   owns week-level patterns.
-- **Immediate tip on manual dish** — when the user types their own meal (check-in
-  "something else" / snack estimate), return **one short coaching tip** in the same
-  Gemini response as the calorie estimate (`estimate-snack-calories`) — no second API
-  call. Examples: "add a protein side," "watch oil/sauce," "pair with veg for volume,"
-  or "fits your remaining budget." Show under the estimate before they confirm save.
-  Professional, supportive tone; estimate-only disclaimer. Optionally persist tip on
-  `meal_logs` later; v1 can be display-only. Complements the weekly nutritionist summary
-  (patterns) with in-the-moment advice.
+- **Immediate tip on manual dish** — ✅ shipped: `estimate-snack-calories` returns
+  `{ calories, tip }` in one Gemini call (tip in he/en from app language). Shown under
+  the estimate in meal check-in and treat-bank "other" before save. Display-only (not
+  stored on `meal_logs`). Disclaimer: coaching estimate, not medical advice.
 - **Cook something else (dish picker)** — from a meal card (or check-in "something else"),
   open a browsable list of other recipes the user can cook instead — instant ideas, not
   free-text. Filter by slot (`lunch` / `dinner` / `snack`), kashrut, and roughly the
@@ -101,13 +97,13 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | Done | Export grocery list (share sheet) | S | H | Shipped; category emojis in shared text |
 | Done | Aggressiveness / deficit pace | S | H | `deficit_pace` + onboarding/settings picker |
 | Done | Visual overflow alert (day strip) | S | M | Red day circle + overage pill + red ring; rebalance later |
-| P0 | Suggested + editable calorie target | S | H | Trust + flexibility; clamp to safe floors; pairs with pace |
+| Done | Immediate tip on manual dish | S | H | Same Gemini call as calories; tip card in check-in + bank other |
 | P1 | Weekend eating preference | S–M | M | Replaces Shabbat question; one answer for all users; planner tweak |
 | P1 | Recipe complexity & diet prefs | M | H | Better week fit from day one; onboarding + recipe filter |
-| P1 | Immediate tip on manual dish | S | H | Piggyback on `estimate-snack-calories`; one tip + UI; no new table for v1 |
 | P1 | Cook something else (dish picker) | M | H | Browse recipes for a slot; replace plan or log with known macros; no Gemini for list |
 | P1 | Free-text planning notes | S | M | Cheap Gemini context; no silent calorie math from prose |
 | P1 | Dynamic calories from weight logs | M | H | Phase 1: recalc after weigh-in when distance-to-goal shifts; apply next week |
+| Later | Suggested + editable calorie target | S | ? | Deferred — value unclear; revisit if users ask for doctor/dietitian overrides |
 | P2 | Weight-trend auto-adjust (2–3 weeks) | M | H | Phase 2 of calorie adaptation; needs enough `weight_logs` history |
 | P2 | Notification preferences | S–M* | M | *S if channels exist; M if building push first — prefs UI alone is cheap |
 | P2 | Achievement badges & nudges | M | M | Retention / motivation; no planner risk |
@@ -119,7 +115,7 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | P3 | Google Keep native checklist | L | M | Keep API / OAuth; real checkboxes (share sheet cannot do this) |
 | P3 | Supermarket cart integration | L | H | Partner/API dependency; defer until grocery export is loved |
 
-**Suggested next slice:** Suggested + editable calorie target (or Immediate tip on manual dish).
+**Suggested next slice:** Cook something else (dish picker), or weekend eating preference.
 
 ### Personalized calorie targets (brainstorm — not started)
 
@@ -135,8 +131,9 @@ Goal: feel more like a coach, still clearly "estimate, not medical advice."
 
 1. **Pace / deficit choice** (Done) — easy / steady / fast (250 / 350 / 500).
    Keep safe floors (1200F / 1500M). Same as "Aggressiveness preference" above.
-2. **Suggested + editable target** (P0) — show the calculated number; let the user
-   override (dietitian / doctor / preference). Clamp to safe bounds.
+2. **Suggested + editable target** (Later) — show the calculated number; let the user
+   override (dietitian / doctor / preference). Clamp to safe bounds. Deferred for now —
+   value unclear; revisit if users ask.
 3. **Auto-adjust from weight trend** (P2) — after 2–3 weeks of weigh-ins (+ optional
    meal check-ins): if weight is flat, nudge food target down a little; if losing
    too fast, raise it. Highest "true personalization" without labs.

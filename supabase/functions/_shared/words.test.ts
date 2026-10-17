@@ -1,7 +1,15 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 
-import { clampSnackText, MAX_SNACK_WORDS, parseSnackEstimate, roundSnackCalories, wordCount } from './words.ts';
+import {
+  clampSnackText,
+  clampTip,
+  MAX_SNACK_WORDS,
+  MAX_TIP_CHARS,
+  parseSnackEstimate,
+  roundSnackCalories,
+  wordCount,
+} from './words.ts';
 
 test('wordCount treats empty and space-only text as zero', () => {
   assert.equal(wordCount(''), 0);
@@ -37,6 +45,20 @@ test('roundSnackCalories snaps to tens inside 1..5000', () => {
 
 test('parseSnackEstimate rejects text that is not food', () => {
   assert.deepEqual(parseSnackEstimate({ food: false, calories: 0 }), { ok: false, error: 'NOT_FOOD' });
-  assert.deepEqual(parseSnackEstimate({ food: true, calories: 250 }), { ok: true, calories: 250 });
+  assert.deepEqual(parseSnackEstimate({ food: true, calories: 250 }), {
+    ok: true,
+    calories: 250,
+    tip: '',
+  });
+  assert.deepEqual(
+    parseSnackEstimate({ food: true, calories: 250, tip: '  Add a protein side.  ' }),
+    { ok: true, calories: 250, tip: 'Add a protein side.' }
+  );
   assert.deepEqual(parseSnackEstimate(null), { ok: false, error: 'ESTIMATE_FAILED' });
+});
+
+test('clampTip trims, collapses spaces, and caps length', () => {
+  assert.equal(clampTip('  add   veg  '), 'add veg');
+  assert.equal(clampTip(null), '');
+  assert.equal(clampTip('x'.repeat(MAX_TIP_CHARS + 20)).length, MAX_TIP_CHARS);
 });

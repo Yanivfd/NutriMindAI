@@ -252,6 +252,8 @@
     "estimate": "Estimate with AI",
     "estimateHint": "AI's rough guess for a typical portion. You can change the number.",
     "estimateFailed": "We couldn't estimate that. Enter the calories yourself.",
+    "tipLabel": "Tip",
+    "tipDisclaimer": "Coaching estimate — not medical advice.",
     "add": "Add",
     "history": "This week",
     "empty": "Nothing logged this week.",
@@ -277,6 +279,8 @@
     "estimate": "Estimate with AI",
     "estimateHint": "AI's rough guess for a typical portion. You can change the number.",
     "estimateFailed": "We couldn't estimate that. Enter the calories yourself.",
+    "tipLabel": "Tip",
+    "tipDisclaimer": "Coaching estimate — not medical advice.",
     "caloriesLabel": "Calories",
     "invalidCalories": "Enter a number from 0 to 5000.",
     "eatenCaption": "Logged so far. Meals you haven't checked aren't counted yet."

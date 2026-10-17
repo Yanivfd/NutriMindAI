@@ -4,7 +4,7 @@ import { Alert, KeyboardAvoidingView, Pressable, ScrollView, View } from 'react-
 
 import { Text } from '@/components/Text';
 import { Button, Card, Chip, EmptyState, Field, SectionTitle } from '@/components/ui';
-import { useT } from '@/lib/i18n';
+import { useLanguage, useT } from '@/lib/i18n';
 import { COLORS } from '@/lib/theme';
 import { localDateOf, localTimeOf, weekdayOf, weekStartFor } from '@/lib/week';
 import { clampSnackText, MAX_SNACK_WORDS, wordCount } from '@/lib/words';
@@ -23,6 +23,7 @@ const DEFAULT_CALORIES: Record<CheatKind, number> = { beer: 150, sweet: 250, oth
 
 export default function BankScreen() {
   const t = useT();
+  const language = useLanguage();
   const weekStart = weekStartFor(0);
   const { data: profile } = useProfile();
   const { data: saved } = useWeeklyPlan(weekStart);
@@ -34,6 +35,7 @@ export default function BankScreen() {
   const [kind, setKind] = useState<CheatKind>('beer');
   const [calories, setCalories] = useState(String(DEFAULT_CALORIES.beer));
   const [note, setNote] = useState('');
+  const [tip, setTip] = useState('');
   const [invalid, setInvalid] = useState(false);
   const [estimateFailed, setEstimateFailed] = useState(false);
 
@@ -48,7 +50,10 @@ export default function BankScreen() {
     setKind(next);
     // Other keeps an estimate already filled from the description. Beer and sweet use their defaults.
     if (next !== 'other' || wordCount(note) === 0) setCalories(String(DEFAULT_CALORIES[next]));
-    if (next !== 'other') setEstimateFailed(false);
+    if (next !== 'other') {
+      setEstimateFailed(false);
+      setTip('');
+    }
     setInvalid(false);
   };
 
@@ -56,13 +61,18 @@ export default function BankScreen() {
     const description = note.trim();
     if (wordCount(description) === 0) return;
     setEstimateFailed(false);
-    estimate.mutate(description, {
-      onSuccess: (kcal) => {
-        setCalories(String(kcal));
-        setInvalid(false);
-      },
-      onError: () => setEstimateFailed(true),
-    });
+    setTip('');
+    estimate.mutate(
+      { description, language },
+      {
+        onSuccess: (result) => {
+          setCalories(String(result.calories));
+          setTip(result.tip);
+          setInvalid(false);
+        },
+        onError: () => setEstimateFailed(true),
+      }
+    );
   };
 
   const onAdd = () => {
@@ -135,6 +145,7 @@ export default function BankScreen() {
                 onChangeText={(next) => {
                   setNote(clampSnackText(next));
                   setEstimateFailed(false);
+                  setTip('');
                 }}
                 multiline
                 numberOfLines={3}
@@ -152,6 +163,20 @@ export default function BankScreen() {
               <Text className={`text-xs ${estimateFailed ? 'text-meat' : 'text-gray-500'}`}>
                 {estimateFailed ? t('bank.estimateFailed') : t('bank.estimateHint')}
               </Text>
+              {tip !== '' && (
+                <View className="gap-1 rounded-2xl border border-brand-200 bg-brand-50 px-3 py-2">
+                  <View className="flex-row items-center gap-1.5">
+                    <MaterialCommunityIcons
+                      name="lightbulb-on-outline"
+                      size={16}
+                      color={COLORS.brandDark}
+                    />
+                    <Text className="text-xs font-semibold text-brand-700">{t('bank.tipLabel')}</Text>
+                  </View>
+                  <Text className="text-sm text-gray-800">{tip}</Text>
+                  <Text className="text-xs text-gray-500">{t('bank.tipDisclaimer')}</Text>
+                </View>
+              )}
             </>
           )}
           <Field

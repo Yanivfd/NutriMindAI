@@ -3,16 +3,34 @@ import { createClient } from 'npm:@supabase/supabase-js@2.117.2';
 
 import { corsHeaders, jsonResponse } from '../_shared/cors.ts';
 import { modelCandidates } from '../_shared/models.ts';
-import { MAX_SNACK_CHARS, MAX_SNACK_WORDS, parseSnackEstimate, wordCount } from '../_shared/words.ts';
+import {
+  MAX_SNACK_CHARS,
+  MAX_SNACK_WORDS,
+  MAX_TIP_CHARS,
+  parseSnackEstimate,
+  wordCount,
+} from '../_shared/words.ts';
 
 const TIMEOUT_MS = 15_000;
 const TOTAL_BUDGET_MS = 25_000;
 const MIN_ATTEMPT_MS = 3_000;
 
-const SYSTEM_PROMPT = `You estimate the calories of one meal, snack, or drink from a short description.
+type TipLanguage = 'en' | 'he';
+
+function tipLanguage(raw: unknown): TipLanguage {
+  return raw === 'he' ? 'he' : 'en';
+}
+
+function systemPrompt(language: TipLanguage): string {
+  const tipLang = language === 'he' ? 'Hebrew' : 'English';
+  return `You estimate the calories of one meal, snack, or drink from a short description.
 Use a typical serving when the amount is missing. Round to the nearest 10 kcal.
-If the text is not food or drink, set food to false and calories to 0.
-Respond with JSON only: {"food": boolean, "calories": number}.`;
+If the text is not food or drink, set food to false, calories to 0, and tip to "".
+When food is true, also write one short coaching tip (max ${MAX_TIP_CHARS} characters) in ${tipLang}.
+Tone: supportive professional nutritionist — concrete, never shaming.
+Tip ideas: add protein, add vegetables for volume, watch oil/sauce, or note when the meal looks balanced.
+Respond with JSON only: {"food": boolean, "calories": number, "tip": string}.`;
+}
 
 Deno.serve(async (req: Request): Promise<Response> => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: corsHeaders });
@@ -35,6 +53,10 @@ Deno.serve(async (req: Request): Promise<Response> => {
     typeof body === 'object' && body !== null && 'description' in body && typeof body.description === 'string'
       ? body.description.trim()
       : '';
+  const language =
+    typeof body === 'object' && body !== null && 'language' in body
+      ? tipLanguage(body.language)
+      : 'en';
   if (wordCount(description) === 0) return jsonResponse({ error: 'EMPTY' }, 400);
   if (wordCount(description) > MAX_SNACK_WORDS || description.length > MAX_SNACK_CHARS) {
     return jsonResponse({ error: 'TOO_LONG' }, 400);
@@ -54,21 +76,22 @@ Deno.serve(async (req: Request): Promise<Response> => {
         model,
         contents: description,
         config: {
-          systemInstruction: SYSTEM_PROMPT,
+          systemInstruction: systemPrompt(language),
           responseMimeType: 'application/json',
           responseJsonSchema: {
             type: 'object',
             properties: {
               food: { type: 'boolean' },
               calories: { type: 'number' },
+              tip: { type: 'string' },
             },
-            required: ['food', 'calories'],
+            required: ['food', 'calories', 'tip'],
           },
           thinkingConfig: { thinkingLevel: 'low' },
         },
       });
       const parsed = parseSnackEstimate(JSON.parse(response.text ?? ''));
-      if (parsed.ok) return jsonResponse({ calories: parsed.calories });
+      if (parsed.ok) return jsonResponse({ calories: parsed.calories, tip: parsed.tip });
       if (parsed.error === 'NOT_FOOD') return jsonResponse({ error: 'NOT_FOOD' }, 422);
     } catch {
       // The description is never logged. Try the next model.

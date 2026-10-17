@@ -407,17 +407,31 @@ export function useDeleteMealLog(weekStart: string) {
   });
 }
 
-/** Asks the edge function for a typical-portion calorie estimate. The number is not saved. */
+/** Result of estimate-snack-calories: calories plus an optional coaching tip (not saved). */
+export interface SnackEstimate {
+  calories: number;
+  tip: string;
+}
+
+/** Asks the edge function for a typical-portion calorie estimate and one short tip. */
 export function useEstimateSnackCalories() {
   return useMutation({
     mutationKey: ['estimate-snack'],
-    mutationFn: async (description: string): Promise<number> => {
-      const { data, error } = await supabase.functions.invoke<{ calories?: number }>(
-        'estimate-snack-calories',
-        { body: { description } }
-      );
+    mutationFn: async (input: {
+      description: string;
+      language: 'en' | 'he';
+    }): Promise<SnackEstimate> => {
+      const { data, error } = await supabase.functions.invoke<{
+        calories?: number;
+        tip?: string;
+      }>('estimate-snack-calories', {
+        body: { description: input.description, language: input.language },
+      });
       if (error || typeof data?.calories !== 'number') throw new Error('ESTIMATE_FAILED');
-      return data.calories;
+      return {
+        calories: data.calories,
+        tip: typeof data.tip === 'string' ? data.tip.trim() : '',
+      };
     },
   });
 }
