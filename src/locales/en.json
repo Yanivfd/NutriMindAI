@@ -221,7 +221,9 @@
     "ofTarget": "/ %{target} kcal",
     "treatBudget": "Treat budget",
     "noPlanTitle": "Let's plan your week",
-    "generatingHint": "This can take up to a minute…"
+    "generatingHint": "This can take up to a minute…",
+    "dayOverBudget": "Over by %{overage} kcal",
+    "dayOverBudgetA11y": "%{day}, over budget by %{overage} kcal"
   },
   "grocery": {
     "title": "Shopping list",

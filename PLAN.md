@@ -79,7 +79,9 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 - **Weight-based calorie recalculation** — if user's weight trend shows consistent loss/plateau over 2–3 weeks, the app auto-recalculates the calorie target using Mifflin–St Jeor and updated weight. Notifies user of the new daily target and applies it to the next week's plan.
 - **Personalized eating guidelines** — after 2–3 weeks of data (meals, weight, cheat logs), Gemini generates a custom "eat / avoid" rules card based on actual history: "You're under goal when you skip coffee swaps" or "Dinners work better than lunch swaps for you." Stores in a new `eating_guidelines` table and refreshes weekly.
 - **Achievement badges & motivation** — users who hit weekly calorie targets unlock a "Balanced week" badge. Users close to target (within 3%) get an encouraging message. Non-achievers receive a supportive nudge: "You got 82% there — let's try a slower pace next week?"
-- **Visual overflow alert** — days with meals exceeding daily calorie target are marked with a red circle / alert indicator on the day strip. Tap to see the overage and (optionally) adjust a meal or view auto-rebalanced suggestions.
+- **Visual overflow alert** — ✅ shipped: days over the daily calorie target get a red
+  date circle on the day strip; selecting that day shows an “Over by X kcal” pill and a
+  red calorie ring. Auto-rebalance suggestions stay with Meal overflow handling.
 - **Aggressiveness preference** — ✅ shipped: onboarding/settings pace picker
   (`easy` 250 / `steady` 350 / `fast` 500) stored as `profiles.deficit_pace`, used in
   `calorieTargets`. Safe floors remain (1200F / 1500M). Weekly rebalancing can reuse later.
@@ -98,8 +100,8 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | --- | --- | --- | --- | --- |
 | Done | Export grocery list (share sheet) | S | H | Shipped; category emojis in shared text |
 | Done | Aggressiveness / deficit pace | S | H | `deficit_pace` + onboarding/settings picker |
+| Done | Visual overflow alert (day strip) | S | M | Red day circle + overage pill + red ring; rebalance later |
 | P0 | Suggested + editable calorie target | S | H | Trust + flexibility; clamp to safe floors; pairs with pace |
-| P0 | Visual overflow alert (day strip) | S | M | Cheap UI signal; sets up overflow handling later |
 | P1 | Weekend eating preference | S–M | M | Replaces Shabbat question; one answer for all users; planner tweak |
 | P1 | Recipe complexity & diet prefs | M | H | Better week fit from day one; onboarding + recipe filter |
 | P1 | Immediate tip on manual dish | S | H | Piggyback on `estimate-snack-calories`; one tip + UI; no new table for v1 |
@@ -117,7 +119,7 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | P3 | Google Keep native checklist | L | M | Keep API / OAuth; real checkboxes (share sheet cannot do this) |
 | P3 | Supermarket cart integration | L | H | Partner/API dependency; defer until grocery export is loved |
 
-**Suggested next slice:** Visual overflow alert → (discuss) editable calorie target.
+**Suggested next slice:** Suggested + editable calorie target (or Immediate tip on manual dish).
 
 ### Personalized calorie targets (brainstorm — not started)
 

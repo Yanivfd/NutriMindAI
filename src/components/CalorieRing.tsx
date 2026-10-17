@@ -14,7 +14,9 @@ const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 /** Ring showing calories against the day's target. */
 export function CalorieRing({ total, target }: { total: number; target: number }) {
   const t = useT();
+  const over = target > 0 && total > target;
   const share = target > 0 ? Math.min(1, total / target) : 0;
+  const accent = over ? COLORS.meat : COLORS.brand;
   return (
     <View
       className="items-center justify-center"
@@ -28,7 +30,7 @@ export function CalorieRing({ total, target }: { total: number; target: number }
           cx={SIZE / 2}
           cy={SIZE / 2}
           r={RADIUS}
-          stroke={COLORS.brand}
+          stroke={accent}
           strokeWidth={STROKE}
           strokeLinecap="round"
           fill="none"
@@ -36,7 +38,9 @@ export function CalorieRing({ total, target }: { total: number; target: number }
           strokeDashoffset={CIRCUMFERENCE * (1 - share)}
         />
       </Svg>
-      <Text className="text-4xl font-bold text-brand-600">{total.toLocaleString('en-US')}</Text>
+      <Text className={`text-4xl font-bold ${over ? 'text-meat' : 'text-brand-600'}`}>
+        {total.toLocaleString('en-US')}
+      </Text>
       <Text className="text-sm text-gray-500">{t('dashboard.ofTarget', { target: target.toLocaleString('en-US') })}</Text>
     </View>
   );

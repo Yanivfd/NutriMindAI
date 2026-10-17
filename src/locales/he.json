@@ -221,7 +221,9 @@
     "ofTarget": "/ %{target} קק״ל",
     "treatBudget": "תקציב פינוקים",
     "noPlanTitle": "בואו נתכנן את השבוע",
-    "generatingHint": "זה יכול לקחת עד דקה…"
+    "generatingHint": "זה יכול לקחת עד דקה…",
+    "dayOverBudget": "חריגה של %{overage} קק״ל",
+    "dayOverBudgetA11y": "%{day}, חריגה של %{overage} קק״ל מהיעד"
   },
   "grocery": {
     "title": "רשימת קניות",

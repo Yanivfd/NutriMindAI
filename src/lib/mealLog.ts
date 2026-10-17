@@ -9,6 +9,13 @@ export function dayEatenCalories(plannedTotal: number, loggedCalories: readonly 
   return loggedCalories.reduce((sum, calories) => sum + calories, 0);
 }
 
+/** How far over the daily target; 0 when on or under budget. */
+export function dayCalorieOverage(eaten: number, target: number): number {
+  if (!Number.isFinite(eaten) || eaten <= 0) return 0;
+  if (!Number.isFinite(target) || target <= 0) return Math.max(0, Math.round(eaten));
+  return Math.max(0, Math.round(eaten - target));
+}
+
 /** Planned calories for a meal the user can check in. Skip slots have none. */
 export function plannedMealCalories(meal: PlannedMeal): number | null {
   if (meal.type === 'recipe') return meal.calories;

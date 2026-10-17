@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 
-import { dayEatenCalories, plannedMealCalories } from './mealLog.ts';
+import { dayCalorieOverage, dayEatenCalories, plannedMealCalories } from './mealLog.ts';
 import type { PlannedMeal } from '../types/plan.ts';
 
 test('the day ring stays on the plan until something is logged', () => {
@@ -10,6 +10,12 @@ test('the day ring stays on the plan until something is logged', () => {
 
 test('logged calories replace the plan, and unmarked meals are not added', () => {
   assert.equal(dayEatenCalories(1800, [520, 0]), 520);
+});
+
+test('overage is zero on or under target, and the excess when over', () => {
+  assert.equal(dayCalorieOverage(1800, 2000), 0);
+  assert.equal(dayCalorieOverage(2000, 2000), 0);
+  assert.equal(dayCalorieOverage(2150, 2000), 150);
 });
 
 test('recipe and takeaway slots expose planned calories; quiet slots do not', () => {

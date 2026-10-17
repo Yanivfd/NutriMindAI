@@ -11,7 +11,7 @@ import { Text } from '@/components/Text';
 import { Button, Card, CenteredMessage, EmptyState, Loading } from '@/components/ui';
 import { WeekToggle } from '@/components/WeekToggle';
 import { useT } from '@/lib/i18n';
-import { dayEatenCalories } from '@/lib/mealLog';
+import { dayCalorieOverage, dayEatenCalories } from '@/lib/mealLog';
 import { COLORS } from '@/lib/theme';
 import { todayLocal, weekStartFor } from '@/lib/week';
 import { showInterstitial } from '@/services/ads';
@@ -24,6 +24,7 @@ import {
   useWeeklyPlan,
 } from '@/services/menuApi';
 import { useWeekStore } from '@/store/useWeekStore';
+import type { MealLog } from '@/types/db';
 import type { PlannedDay } from '@/types/plan';
 
 function greetingKey(hour: number): string {
@@ -32,32 +33,90 @@ function greetingKey(hour: number): string {
   return 'dashboard.greetingEvening';
 }
 
-function DayStrip(props: { days: PlannedDay[]; selected: string; onSelect: (date: string) => void }) {
+/** Overage kcal per date (only dates that exceed their target). */
+function dayOverageByDate(
+  days: readonly PlannedDay[],
+  mealLogs: readonly MealLog[] | undefined
+): Map<string, number> {
+  const logsByDate = new Map<string, number[]>();
+  for (const log of mealLogs ?? []) {
+    const list = logsByDate.get(log.logged_on);
+    if (list) list.push(log.calories);
+    else logsByDate.set(log.logged_on, [log.calories]);
+  }
+  const overages = new Map<string, number>();
+  for (const day of days) {
+    const eaten = dayEatenCalories(day.total_calories, logsByDate.get(day.date) ?? []);
+    const overage = dayCalorieOverage(eaten, day.target_calories);
+    if (overage > 0) overages.set(day.date, overage);
+  }
+  return overages;
+}
+
+function DayStrip(props: {
+  days: PlannedDay[];
+  selected: string;
+  overages: ReadonlyMap<string, number>;
+  onSelect: (date: string) => void;
+}) {
   const t = useT();
   return (
     <Card className="flex-row justify-between px-2 py-3">
       {props.days.map((day) => {
         const active = day.date === props.selected;
+        const overage = props.overages.get(day.date) ?? 0;
+        const over = overage > 0;
+        const dayLabel = t(`weekdays.${day.weekday}`);
         return (
           <Pressable
             key={day.date}
             accessibilityRole="button"
             accessibilityState={{ selected: active }}
-            accessibilityLabel={t(`weekdays.${day.weekday}`)}
+            accessibilityLabel={
+              over
+                ? t('dashboard.dayOverBudgetA11y', { day: dayLabel, overage })
+                : dayLabel
+            }
             onPress={() => props.onSelect(day.date)}
             className="flex-1 items-center gap-1"
           >
-            <Text className={`text-xs ${active ? 'font-semibold text-brand-600' : 'text-gray-500'}`}>
+            <Text
+              className={`text-xs ${
+                active
+                  ? over
+                    ? 'font-semibold text-meat'
+                    : 'font-semibold text-brand-600'
+                  : over
+                    ? 'text-meat'
+                    : 'text-gray-500'
+              }`}
+            >
               {t(`weekdaysShort.${day.weekday}`)}
             </Text>
             <View
-              className={`h-9 w-9 items-center justify-center rounded-full ${active ? 'bg-brand-500' : 'bg-gray-100'}`}
+              className={`h-9 w-9 items-center justify-center rounded-full ${
+                active
+                  ? over
+                    ? 'bg-meat'
+                    : 'bg-brand-500'
+                  : over
+                    ? 'border-2 border-meat bg-red-50'
+                    : 'bg-gray-100'
+              }`}
             >
-              <Text className={`text-sm ${active ? 'font-semibold text-white' : 'text-gray-700'}`}>
+              <Text
+                className={`text-sm ${
+                  active ? 'font-semibold text-white' : over ? 'font-semibold text-meat' : 'text-gray-700'
+                }`}
+              >
                 {Number(day.date.slice(8))}
               </Text>
             </View>
-            <View className={`h-1.5 w-1.5 rounded-full ${active ? 'bg-brand-500' : 'bg-transparent'}`} />
+            <View
+              className={`h-1.5 w-1.5 rounded-full ${
+                over ? 'bg-meat' : active ? 'bg-brand-500' : 'bg-transparent'
+              }`}
+            />
           </Pressable>
         );
       })}
@@ -107,6 +166,8 @@ export default function DashboardScreen() {
     days[0]?.date;
   const activeDay = days.find((d) => d.date === activeDate);
   const dayLogs = (mealLogs ?? []).filter((log) => log.logged_on === activeDate);
+  const dayOverages = dayOverageByDate(days, mealLogs);
+  const activeOverage = activeDate ? (dayOverages.get(activeDate) ?? 0) : 0;
   const treatsSpent = (cheatLogs ?? []).reduce((sum, log) => sum + log.calories, 0);
 
   const runGenerate = () => {
@@ -171,10 +232,23 @@ export default function DashboardScreen() {
             {dayLogs.length > 0 && (
               <Text className="px-4 text-center text-xs text-gray-500">{t('checkIn.eatenCaption')}</Text>
             )}
+            {activeOverage > 0 && (
+              <View className="flex-row items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1">
+                <MaterialCommunityIcons name="alert-circle-outline" size={16} color={COLORS.meat} />
+                <Text className="text-sm font-semibold text-meat">
+                  {t('dashboard.dayOverBudget', { overage: activeOverage })}
+                </Text>
+              </View>
+            )}
             <TreatPill remaining={plan.weekly_cheat_bank - treatsSpent} />
           </Card>
         )}
-        <DayStrip days={days} selected={activeDate ?? ''} onSelect={setSelectedDate} />
+        <DayStrip
+          days={days}
+          selected={activeDate ?? ''}
+          overages={dayOverages}
+          onSelect={setSelectedDate}
+        />
         {plan.source === 'fallback' && (
           <View className="flex-row items-start gap-2 rounded-2xl border border-amber-200 bg-amber-50 p-3">
             <MaterialCommunityIcons name="information-outline" size={18} color="#b45309" />
