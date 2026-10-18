@@ -4,12 +4,12 @@ import { test } from 'node:test';
 import { dayCalorieOverage, dayEatenCalories, plannedMealCalories } from './mealLog.ts';
 import type { PlannedMeal } from '../types/plan.ts';
 
-test('the day ring stays on the plan until something is logged', () => {
-  assert.equal(dayEatenCalories(1800, []), 1800);
+test('the day ring starts at zero until something is logged', () => {
+  assert.equal(dayEatenCalories([]), 0);
 });
 
-test('logged calories replace the plan, and unmarked meals are not added', () => {
-  assert.equal(dayEatenCalories(1800, [520, 0]), 520);
+test('only logged calories count; unmarked planned meals are not added', () => {
+  assert.equal(dayEatenCalories([520, 0]), 520);
 });
 
 test('overage is zero on or under target, and the excess when over', () => {

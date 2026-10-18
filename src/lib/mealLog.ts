@@ -1,11 +1,11 @@
 import type { PlannedMeal } from '../types/plan.ts';
 
 /**
- * Calories for the day ring. The planned total is shown until a meal is logged.
- * After that, only logged calories count. Unmarked meals are left out.
+ * Calories for the day ring and overflow alerts.
+ * Only logged meals count — the day starts at 0 until the user checks in.
+ * Unmarked planned meals are not counted as eaten.
  */
-export function dayEatenCalories(plannedTotal: number, loggedCalories: readonly number[]): number {
-  if (loggedCalories.length === 0) return plannedTotal;
+export function dayEatenCalories(loggedCalories: readonly number[]): number {
   return loggedCalories.reduce((sum, calories) => sum + calories, 0);
 }
 

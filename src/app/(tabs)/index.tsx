@@ -46,7 +46,7 @@ function dayOverageByDate(
   }
   const overages = new Map<string, number>();
   for (const day of days) {
-    const eaten = dayEatenCalories(day.total_calories, logsByDate.get(day.date) ?? []);
+    const eaten = dayEatenCalories(logsByDate.get(day.date) ?? []);
     const overage = dayCalorieOverage(eaten, day.target_calories);
     if (overage > 0) overages.set(day.date, overage);
   }
@@ -223,10 +223,7 @@ export default function DashboardScreen() {
               {t(`weekdays.${activeDay.weekday}`)}
             </Text>
             <CalorieRing
-              total={dayEatenCalories(
-                activeDay.total_calories,
-                dayLogs.map((log) => log.calories)
-              )}
+              total={dayEatenCalories(dayLogs.map((log) => log.calories))}
               target={activeDay.target_calories}
             />
             {dayLogs.length > 0 && (
