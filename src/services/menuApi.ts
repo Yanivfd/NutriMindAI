@@ -1,4 +1,5 @@
 import { FunctionsHttpError } from '@supabase/supabase-js';
+import { useEffect, useRef } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { addDays, localDateOf, todayLocal } from '@/lib/week';
@@ -263,9 +264,33 @@ export function useRecipes() {
   });
 }
 
+/**
+ * The recipe list is cached for a day. A new plan can name dishes added after that
+ * cache was saved. Fetch once when a needed id is missing, then stop.
+ */
+export function useEnsureRecipes(ids: readonly string[]) {
+  const query = useRecipes();
+  const refreshedFor = useRef('');
+  const missingKey =
+    query.data === undefined
+      ? ''
+      : ids
+          .filter((id) => id.length > 0 && !query.data?.has(id))
+          .sort()
+          .join(',');
+  const { refetch } = query;
+  useEffect(() => {
+    if (!missingKey || refreshedFor.current === missingKey) return;
+    refreshedFor.current = missingKey;
+    void refetch();
+  }, [missingKey, refetch]);
+  return query;
+}
+
 export function useRecipe(id: string): { recipe: RecipeRow | undefined; isLoading: boolean } {
-  const { data, isLoading } = useRecipes();
-  return { recipe: data?.get(id), isLoading };
+  const { data, isLoading, isFetching } = useEnsureRecipes([id]);
+  const recipe = data?.get(id);
+  return { recipe, isLoading: isLoading || (isFetching && !recipe) };
 }
 
 // ---------------------------------------------------------------------------

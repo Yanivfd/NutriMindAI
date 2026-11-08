@@ -6,8 +6,17 @@ import { COLORS } from '@/lib/theme';
 import type { ProfileField, ProfileFormValues, WaitHours } from '@/lib/profileForm';
 import { DEFICIT_PACES } from '@/lib/tdee';
 import type { ActivityLevel, SmokingStatus } from '@/types/db';
-import { CUISINES, MEAL_SLOTS, WEEKDAYS } from '@/types/plan';
-import type { Cuisine, KosherLevel, MealSlot, Weekday } from '@/types/plan';
+import {
+  CUISINES,
+  DIETS,
+  MEAL_SLOTS,
+  WEEKDAYS,
+  type Cuisine,
+  type Diet,
+  type KosherLevel,
+  type MealSlot,
+  type Weekday,
+} from '@/types/plan';
 
 import { BirthDateField, TimeField } from './DateTimeField';
 import { Text } from './Text';
@@ -408,6 +417,29 @@ export function KashrutSection(props: ProfileSectionProps) {
   );
 }
 
+/** Diet is a hard filter on the next week. It does not change the calorie target. */
+export function EatingStyleSection(props: ProfileSectionProps) {
+  const t = useT();
+  const { values } = props;
+  const { set } = formHelpers(props);
+
+  return (
+    <Card className="gap-2">
+      <SectionTitle>{t('onboarding.eatingStyleTitle')}</SectionTitle>
+      <Text className="text-sm text-gray-700">{t('onboarding.diet')}</Text>
+      <Text className="text-xs text-gray-500">{t('onboarding.dietHint')}</Text>
+      {DIETS.map((diet) => (
+        <OptionRow
+          key={diet}
+          label={t(`onboarding.diets.${diet}`)}
+          selected={values.diet === diet}
+          onPress={() => set('diet', diet as Diet)}
+        />
+      ))}
+    </Card>
+  );
+}
+
 /** Optional note for the whole week. Not part of kashrut. */
 export function PlanningNotesSection(props: ProfileSectionProps) {
   const t = useT();
@@ -441,6 +473,7 @@ export function ProfileForm(props: ProfileSectionProps) {
       <ActivitySection {...props} />
       <RoutineSection {...props} />
       <KashrutSection {...props} />
+      <EatingStyleSection {...props} />
       <PlanningNotesSection {...props} />
     </View>
   );

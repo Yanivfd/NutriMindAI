@@ -1,0 +1,33 @@
+{
+  "id": "baked-shakshuka",
+  "title_he": "שקשוקה אפויה",
+  "title_en": "Baked shakshuka",
+  "prep_time_minutes": 35,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 400,
+  "protein_g": 24,
+  "carbs_g": 40,
+  "fat_g": 16,
+  "ingredients": [
+    {"name_he": "ביצים", "name_en": "Eggs", "amount": 2, "unit": "unit", "category": "dairy", "swaps": []},
+    {"name_he": "גרגרי חומוס", "name_en": "Chickpeas", "amount": 80, "unit": "g", "category": "pantry", "swaps": [], "insect_check": true},
+    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 2, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "פלפל אדום", "name_en": "Red bell pepper", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "בצל", "name_en": "Onion", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "מטגנים בצל, פלפל ועגבניות בשמן עד שמתקבל רוטב.",
+    "מוסיפים חומוס ויוצרים שתי גומות לביצים.",
+    "אופים 12 דקות ב-190 מעלות עד שהחלבון מתייצב."
+  ],
+  "instructions_en": [
+    "Cook the onion, pepper and tomatoes in the oil until they make a sauce.",
+    "Add the chickpeas and make two wells for the eggs.",
+    "Bake for 12 minutes at 190 C until the whites are set."
+  ],
+  "cuisines": ["mizrahi", "israeli"],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false
+}

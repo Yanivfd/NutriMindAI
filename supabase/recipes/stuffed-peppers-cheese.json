@@ -1,0 +1,33 @@
+{
+  "id": "stuffed-peppers-cheese",
+  "title_he": "פלפלים ממולאים בגבינה",
+  "title_en": "Cheese stuffed peppers",
+  "prep_time_minutes": 45,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 430,
+  "protein_g": 22,
+  "carbs_g": 50,
+  "fat_g": 16,
+  "ingredients": [
+    {"name_he": "פלפל אדום", "name_en": "Red bell pepper", "amount": 2, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "אורז", "name_en": "Rice", "amount": 50, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "מוצרלה", "name_en": "Mozzarella", "amount": 40, "unit": "g", "category": "dairy", "swaps": []},
+    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "בצל", "name_en": "Onion", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 8, "unit": "ml", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "מבשלים את האורז עם הבצל והעגבנייה 15 דקות ומערבבים עם המוצרלה.",
+    "ממלאים את הפלפלים ומניחים בתבנית עם מעט מים.",
+    "אופים מכוסה 25 דקות ב-190 מעלות."
+  ],
+  "instructions_en": [
+    "Cook the rice with the onion and tomato for 15 minutes and mix in the mozzarella.",
+    "Fill the peppers and set them in a pan with a little water.",
+    "Bake covered for 25 minutes at 190 C."
+  ],
+  "cuisines": ["mediterranean", "israeli"],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": false
+}

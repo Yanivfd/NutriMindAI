@@ -1,0 +1,34 @@
+{
+  "id": "chickpea-spinach-curry",
+  "title_he": "קארי חומוס ותרד",
+  "title_en": "Chickpea and spinach curry",
+  "prep_time_minutes": 40,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 390,
+  "protein_g": 20,
+  "carbs_g": 46,
+  "fat_g": 14,
+  "ingredients": [
+    {"name_he": "גרגרי חומוס", "name_en": "Chickpeas", "amount": 120, "unit": "g", "category": "pantry", "swaps": [], "insect_check": true},
+    {"name_he": "תרד", "name_en": "Spinach", "amount": 80, "unit": "g", "category": "produce", "swaps": [], "insect_check": true},
+    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "בצל", "name_en": "Onion", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "כמון טחון", "name_en": "Ground cumin", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []},
+    {"name_he": "כורכום", "name_en": "Turmeric", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "מטגנים בצל בשמן ומוסיפים כמון וכורכום.",
+    "מוסיפים עגבנייה, חומוס ו-200 מ״ל מים ומבשלים 20 דקות.",
+    "מקפלים פנימה את התרד ומבשלים עוד 5 דקות."
+  ],
+  "instructions_en": [
+    "Cook the onion in the oil and add the cumin and turmeric.",
+    "Add the tomato, chickpeas and 200 ml of water and simmer for 20 minutes.",
+    "Fold in the spinach and cook for 5 more minutes."
+  ],
+  "cuisines": ["asian", "mediterranean"],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false
+}

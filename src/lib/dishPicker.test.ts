@@ -52,6 +52,7 @@ function query(partial: Partial<PickerQuery> = {}): PickerQuery {
     dislikedRecipeIds: [],
     dislikedIngredients: [],
     preferredCuisines: [],
+    diet: 'none',
     ...partial,
   };
 }

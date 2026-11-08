@@ -5,9 +5,9 @@ select id, calories, 4 * protein_g + 4 * carbs_g + 9 * fat_g as from_macros
 from public.recipes
 where abs(calories - (4 * protein_g + 4 * carbs_g + 9 * fat_g)) > calories * 0.05;
 
-\echo '--- prep time > 20 or calories outside 350-650 ---'
+\echo '--- prep time > 60 or calories outside 350-650 ---'
 select id, prep_time_minutes, calories from public.recipes
-where prep_time_minutes > 20 or calories not between 350 and 650;
+where prep_time_minutes > 60 or calories not between 350 and 650;
 
 \echo '--- he/en instruction count mismatch ---'
 select id from public.recipes

@@ -3,6 +3,7 @@ import { isShabbatSlot, roundPortion } from '../../supabase/functions/_shared/pl
 import type { RecipeRow } from '../types/db.ts';
 import type {
   Cuisine,
+  Diet,
   DislikedIngredient,
   KosherLevel,
   MealSlot,
@@ -12,6 +13,7 @@ import type {
   Weekday,
   WeeklyPlanPayload,
 } from '../types/plan.ts';
+import { recipeFitsDiet } from '../../supabase/functions/_shared/diet.ts';
 import { isRecipeBlocked } from '../types/plan.ts';
 
 import { plannedMealCalories } from './mealLog.ts';
@@ -36,6 +38,7 @@ export interface PickerQuery {
   dislikedRecipeIds: readonly string[];
   dislikedIngredients: readonly DislikedIngredient[];
   preferredCuisines: readonly Cuisine[];
+  diet: Diet;
   /** The dish already in this slot, so the list offers something else. */
   currentRecipeId?: string;
 }
@@ -113,6 +116,7 @@ function allowed(recipe: RecipeRow, query: PickerQuery, meal: PlannedMeal | unde
   if (query.kosherLevel !== 'none' && !recipe.is_kosher) return false;
   if (needsShabbat(query, meal) && !recipe.shabbat_friendly) return false;
   if (breaksWait(recipe, query)) return false;
+  if (!recipeFitsDiet(recipe, query.diet)) return false;
   return !isRecipeBlocked(recipe, {
     disliked_recipe_ids: [...query.dislikedRecipeIds],
     disliked_ingredients: [...query.dislikedIngredients],
@@ -129,6 +133,7 @@ export function pickerQuery(input: {
   dislikedRecipeIds: readonly string[];
   dislikedIngredients: readonly DislikedIngredient[];
   preferredCuisines: readonly Cuisine[];
+  diet: Diet;
 }): PickerQuery {
   return {
     slot: input.meal.slot,
@@ -141,6 +146,7 @@ export function pickerQuery(input: {
     dislikedRecipeIds: input.dislikedRecipeIds,
     dislikedIngredients: input.dislikedIngredients,
     preferredCuisines: input.preferredCuisines,
+    diet: input.diet,
     currentRecipeId: input.meal.type === 'recipe' ? input.meal.recipe_id : undefined,
   };
 }
@@ -148,10 +154,10 @@ export function pickerQuery(input: {
 function byFit(query: PickerQuery) {
   const preferred = query.preferredCuisines;
   return (a: PickerDish, b: PickerDish): number => {
-    const rank = (recipe: RecipeRow): number =>
-      preferred.length === 0 || recipe.cuisines.some((cuisine) => preferred.includes(cuisine)) ? 0 : 1;
+    const cuisine = (recipe: RecipeRow): number =>
+      preferred.length === 0 || recipe.cuisines.some((item) => preferred.includes(item)) ? 0 : 1;
     return (
-      rank(a.recipe) - rank(b.recipe) ||
+      cuisine(a.recipe) - cuisine(b.recipe) ||
       Math.abs(a.calories - query.budget) - Math.abs(b.calories - query.budget) ||
       a.recipe.title_en.localeCompare(b.recipe.title_en)
     );

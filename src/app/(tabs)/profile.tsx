@@ -192,6 +192,12 @@ export default function ProfileScreen() {
                 .join(', ')}
             </Text>
           </View>
+          <View className="flex-row justify-between gap-3">
+            <Text className="text-gray-700">{t('profile.diet')}</Text>
+            <Text className="shrink font-semibold text-gray-900">
+              {t(`onboarding.diets.${profile.diet ?? 'none'}`)}
+            </Text>
+          </View>
           {profile.planning_notes?.trim() ? (
             <View className="gap-1">
               <Text className="text-gray-700">{t('profile.planningNotes')}</Text>

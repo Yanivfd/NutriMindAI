@@ -1,0 +1,33 @@
+{
+  "id": "stuffed-squash-rice",
+  "title_he": "דלעת ממולאת באורז",
+  "title_en": "Rice stuffed squash",
+  "prep_time_minutes": 55,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 440,
+  "protein_g": 16,
+  "carbs_g": 62,
+  "fat_g": 14,
+  "ingredients": [
+    {"name_he": "דלעת", "name_en": "Squash", "amount": 300, "unit": "g", "category": "produce", "swaps": []},
+    {"name_he": "אורז", "name_en": "Rice", "amount": 50, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "גרגרי חומוס", "name_en": "Chickpeas", "amount": 60, "unit": "g", "category": "pantry", "swaps": [], "insect_check": true},
+    {"name_he": "בצל", "name_en": "Onion", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "כמון טחון", "name_en": "Ground cumin", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "חוצים את הדלעת ואופים 20 דקות ב-190 מעלות.",
+    "מבשלים אורז, בצל, חומוס וכמון 15 דקות.",
+    "ממלאים את הדלעת ואופים עוד 15 דקות."
+  ],
+  "instructions_en": [
+    "Halve the squash and bake for 20 minutes at 190 C.",
+    "Cook the rice, onion, chickpeas and cumin for 15 minutes.",
+    "Fill the squash and bake for 15 more minutes."
+  ],
+  "cuisines": ["mediterranean", "international"],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false
+}

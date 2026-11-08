@@ -155,6 +155,100 @@ describe('parseSuggestions', () => {
 });
 
 describe('chooseRecipes + buildDays', () => {
+  it('drops a dish the diet forbids, even when the model asks for it', () => {
+    const chicken = recipe({
+      id: 'diet-chicken',
+      title_en: 'Chicken',
+      calories: 500,
+      protein_g: 40,
+      prep_time_minutes: 15,
+      meal_types: ['lunch'],
+      kashrut_type: 'meat',
+      is_kosher: true,
+      shabbat_friendly: false,
+      ingredients: [ing('Chicken breast', 150, 'g', 'meat_fish')],
+    });
+    const lentils = recipe({
+      id: 'diet-lentils',
+      title_en: 'Lentils',
+      calories: 420,
+      protein_g: 20,
+      prep_time_minutes: 20,
+      meal_types: ['lunch'],
+      kashrut_type: 'parve',
+      is_kosher: true,
+      shabbat_friendly: false,
+      ingredients: [ing('Red lentils', 80, 'g', 'pantry', true)],
+    });
+    const tuna = recipe({
+      id: 'diet-tuna',
+      title_en: 'Tuna',
+      calories: 430,
+      protein_g: 35,
+      prep_time_minutes: 10,
+      meal_types: ['lunch'],
+      kashrut_type: 'parve',
+      is_kosher: true,
+      shabbat_friendly: true,
+      ingredients: [ing('Tuna in water', 150, 'g', 'pantry')],
+    });
+    const yogurt = recipe({
+      id: 'diet-yogurt',
+      title_en: 'Yogurt',
+      calories: 410,
+      protein_g: 22,
+      prep_time_minutes: 5,
+      meal_types: ['lunch'],
+      kashrut_type: 'dairy',
+      is_kosher: true,
+      shabbat_friendly: true,
+      ingredients: [ing('Greek yogurt', 200, 'g', 'dairy')],
+    });
+    const salmon = recipe({
+      id: 'diet-salmon',
+      title_en: 'Salmon',
+      calories: 480,
+      protein_g: 34,
+      prep_time_minutes: 20,
+      meal_types: ['lunch'],
+      kashrut_type: 'parve',
+      is_kosher: true,
+      shabbat_friendly: true,
+      ingredients: [ing('Salmon fillet', 160, 'g', 'meat_fish')],
+    });
+    const catalog = [chicken, lentils, tuna, yogurt, salmon];
+    const sundayLunch = (profile: PlanningProfile, suggestions: ModelSuggestion[]) => {
+      const slots = buildSlots(profile, WEEK).filter((slot) => slot.day === 'sunday' && slot.slot === 'lunch');
+      const choice = chooseRecipes(slots, suggestions, catalog, profile)[0];
+      return choice?.recipe?.id;
+    };
+    const askChicken: ModelSuggestion[] = [{ day: 'sunday', slot: 'lunch', recipe_id: 'diet-chicken' }];
+    const vegan = baseProfile({ diet: 'vegan', office_days: [] });
+    assert.equal(sundayLunch(vegan, askChicken), 'diet-lentils');
+    const vegetarian = baseProfile({ diet: 'vegetarian', office_days: [] });
+    assert.equal(
+      sundayLunch(vegetarian, [{ day: 'sunday', slot: 'lunch', recipe_id: 'diet-yogurt' }]),
+      'diet-yogurt'
+    );
+    assert.equal(sundayLunch(vegetarian, [{ day: 'sunday', slot: 'lunch', recipe_id: 'diet-tuna' }]), 'diet-lentils');
+    assert.notEqual(sundayLunch(vegetarian, askChicken), 'diet-tuna');
+    const pescatarian = baseProfile({ diet: 'pescatarian', office_days: [] });
+    assert.equal(
+      sundayLunch(pescatarian, askChicken),
+      'diet-salmon'
+    );
+    assert.notEqual(sundayLunch(pescatarian, askChicken), 'diet-chicken');
+  });
+
+  it('keeps slot budgets the same for any diet', () => {
+    const plain = buildSlots(baseProfile({ office_days: [] }), WEEK);
+    const styled = buildSlots(baseProfile({ office_days: [], diet: 'vegan' }), WEEK);
+    assert.deepEqual(
+      styled.map((slot) => slot.budget),
+      plain.map((slot) => slot.budget)
+    );
+  });
+
   it('keeps valid model suggestions', () => {
     const days = plan(baseProfile(), [{ day: 'sunday', slot: 'lunch', recipe_id: 'salmon-sweet-potato' }]);
     const sundayLunch = days[0].meals.find((m) => m.slot === 'lunch');

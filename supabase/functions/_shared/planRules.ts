@@ -1,3 +1,4 @@
+import { recipeFitsDiet } from './diet.ts';
 import { isRecipeBlocked, MEAL_SLOTS, WEEKDAYS } from './types.ts';
 import type {
   MealSlot,
@@ -250,6 +251,7 @@ export function chooseRecipes(
       const meatBefore = lastMeat;
       const hardOk = (r: Recipe): boolean =>
         !isRecipeBlocked(r, profile) &&
+        recipeFitsDiet(r, profile.diet) &&
         r.meal_types.includes(spec.slot) &&
         (!spec.shabbat || r.shabbat_friendly) &&
         !(noMeat.has(spec.slot) && r.kashrut_type === 'meat') &&
@@ -274,12 +276,13 @@ export function chooseRecipes(
 
       const suggestedId = suggested.get(`${spec.day}|${spec.slot}`);
       const fromModel = suggestedId ? byId.get(suggestedId) : undefined;
+      const valid = pool.filter(hardOk);
+      const soft = valid.filter(softOk);
       let pick: Recipe | null = null;
       if (fromModel && hardOk(fromModel) && softOk(fromModel)) {
         pick = fromModel;
       } else {
-        const valid = pool.filter(hardOk);
-        pick = valid.filter(softOk).sort(rank)[0] ?? valid.sort(rank)[0] ?? null;
+        pick = soft.sort(rank)[0] ?? [...valid].sort(rank)[0] ?? null;
       }
 
       if (!pick) {

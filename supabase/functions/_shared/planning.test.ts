@@ -71,10 +71,13 @@ describe('toPlanningProfile', () => {
       snack_time: '16:30',
       dinner_time: '19:30',
       planning_notes: '  simple meals  ',
+      diet: 'vegan',
     } satisfies ProfileRow;
     assert.equal(toPlanningProfile(row).planning_notes, 'simple meals');
     assert.equal(toPlanningProfile({ ...row, planning_notes: null }).planning_notes, '');
     assert.equal(toPlanningProfile(row).daily_calorie_target, 1800);
+    assert.equal(toPlanningProfile(row).diet, 'vegan');
+    assert.equal(toPlanningProfile({ ...row, diet: 'nope' }).diet, 'none');
   });
 });
 

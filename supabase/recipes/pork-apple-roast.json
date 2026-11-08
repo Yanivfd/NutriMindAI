@@ -1,0 +1,33 @@
+{
+  "id": "pork-apple-roast",
+  "title_he": "צלי חזיר ותפוחים",
+  "title_en": "Pork and apple roast",
+  "prep_time_minutes": 55,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 450,
+  "protein_g": 32,
+  "carbs_g": 36,
+  "fat_g": 20,
+  "ingredients": [
+    {"name_he": "סינטה חזיר", "name_en": "Pork loin", "amount": 150, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "תפוח", "name_en": "Apple", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "תפוח אדמה", "name_en": "Potato", "amount": 150, "unit": "g", "category": "produce", "swaps": []},
+    {"name_he": "בצל", "name_en": "Onion", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "טימין", "name_en": "Thyme", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "מחממים תנור ל-190 מעלות ומתבלים את החזיר בטימין ושמן.",
+    "מניחים תפוח, תפוח אדמה ובצל סביב הבשר.",
+    "צולים 40 דקות עד שהבשר מוכן והירקות רכים."
+  ],
+  "instructions_en": [
+    "Heat the oven to 190 C and season the pork with thyme and oil.",
+    "Place the apple, potato and onion around the meat.",
+    "Roast for 40 minutes until the meat is cooked and the vegetables are soft."
+  ],
+  "cuisines": ["international", "american"],
+  "kashrut_type": "meat",
+  "is_kosher": false,
+  "shabbat_friendly": false
+}

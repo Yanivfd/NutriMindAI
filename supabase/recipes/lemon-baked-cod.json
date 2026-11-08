@@ -1,0 +1,33 @@
+{
+  "id": "lemon-baked-cod",
+  "title_he": "דג בקלה אפוי בלימון",
+  "title_en": "Lemon baked cod",
+  "prep_time_minutes": 40,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 370,
+  "protein_g": 36,
+  "carbs_g": 28,
+  "fat_g": 12,
+  "ingredients": [
+    {"name_he": "פילה בקלה", "name_en": "Cod fillet", "amount": 180, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "תפוח אדמה", "name_en": "Potato", "amount": 180, "unit": "g", "category": "produce", "swaps": []},
+    {"name_he": "לימון", "name_en": "Lemon", "amount": 0.5, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 8, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "שום", "name_en": "Garlic", "amount": 1, "unit": "clove", "category": "produce", "swaps": []},
+    {"name_he": "פטרוזיליה", "name_en": "Parsley", "amount": 5, "unit": "g", "category": "produce", "swaps": [], "insect_check": true}
+  ],
+  "instructions_he": [
+    "מרתיחים את תפוחי האדמה 15 דקות ופורסים אותם לתבנית.",
+    "מניחים את הבקלה מעל עם שמן, שום, לימון ופטרוזיליה.",
+    "אופים 15 דקות ב-200 מעלות עד שהדג אטום."
+  ],
+  "instructions_en": [
+    "Boil the potatoes for 15 minutes and slice them into a pan.",
+    "Lay the cod on top with the oil, garlic, lemon and parsley.",
+    "Bake for 15 minutes at 200 C until the fish is opaque."
+  ],
+  "cuisines": ["mediterranean", "international"],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": false
+}

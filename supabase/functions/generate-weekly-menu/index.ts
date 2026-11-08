@@ -15,6 +15,7 @@ import {
   toPlanningProfile,
 } from '../_shared/planning.ts';
 import type { ProfileRow } from '../_shared/planning.ts';
+import { recipeFitsDiet } from '../_shared/diet.ts';
 import { isRecipeBlocked } from '../_shared/types.ts';
 import type { ModelSuggestion, Recipe, WeeklyPlanPayload } from '../_shared/types.ts';
 import { modelCandidates } from '../_shared/models.ts';
@@ -79,7 +80,9 @@ Deno.serve(async (req: Request): Promise<Response> => {
     Deno.env.get('GEMINI_FALLBACK_MODELS')
   );
   // The model only sees dishes that already passed the dislike rules.
-  const allowed = recipes.filter((recipe) => !isRecipeBlocked(recipe, profile));
+  const allowed = recipes.filter(
+    (recipe) => !isRecipeBlocked(recipe, profile) && recipeFitsDiet(recipe, profile.diet)
+  );
 
   let suggestions: ModelSuggestion[] = [];
   let source: WeeklyPlanPayload['source'] = 'fallback';

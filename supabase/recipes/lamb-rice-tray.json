@@ -1,0 +1,33 @@
+{
+  "id": "lamb-rice-tray",
+  "title_he": "מגש כבש ואורז",
+  "title_en": "Lamb and rice tray",
+  "prep_time_minutes": 45,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 480,
+  "protein_g": 30,
+  "carbs_g": 48,
+  "fat_g": 18,
+  "ingredients": [
+    {"name_he": "כתף כבש", "name_en": "Lamb shoulder", "amount": 130, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "אורז", "name_en": "Rice", "amount": 60, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "בצל", "name_en": "Onion", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "כמון טחון", "name_en": "Ground cumin", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "משחימים את הכבש והבצל בשמן.",
+    "מוסיפים אורז, עגבנייה קצוצה, כמון ו-250 מ״ל מים.",
+    "מבשלים מכוסה 30 דקות עד שהאורז סופג את הנוזלים."
+  ],
+  "instructions_en": [
+    "Brown the lamb and onion in the oil.",
+    "Add the rice, chopped tomato, cumin and 250 ml of water.",
+    "Cover and cook for 30 minutes until the rice has absorbed the liquid."
+  ],
+  "cuisines": ["mizrahi", "mediterranean"],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": false
+}

@@ -81,7 +81,13 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
   (`easy` 250 / `steady` 350 / `fast` 500) stored as `profiles.deficit_pace`, used in
   `calorieTargets`. Safe floors remain (1200F / 1500M). Weekly rebalancing can reuse later.
 - **Pick-your-dishes week planner** — when starting next week's menu, the user chooses **auto generate** (current flow: AI picks and schedules dishes) or **manual pick**. In manual mode they browse the available dish list and select which recipes they want; a capacity counter tracks progress toward that week's meal slots (e.g. lunches + dinners + snacks, respecting skip-breakfast and office days). When selection reaches full week capacity, the app locks the dish set and AI arranges those dishes across the week (days/slots, portions, kashrut/Shabbat/repeat rules) — refining order and sizing rather than inventing new recipes. User can still deselect/swap before confirming generate. Both paths produce the same weekly plan shape.
-- **Recipe complexity & diet preferences (onboarding)** — early in the app (onboarding questions about the user), ask how difficult / rich the recipes should be on a scale from low to high (e.g. simple & light → moderate → rich & advanced). Also ask whether they follow a special diet (e.g. vegan, vegetarian, and similar options). Store both answers on the profile and use them when building personalized weekly meals (filter or bias the recipe pool and planner constraints so the week matches their skill/richness level and diet). Editable later in settings.
+- **Diet preference (onboarding)** — ✅ shipped: its own step and a settings card.
+  Diet is `none`, vegetarian, vegan, or pescatarian, and it is a hard filter on ingredients
+  and swaps (eggplant does not count as egg). Calories and portions do not change.
+  Cooking style was removed: there was no rule for which dish counts as richer.
+  The 12 longer recipes stay in the catalog as normal dishes. Production still needs
+  `20261108000013_drop_cooking_style.sql`, the new recipe rows, and a redeploy of
+  `generate-weekly-menu` and `apply-dislikes`.
 - **Weekend eating preference (replaces Shabbat question)** — ✅ shipped: onboarding and settings
   ask "I eat more on weekends". When on, Friday and Saturday get 25% more of the day's food and
   the other days 10% less, so the week still adds up. Kosher Shabbat rules stay automatic from
@@ -112,7 +118,7 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | Done | Immediate tip on manual dish | S | H | Same Gemini call as calories; tip card in check-in + bank other |
 | Done | Cook something else (dish picker) | M | H | Browse recipes; replace the slot or log known calories. No Gemini |
 | Done | Weekend eating preference | S–M | M | Fri–Sat +25%, other days −10%. Skip lunch/dinner and weigh-in days shipped with it |
-| P1 | Recipe complexity & diet prefs | M | H | Better week fit from day one; onboarding + recipe filter |
+| Done | Diet preference | M | H | Hard filter. Cooking style removed; richer vs not was not defined |
 | Done | Free-text planning notes | S | M | Optional note; Gemini dish choice only. Calories stay in code |
 | P1 | Dynamic calories from weight logs | M | H | Phase 1: recalc after weigh-in when distance-to-goal shifts; apply next week |
 | Later | Suggested + editable calorie target | S | ? | Deferred — value unclear; revisit if users ask for doctor/dietitian overrides |
@@ -128,7 +134,7 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | P3 | Google Keep native checklist | L | M | Keep API / OAuth; real checkboxes (share sheet cannot do this) |
 | P3 | Supermarket cart integration | L | H | Partner/API dependency; defer until grocery export is loved |
 
-**Suggested next slice:** Recipe complexity and diet preferences.
+**Suggested next slice:** Dynamic calories from weight logs.
 
 ### Personalized calorie targets (brainstorm — not started)
 
@@ -213,7 +219,7 @@ Goal: feel more like a coach, still clearly "estimate, not medical advice."
 - `chooseRecipes` (`_shared/planRules.ts`) is the single gatekeeper: kashrut/Shabbat rules are never relaxed; max 3 uses per recipe per week and no repeat within a day are relaxed only when nothi[...]
 - Models are tried in order: `GEMINI_MODEL` (default `gemini-3.8-flash`), then `GEMINI_FALLBACK_MODELS` (default `gemini-3.7-flash,gemini-3.5-flash,gemini-flash-latest`), one attempt each, within[...]
 - If every model fails or `GEMINI_API_KEY` is unset, the same rules build a deterministic plan (`source: 'fallback'`).
-- Gemini receives calorie slot targets, slot times, the recipe catalog, kitchen and kashrut flags, and the optional planning note. It does not receive age, weight, or other profile fields. The note cannot change the calorie target; portions stay in code. If Gemini is unavailable, the fallback planner ignores the note.
+- Gemini receives calorie slot targets, slot times, the recipe catalog, kitchen and kashrut flags, cooking style, and the optional planning note. It does not receive age, weight, or other profile fields. Diet filtering happens in code before the model sees the catalog. The note and cooking style cannot change the calorie target; portions stay in code. If Gemini is unavailable, the fallback planner still applies the diet and the cooking-style rank, and ignores the free-text note.
 - Request body `{ week_start_date? }` must be the current or next Sunday (Asia/Jerusalem). Response: `{ plan_id, plan: WeeklyPlanPayload }`. Errors: 401 `UNAUTHORIZED`, 400 `INVALID_WEEK`, 409 `P[...]
 - Tests: `npm run test:functions` (Node's built-in runner; Deno not required). Typecheck: `npm run typecheck`.
 

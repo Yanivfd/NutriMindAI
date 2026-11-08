@@ -100,6 +100,18 @@ const RECIPE_IMAGES: Record<string, ImageSourcePropType> = {
   'zaatar-feta-salad': require('../../assets/recipes/zaatar-feta-salad.jpg'),
   'zaatar-labneh-plate': require('../../assets/recipes/zaatar-labneh-plate.jpg'),
   'zaatar-salmon-salad': require('../../assets/recipes/zaatar-salmon-salad.jpg'),
+  'baked-salmon-tray': require('../../assets/recipes/baked-salmon-tray.jpg'),
+  'baked-shakshuka': require('../../assets/recipes/baked-shakshuka.jpg'),
+  'beef-barley-stew': require('../../assets/recipes/beef-barley-stew.jpg'),
+  'chickpea-spinach-curry': require('../../assets/recipes/chickpea-spinach-curry.jpg'),
+  'lamb-rice-tray': require('../../assets/recipes/lamb-rice-tray.jpg'),
+  'lemon-baked-cod': require('../../assets/recipes/lemon-baked-cod.jpg'),
+  'lentil-mushroom-stew': require('../../assets/recipes/lentil-mushroom-stew.jpg'),
+  'oven-roast-chicken': require('../../assets/recipes/oven-roast-chicken.jpg'),
+  'pork-apple-roast': require('../../assets/recipes/pork-apple-roast.jpg'),
+  'spinach-lasagna-bake': require('../../assets/recipes/spinach-lasagna-bake.jpg'),
+  'stuffed-peppers-cheese': require('../../assets/recipes/stuffed-peppers-cheese.jpg'),
+  'stuffed-squash-rice': require('../../assets/recipes/stuffed-squash-rice.jpg'),
 };
 
 /** Photo for a recipe, or undefined when none is bundled. */

@@ -127,14 +127,15 @@ supabase/templates  Sign-in email (he/en)
 7. **Release build:** a signed Android build, with EAS (`npx eas-cli@latest build -p android`) or
    locally.
 
-**Before the next Play release:** the hosted project does not have these migrations yet:
+**Before the next Play release:** the hosted project already has migrations through
+`20261108000012_diet_style.sql` (that one also added `cooking_style`). Still to do:
 
-- `20261108000010_meal_flexibility.sql` — skip lunch/dinner, eat more on weekends, weigh-in days
-- `20261108000011_planning_notes.sql` — optional planning note
+- `npx supabase db push` for `20261108000013_drop_cooking_style.sql` — removes `cooking_style`
+- Load the rebuilt `supabase/seed.sql` so the 12 longer recipes exist
+- Redeploy `generate-weekly-menu` and `apply-dislikes`
 
-Run `npx supabase db push` first, then redeploy `generate-weekly-menu` and `apply-dislikes`.
-Saving a profile on production fails until those migrations are applied. The planning note
-only affects the next week generated with Gemini. It does not change the calorie target.
+Do the push and the redeploy together. The current hosted functions still read `cooking_style`,
+and this migration drops that column.
 
 ## Known limitations
 

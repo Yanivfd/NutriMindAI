@@ -184,6 +184,14 @@ test('buildProfileInput stores a planning note without changing calories', () =>
   assert.equal(blank.input.planning_notes, '');
 });
 
+test('buildProfileInput stores diet without changing calories', () => {
+  const plain = buildProfileInput(validForm, TODAY);
+  const styled = buildProfileInput({ ...validForm, diet: 'vegan' }, TODAY);
+  assert.ok(plain.ok && styled.ok);
+  assert.equal(styled.input.diet, 'vegan');
+  assert.equal(styled.input.daily_calorie_target, plain.input.daily_calorie_target);
+});
+
 test('buildProfileInput requires at least one kitchen', () => {
   const result = buildProfileInput({ ...validForm, cuisines: [] }, TODAY);
   assert.ok(!result.ok);

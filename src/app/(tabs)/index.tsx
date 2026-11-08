@@ -18,10 +18,10 @@ import { showInterstitial } from '@/services/ads';
 import {
   MenuApiError,
   useCheatLogs,
+  useEnsureRecipes,
   useGenerateWeek,
   useMealLogs,
   useProfile,
-  useRecipes,
   useWeeklyPlan,
 } from '@/services/menuApi';
 import { useWeekStore } from '@/store/useWeekStore';
@@ -151,7 +151,10 @@ export default function DashboardScreen() {
   const planQuery = useWeeklyPlan(weekStart);
   const { data: cheatLogs } = useCheatLogs(weekStart);
   const { data: mealLogs } = useMealLogs(weekStart);
-  const { data: recipes } = useRecipes();
+  const plannedRecipeIds = (planQuery.data?.plan.days ?? []).flatMap((day) =>
+    day.meals.flatMap((meal) => (meal.type === 'recipe' ? [meal.recipe_id] : []))
+  );
+  const { data: recipes } = useEnsureRecipes(plannedRecipeIds);
   const { data: profile } = useProfile();
   const generate = useGenerateWeek();
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
@@ -271,6 +274,7 @@ export default function DashboardScreen() {
                 dislikedRecipeIds={profile?.disliked_recipe_ids ?? []}
                 dislikedIngredients={profile?.disliked_ingredients ?? []}
                 preferredCuisines={profile?.preferred_cuisines ?? []}
+                diet={profile?.diet ?? 'none'}
                 log={dayLogs.find((log) => log.slot === meal.slot)}
                 onOpenRecipe={(id, portion) =>
                   router.push({

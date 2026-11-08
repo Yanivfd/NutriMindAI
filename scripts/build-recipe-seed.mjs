@@ -79,7 +79,7 @@ function validate(recipe) {
   const problems = [];
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(recipe.id)) problems.push(`${recipe.id} is not kebab-case`);
   if (!recipe.title_he || !recipe.title_en) problems.push(`${recipe.id} needs both titles`);
-  if (recipe.prep_time_minutes > 20) problems.push(`${recipe.id} takes over 20 minutes`);
+  if (recipe.prep_time_minutes > 60) problems.push(`${recipe.id} takes over 60 minutes`);
   if (!recipe.meal_types?.length || recipe.meal_types.some((s) => !MEAL_TYPES.includes(s))) {
     problems.push(`${recipe.id} has bad meal types`);
   }

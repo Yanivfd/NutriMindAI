@@ -1,3 +1,4 @@
+import { normalizeDiet } from './diet.ts';
 import { addDays, currentWeekStart, isValidIsoDate, weekdayOf } from './planRules.ts';
 import { ingredientKey, normalizePlanningNotes } from './types.ts';
 import type { DislikedIngredient, PlanningProfile } from './types.ts';
@@ -21,13 +22,14 @@ export interface ProfileRow {
   snack_time: string;
   dinner_time: string;
   planning_notes: string | null;
+  diet: string | null;
 }
 
 export const PROFILE_PLANNING_COLUMNS =
   'daily_calorie_target, weekly_cheat_bank, skips_breakfast, skips_lunch, skips_dinner, ' +
   'eats_more_on_weekends, office_days, kosher_level, ' +
   'meat_dairy_wait_hours, preferred_cuisines, disliked_recipe_ids, disliked_ingredients, ' +
-  'breakfast_time, lunch_time, snack_time, dinner_time, planning_notes';
+  'breakfast_time, lunch_time, snack_time, dinner_time, planning_notes, diet';
 
 /** Maps a profiles row to the fields `chooseRecipes` needs. */
 export function toPlanningProfile(row: ProfileRow): PlanningProfile {
@@ -51,6 +53,7 @@ export function toPlanningProfile(row: ProfileRow): PlanningProfile {
       dinner: row.dinner_time,
     },
     planning_notes: normalizePlanningNotes(row.planning_notes),
+    diet: normalizeDiet(row.diet),
   };
 }
 

@@ -1,0 +1,33 @@
+{
+  "id": "oven-roast-chicken",
+  "title_he": "עוף צלוי בתנור",
+  "title_en": "Oven roast chicken",
+  "prep_time_minutes": 50,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 460,
+  "protein_g": 34,
+  "carbs_g": 40,
+  "fat_g": 18,
+  "ingredients": [
+    {"name_he": "ירך עוף", "name_en": "Chicken thigh", "amount": 160, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "תפוח אדמה", "name_en": "Potato", "amount": 200, "unit": "g", "category": "produce", "swaps": []},
+    {"name_he": "בצל", "name_en": "Onion", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שום", "name_en": "Garlic", "amount": 2, "unit": "clove", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "פפריקה", "name_en": "Paprika", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "מחממים תנור ל-200 מעלות ומתבלים את העוף בפפריקה, שום ושמן.",
+    "פורסים תפוח אדמה ובצל ומסדרים סביב העוף בתבנית.",
+    "צולים 40 דקות עד שהעוף מוכן והירקות רכים. אפשר להגיש בטמפרטורת החדר."
+  ],
+  "instructions_en": [
+    "Heat the oven to 200 C and season the chicken with paprika, garlic and oil.",
+    "Slice the potato and onion and arrange them around the chicken in a pan.",
+    "Roast for 40 minutes until the chicken is cooked and the vegetables are soft. It can be served at room temperature."
+  ],
+  "cuisines": ["mediterranean", "israeli"],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": true
+}

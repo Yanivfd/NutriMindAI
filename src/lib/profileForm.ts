@@ -6,8 +6,9 @@ import type {
   Sex,
   SmokingStatus,
 } from '../types/db.ts';
+import { normalizeDiet } from '../../supabase/functions/_shared/diet.ts';
 import { CUISINES, normalizePlanningNotes } from '../types/plan.ts';
-import type { Cuisine, KosherLevel, MealSlot, Weekday } from '../types/plan.ts';
+import type { Cuisine, Diet, KosherLevel, MealSlot, Weekday } from '../types/plan.ts';
 import { DEFAULT_WEIGH_IN_DAYS, normalizeWeighInDays } from './reminders.ts';
 import { ageOn, calorieTargets, DEFICIT_PACES } from './tdee.ts';
 
@@ -36,6 +37,7 @@ export interface ProfileFormValues {
   coffeeMilkCups: number;
   coffeeSugarTsp: number;
   planningNotes: string;
+  diet: Diet;
 }
 
 export type ProfileField =
@@ -78,6 +80,7 @@ export const DEFAULT_FORM_VALUES: ProfileFormValues = {
   coffeeMilkCups: 0,
   coffeeSugarTsp: 0,
   planningNotes: '',
+  diet: 'none',
 };
 
 const MIN_AGE = 16;
@@ -128,6 +131,7 @@ export function profileToFormValues(profile: Profile): ProfileFormValues {
     coffeeMilkCups: profile.coffee_milk_cups ?? 0,
     coffeeSugarTsp: profile.coffee_sugar_tsp ?? 0,
     planningNotes: profile.planning_notes ?? '',
+    diet: normalizeDiet(profile.diet),
   };
 }
 
@@ -229,6 +233,7 @@ export function buildProfileInput(
       coffee_milk_cups: coffeeMilkCups,
       coffee_sugar_tsp: coffeeSugarTsp,
       planning_notes: normalizePlanningNotes(values.planningNotes),
+      diet: normalizeDiet(values.diet),
     },
   };
 }

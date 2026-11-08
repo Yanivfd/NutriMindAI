@@ -1,0 +1,33 @@
+{
+  "id": "beef-barley-stew",
+  "title_he": "תבשיל בקר ושעורה",
+  "title_en": "Beef and barley stew",
+  "prep_time_minutes": 60,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 440,
+  "protein_g": 32,
+  "carbs_g": 42,
+  "fat_g": 16,
+  "ingredients": [
+    {"name_he": "בקר רזה", "name_en": "Lean beef", "amount": 140, "unit": "g", "category": "meat_fish", "swaps": []},
+    {"name_he": "גריסי שעורה", "name_en": "Pearl barley", "amount": 50, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "גזר", "name_en": "Carrot", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "בצל", "name_en": "Onion", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "כמון טחון", "name_en": "Ground cumin", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "משחימים את הבקר והבצל בשמן בסיר כבד.",
+    "מוסיפים גזר, שעורה, כמון ו-500 מ״ל מים.",
+    "מבשלים מכוסה על אש נמוכה 45 דקות עד שהשעורה רכה."
+  ],
+  "instructions_en": [
+    "Brown the beef and onion in the oil in a heavy pot.",
+    "Add the carrot, barley, cumin and 500 ml of water.",
+    "Cover and simmer on low for 45 minutes until the barley is soft."
+  ],
+  "cuisines": ["ashkenazi", "international"],
+  "kashrut_type": "meat",
+  "is_kosher": true,
+  "shabbat_friendly": false
+}

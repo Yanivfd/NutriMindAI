@@ -1,0 +1,33 @@
+{
+  "id": "lentil-mushroom-stew",
+  "title_he": "תבשיל עדשים ופטריות",
+  "title_en": "Lentil and mushroom stew",
+  "prep_time_minutes": 45,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 390,
+  "protein_g": 22,
+  "carbs_g": 48,
+  "fat_g": 12,
+  "ingredients": [
+    {"name_he": "עדשים ירוקות", "name_en": "Green lentils", "amount": 80, "unit": "g", "category": "pantry", "swaps": [], "insect_check": true},
+    {"name_he": "פטריות", "name_en": "Mushrooms", "amount": 100, "unit": "g", "category": "produce", "swaps": []},
+    {"name_he": "גזר", "name_en": "Carrot", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "בצל", "name_en": "Onion", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 10, "unit": "ml", "category": "pantry", "swaps": []},
+    {"name_he": "כמון טחון", "name_en": "Ground cumin", "amount": 1, "unit": "tsp", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "מטגנים בצל, גזר ופטריות בשמן 5 דקות.",
+    "מוסיפים עדשים שטופות, כמון ו-500 מ״ל מים.",
+    "מבשלים מכוסה 30 דקות. אפשר להגיש בטמפרטורת החדר."
+  ],
+  "instructions_en": [
+    "Cook the onion, carrot and mushrooms in the oil for 5 minutes.",
+    "Add the rinsed lentils, cumin and 500 ml of water.",
+    "Cover and simmer for 30 minutes. It can be served at room temperature."
+  ],
+  "cuisines": ["mediterranean", "international"],
+  "kashrut_type": "parve",
+  "is_kosher": true,
+  "shabbat_friendly": true
+}

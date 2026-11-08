@@ -18,6 +18,7 @@ import {
 import type { MealLog, RecipeRow } from '@/types/db';
 import type {
   Cuisine,
+  Diet,
   DislikedIngredient,
   KosherLevel,
   PlannedMeal,
@@ -44,6 +45,7 @@ interface MealCheckInProps {
   dislikedRecipeIds: readonly string[];
   dislikedIngredients: readonly DislikedIngredient[];
   preferredCuisines: readonly Cuisine[];
+  diet: Diet;
   log: MealLog | undefined;
   onOpenRecipe: (recipeId: string, portion: number) => void;
 }
@@ -280,6 +282,7 @@ export function MealCheckIn(props: MealCheckInProps) {
             dislikedRecipeIds: props.dislikedRecipeIds,
             dislikedIngredients: props.dislikedIngredients,
             preferredCuisines: props.preferredCuisines,
+            diet: props.diet,
           })}
           meal={props.meal}
           savingPlanId={savingPlanId}

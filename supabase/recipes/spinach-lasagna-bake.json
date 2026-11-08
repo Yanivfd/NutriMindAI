@@ -1,0 +1,33 @@
+{
+  "id": "spinach-lasagna-bake",
+  "title_he": "לזניה תרד אפויה",
+  "title_en": "Baked spinach lasagna",
+  "prep_time_minutes": 50,
+  "meal_types": ["lunch", "dinner"],
+  "calories": 470,
+  "protein_g": 28,
+  "carbs_g": 48,
+  "fat_g": 18,
+  "ingredients": [
+    {"name_he": "דפי לזניה", "name_en": "Lasagna sheets", "amount": 60, "unit": "g", "category": "pantry", "swaps": []},
+    {"name_he": "גבינת קוטג'", "name_en": "Cottage cheese", "amount": 100, "unit": "g", "category": "dairy", "swaps": []},
+    {"name_he": "מוצרלה", "name_en": "Mozzarella", "amount": 40, "unit": "g", "category": "dairy", "swaps": []},
+    {"name_he": "תרד", "name_en": "Spinach", "amount": 80, "unit": "g", "category": "produce", "swaps": [], "insect_check": true},
+    {"name_he": "עגבנייה", "name_en": "Tomato", "amount": 1, "unit": "unit", "category": "produce", "swaps": []},
+    {"name_he": "שמן זית", "name_en": "Olive oil", "amount": 8, "unit": "ml", "category": "pantry", "swaps": []}
+  ],
+  "instructions_he": [
+    "מערבבים תרד, קוטג' ועגבנייה קצוצה.",
+    "שכבות של דפי לזניה והמילוי בתבנית, ומסיימים במוצרלה.",
+    "אופים מכוסה 30 דקות ב-190 מעלות, ואז 10 דקות בלי כיסוי."
+  ],
+  "instructions_en": [
+    "Mix the spinach, cottage cheese and chopped tomato.",
+    "Layer the lasagna sheets and filling in a pan, and finish with mozzarella.",
+    "Bake covered for 30 minutes at 190 C, then 10 minutes uncovered."
+  ],
+  "cuisines": ["italian", "mediterranean"],
+  "kashrut_type": "dairy",
+  "is_kosher": true,
+  "shabbat_friendly": false
+}

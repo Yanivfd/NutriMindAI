@@ -1,7 +1,8 @@
 import type {
+  Cuisine,
+  Diet,
   DislikedIngredient,
   Ingredient,
-  Cuisine,
   KashrutType,
   KosherLevel,
   MealSlot,
@@ -47,6 +48,8 @@ export interface Profile {
   office_days: Weekday[];
   /** Optional note for the next week's dishes. Does not change the calorie target. */
   planning_notes: string;
+  /** Hard food rule for the next generated week. */
+  diet: Diet;
   smoking: SmokingStatus;
   coffee_black_cups: number;
   coffee_milk_cups: number;

@@ -39,6 +39,9 @@ export const CUISINES = [
 export type Cuisine = (typeof CUISINES)[number];
 export type KosherLevel = 'none' | 'kosher' | 'mehadrin';
 
+export const DIETS = ['none', 'vegetarian', 'vegan', 'pescatarian'] as const;
+export type Diet = (typeof DIETS)[number];
+
 export interface IngredientSwap {
   name_he: string;
   name_en: string;
@@ -86,6 +89,8 @@ export interface PlanningProfile {
   /** Ingredient names the user asked never to see again. Match is on name_en. */
   disliked_ingredients: DislikedIngredient[];
   meal_times: Record<MealSlot, string>;
+  /** Hard food rule. Missing means no special diet. */
+  diet?: Diet;
   /**
    * Optional free-text meal preferences. Gemini may use them when choosing dishes.
    * Calorie targets and portion math ignore this field.

@@ -7,6 +7,7 @@ import {
   AboutYouSection,
   ActivitySection,
   HabitsSection,
+  EatingStyleSection,
   KashrutSection,
   PlanningNotesSection,
   RoutineSection,
@@ -38,6 +39,7 @@ const STEPS: WizardStep[] = [
   { Section: ActivitySection, fields: [] },
   { Section: RoutineSection, fields: ['mealTimes', 'skippedMeals'] },
   { Section: KashrutSection, fields: ['cuisines'] },
+  { Section: EatingStyleSection, fields: [] },
   { Section: PlanningNotesSection, fields: [] },
   { Section: null, fields: [] },
 ];
