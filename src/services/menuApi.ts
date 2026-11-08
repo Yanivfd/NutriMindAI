@@ -12,7 +12,7 @@ import type {
   RecipeRow,
   WeightLog,
 } from '@/types/db';
-import type { DislikedIngredient, MealSlot, WeeklyPlanPayload } from '@/types/plan';
+import type { DislikedIngredient, MealSlot, Weekday, WeeklyPlanPayload } from '@/types/plan';
 
 import { useUserId } from './auth';
 import { supabase } from './supabase';
@@ -79,6 +79,26 @@ export function useSaveProfile() {
       const { data, error } = await supabase
         .from('profiles')
         .upsert({ id: userId, ...input })
+        .select('*')
+        .single();
+      if (error) throw error;
+      return data as Profile;
+    },
+    onSuccess: (profile) => queryClient.setQueryData(queryKeys.profile(userId), profile),
+  });
+}
+
+/** Saves the days of the 08:00 weigh-in reminder. */
+export function useUpdateWeighInDays() {
+  const userId = useUserId();
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationKey: ['update-weigh-in-days'],
+    mutationFn: async (days: Weekday[]): Promise<Profile> => {
+      const { data, error } = await supabase
+        .from('profiles')
+        .update({ weigh_in_days: days })
+        .eq('id', userId)
         .select('*')
         .single();
       if (error) throw error;

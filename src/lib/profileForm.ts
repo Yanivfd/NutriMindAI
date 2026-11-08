@@ -8,6 +8,7 @@ import type {
 } from '../types/db.ts';
 import { CUISINES } from '../types/plan.ts';
 import type { Cuisine, KosherLevel, MealSlot, Weekday } from '../types/plan.ts';
+import { DEFAULT_WEIGH_IN_DAYS, normalizeWeighInDays } from './reminders.ts';
 import { ageOn, calorieTargets, DEFICIT_PACES } from './tdee.ts';
 
 export type WaitHours = 1 | 3 | 6;
@@ -21,6 +22,10 @@ export interface ProfileFormValues {
   activity: ActivityLevel;
   deficitPace: DeficitPace;
   skipsBreakfast: boolean;
+  skipsLunch: boolean;
+  skipsDinner: boolean;
+  eatsMoreOnWeekends: boolean;
+  weighInDays: Weekday[];
   officeDays: Weekday[];
   mealTimes: Record<MealSlot, string>;
   kosherLevel: KosherLevel;
@@ -39,6 +44,7 @@ export type ProfileField =
   | 'currentWeightKg'
   | 'targetWeightKg'
   | 'mealTimes'
+  | 'skippedMeals'
   | 'cuisines';
 
 /** First kitchen choice from the app language. The user can change it afterwards. */
@@ -57,6 +63,10 @@ export const DEFAULT_FORM_VALUES: ProfileFormValues = {
   activity: 'light',
   deficitPace: 'steady',
   skipsBreakfast: true,
+  skipsLunch: false,
+  skipsDinner: false,
+  eatsMoreOnWeekends: false,
+  weighInDays: [...DEFAULT_WEIGH_IN_DAYS],
   officeDays: [],
   mealTimes: { breakfast: '08:00', lunch: '13:00', snack: '16:30', dinner: '19:30' },
   kosherLevel: 'none',
@@ -94,6 +104,10 @@ export function profileToFormValues(profile: Profile): ProfileFormValues {
     activity: profile.activity_level,
     deficitPace: profile.deficit_pace ?? 'steady',
     skipsBreakfast: profile.skips_breakfast,
+    skipsLunch: profile.skips_lunch ?? false,
+    skipsDinner: profile.skips_dinner ?? false,
+    eatsMoreOnWeekends: profile.eats_more_on_weekends ?? false,
+    weighInDays: normalizeWeighInDays(profile.weigh_in_days ?? DEFAULT_WEIGH_IN_DAYS),
     officeDays: profile.office_days,
     mealTimes: {
       breakfast: profile.breakfast_time.slice(0, 5),
@@ -150,6 +164,7 @@ export function buildProfileInput(
   const t = values.mealTimes;
   const timesValid = Object.values(t).every((v) => TIME_RE.test(v));
   if (!timesValid || !(t.breakfast < t.lunch && t.lunch < t.dinner)) errors.push('mealTimes');
+  if (values.skipsBreakfast && values.skipsLunch && values.skipsDinner) errors.push('skippedMeals');
   const cuisines = values.cuisines.filter((cuisine) => (CUISINES as readonly string[]).includes(cuisine));
   if (cuisines.length === 0) errors.push('cuisines');
 
@@ -194,6 +209,10 @@ export function buildProfileInput(
       weekly_cheat_bank: targets.weeklyCheatBank,
       deficit_pace: deficitPace,
       skips_breakfast: values.skipsBreakfast,
+      skips_lunch: values.skipsLunch,
+      skips_dinner: values.skipsDinner,
+      eats_more_on_weekends: values.eatsMoreOnWeekends,
+      weigh_in_days: normalizeWeighInDays(values.weighInDays),
       kosher_level: values.kosherLevel,
       meat_dairy_wait_hours: values.waitHours,
       preferred_cuisines: cuisines,

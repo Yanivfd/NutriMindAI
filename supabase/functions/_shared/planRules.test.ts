@@ -95,6 +95,26 @@ describe('buildSlots', () => {
     assert.deepEqual(shabbat, ['friday:dinner', 'saturday:lunch', 'saturday:snack', 'saturday:dinner']);
   });
 
+  it('drops a skipped lunch or dinner and keeps the other meals', () => {
+    const skipLunch = buildSlots(baseProfile({ skips_lunch: true }), WEEK);
+    assert.equal(skipLunch.filter((slot) => slot.slot === 'lunch').length, 0);
+    assert.ok(skipLunch.some((slot) => slot.slot === 'dinner'));
+    const skipDinner = buildSlots(baseProfile({ skips_dinner: true, office_days: [] }), WEEK);
+    assert.equal(skipDinner.filter((slot) => slot.slot === 'dinner').length, 0);
+    assert.ok(skipDinner.some((slot) => slot.slot === 'lunch'));
+  });
+
+  it('gives Friday and Saturday a larger budget when weekends are bigger', () => {
+    const slots = buildSlots(baseProfile({ eats_more_on_weekends: true, office_days: [] }), WEEK);
+    const sum = (day: string) =>
+      slots.filter((slot) => slot.day === day).reduce((total, slot) => total + slot.budget, 0);
+    assert.ok(sum('friday') > sum('monday'));
+    assert.ok(sum('saturday') > sum('thursday'));
+    const week = WEEKDAYS.reduce((total, day) => total + sum(day), 0);
+    const evenWeek = dailyFoodTarget(baseProfile()) * 7;
+    assert.ok(Math.abs(week - evenWeek) / evenWeek < 0.02);
+  });
+
   it('never makes a Shabbat lunch a takeaway', () => {
     const profile = baseProfile({ kosher_level: 'kosher', office_days: ['saturday'] });
     const saturdayLunch = buildSlots(profile, WEEK).find((s) => s.day === 'saturday' && s.slot === 'lunch');

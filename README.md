@@ -127,6 +127,11 @@ supabase/templates  Sign-in email (he/en)
 7. **Release build:** a signed Android build, with EAS (`npx eas-cli@latest build -p android`) or
    locally.
 
+**Before the next Play release:** the hosted project does not have
+`20261108000010_meal_flexibility.sql` yet (skip lunch/dinner, eat more on weekends, weigh-in days).
+Run `npx supabase db push` first, then redeploy `generate-weekly-menu` and `apply-dislikes`.
+Saving a profile on production fails until that migration is applied.
+
 ## Known limitations
 
 - `npm audit` reports issues in Expo's build and developer tools (CLI code signing, file watchers,

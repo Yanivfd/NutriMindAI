@@ -5,16 +5,53 @@ import { KeyboardAvoidingView, Pressable, ScrollView, Switch, View } from 'react
 
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { Text } from '@/components/Text';
-import { Button, Card, Field, Loading, SectionTitle } from '@/components/ui';
+import { Button, Card, Chip, Field, Loading, SectionTitle } from '@/components/ui';
 import { WeightChart } from '@/components/WeightChart';
 import { localizedName, localizedTitle } from '@/lib/format';
 import { useLanguage, useT } from '@/lib/i18n';
 import { COLORS } from '@/lib/theme';
 import { signOut } from '@/services/auth';
-import { useLogWeight, useProfile, useRecipes, useUpdateDislikes, useWeightLogs } from '@/services/menuApi';
+import { normalizeWeighInDays } from '@/lib/reminders';
+import {
+  useLogWeight,
+  useProfile,
+  useRecipes,
+  useUpdateDislikes,
+  useUpdateWeighInDays,
+  useWeightLogs,
+} from '@/services/menuApi';
 import { useNotificationPermission } from '@/services/reminders';
 import { usePreferencesStore } from '@/store/usePreferencesStore';
-import { ingredientKey } from '@/types/plan';
+import { WEEKDAYS, ingredientKey } from '@/types/plan';
+import type { Weekday } from '@/types/plan';
+
+function WeighInDays(props: {
+  days: Weekday[];
+  onChange: (days: Weekday[]) => void;
+}) {
+  const t = useT();
+  const toggle = (day: Weekday) => {
+    const next = props.days.includes(day)
+      ? props.days.filter((item) => item !== day)
+      : [...props.days, day];
+    props.onChange(normalizeWeighInDays(next));
+  };
+  return (
+    <View className="gap-2">
+      <Text className="text-xs text-gray-500">{t('reminders.weighInSuggest')}</Text>
+      <View className="flex-row flex-wrap gap-2">
+        {WEEKDAYS.map((day) => (
+          <Chip
+            key={day}
+            label={t(`weekdaysShort.${day}`)}
+            selected={props.days.includes(day)}
+            onPress={() => toggle(day)}
+          />
+        ))}
+      </View>
+    </View>
+  );
+}
 
 export default function ProfileScreen() {
   const t = useT();
@@ -23,6 +60,7 @@ export default function ProfileScreen() {
   const { data: recipes } = useRecipes();
   const { data: logs = [] } = useWeightLogs();
   const updateDislikes = useUpdateDislikes();
+  const updateWeighInDays = useUpdateWeighInDays();
   const logWeight = useLogWeight();
   const [weight, setWeight] = useState('');
   const [invalidWeight, setInvalidWeight] = useState(false);
@@ -77,18 +115,26 @@ export default function ProfileScreen() {
               ['checkIn', 'reminders.checkIn', 'reminders.checkInHint'],
             ] as const
           ).map(([key, label, hint]) => (
-            <View key={key} className="flex-row items-center justify-between gap-3">
-              <View className="flex-1 gap-1">
-                <Text className="text-gray-900">{t(label)}</Text>
-                <Text className="text-xs text-gray-500">{t(hint)}</Text>
+            <View key={key} className="gap-2">
+              <View className="flex-row items-center justify-between gap-3">
+                <View className="flex-1 gap-1">
+                  <Text className="text-gray-900">{t(label)}</Text>
+                  <Text className="text-xs text-gray-500">{t(hint)}</Text>
+                </View>
+                <Switch
+                  accessibilityLabel={t(label)}
+                  value={reminders[key]}
+                  onValueChange={(enabled) => setReminder(key, enabled)}
+                  trackColor={{ false: '#d1d5db', true: COLORS.brand }}
+                  thumbColor="#ffffff"
+                />
               </View>
-              <Switch
-                accessibilityLabel={t(label)}
-                value={reminders[key]}
-                onValueChange={(enabled) => setReminder(key, enabled)}
-                trackColor={{ false: '#d1d5db', true: COLORS.brand }}
-                thumbColor="#ffffff"
-              />
+              {key === 'weight' && reminders.weight && (
+                <WeighInDays
+                  days={normalizeWeighInDays(profile.weigh_in_days)}
+                  onChange={(days) => updateWeighInDays.mutate(days)}
+                />
+              )}
             </View>
           ))}
           {notificationPermission === 'denied' &&

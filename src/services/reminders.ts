@@ -232,6 +232,7 @@ export function ReminderSync(): null {
           switches: reminders,
           hasPlan: Boolean(current.data || upcoming.data),
           meals,
+          weighInDays: profile.data?.weigh_in_days,
         })
       : [];
     void syncScheduledReminders({ reminders: planned, language, requestPermission: enabled }).catch(

@@ -72,6 +72,10 @@ export interface PlanningProfile {
   daily_calorie_target: number;
   weekly_cheat_bank: number;
   skips_breakfast: boolean;
+  skips_lunch: boolean;
+  skips_dinner: boolean;
+  /** Friday and Saturday get a larger share of the week's calories. */
+  eats_more_on_weekends: boolean;
   office_days: Weekday[];
   kosher_level: KosherLevel;
   meat_dairy_wait_hours: number;

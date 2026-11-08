@@ -35,7 +35,7 @@ const STEPS: WizardStep[] = [
   },
   { Section: HabitsSection, fields: [] },
   { Section: ActivitySection, fields: [] },
-  { Section: RoutineSection, fields: ['mealTimes'] },
+  { Section: RoutineSection, fields: ['mealTimes', 'skippedMeals'] },
   { Section: KashrutSection, fields: ['cuisines'] },
   { Section: null, fields: [] },
 ];

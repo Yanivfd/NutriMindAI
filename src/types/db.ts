@@ -30,6 +30,11 @@ export interface Profile {
   weekly_cheat_bank: number;
   deficit_pace: DeficitPace;
   skips_breakfast: boolean;
+  skips_lunch: boolean;
+  skips_dinner: boolean;
+  eats_more_on_weekends: boolean;
+  /** Weekdays for the 08:00 weigh-in reminder. Empty means no weigh-in alarm. */
+  weigh_in_days: Weekday[];
   kosher_level: KosherLevel;
   meat_dairy_wait_hours: 1 | 3 | 6;
   preferred_cuisines: Cuisine[];

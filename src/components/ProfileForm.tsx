@@ -7,7 +7,7 @@ import type { ProfileField, ProfileFormValues, WaitHours } from '@/lib/profileFo
 import { DEFICIT_PACES } from '@/lib/tdee';
 import type { ActivityLevel, SmokingStatus } from '@/types/db';
 import { CUISINES, MEAL_SLOTS, WEEKDAYS } from '@/types/plan';
-import type { Cuisine, KosherLevel, MealSlot } from '@/types/plan';
+import type { Cuisine, KosherLevel, MealSlot, Weekday } from '@/types/plan';
 
 import { BirthDateField, TimeField } from './DateTimeField';
 import { Text } from './Text';
@@ -238,41 +238,68 @@ export function RoutineSection(props: ProfileSectionProps) {
   // Kosher users never have a takeaway day on Shabbat.
   const officeDayOptions =
     values.kosherLevel !== 'none' ? WEEKDAYS.filter((d) => d !== 'saturday') : WEEKDAYS;
-  const visibleSlots = MEAL_SLOTS.filter((s) => !(s === 'breakfast' && values.skipsBreakfast));
+  const visibleSlots = MEAL_SLOTS.filter(
+    (slot) =>
+      !(slot === 'breakfast' && values.skipsBreakfast) &&
+      !(slot === 'lunch' && values.skipsLunch) &&
+      !(slot === 'dinner' && values.skipsDinner)
+  );
   const setMealTime = (slot: MealSlot, time: string) =>
     set('mealTimes', { ...values.mealTimes, [slot]: time });
+  const toggleDay = (days: Weekday[], day: Weekday): Weekday[] =>
+    days.includes(day) ? days.filter((item) => item !== day) : [...days, day];
 
   return (
     <Card className="gap-3">
       <SectionTitle>{t('onboarding.routine')}</SectionTitle>
+      {(
+        [
+          ['skipsBreakfast', 'onboarding.skipsBreakfast'],
+          ['skipsLunch', 'onboarding.skipsLunch'],
+          ['skipsDinner', 'onboarding.skipsDinner'],
+        ] as const
+      ).map(([key, label]) => (
+        <View key={key} className="flex-row items-center justify-between">
+          <Text className="flex-1 text-base text-gray-800">{t(label)}</Text>
+          <Switch
+            value={values[key]}
+            onValueChange={(next) => set(key, next)}
+            trackColor={{ true: '#86efac', false: '#d1d5db' }}
+            thumbColor={values[key] ? COLORS.brand : '#f9fafb'}
+          />
+        </View>
+      ))}
+      {has('skippedMeals') && (
+        <Text className="text-xs text-meat">{t('onboarding.keepOneMeal')}</Text>
+      )}
       <View className="flex-row items-center justify-between">
-        <Text className="flex-1 text-base text-gray-800">{t('onboarding.skipsBreakfast')}</Text>
+        <Text className="flex-1 text-base text-gray-800">{t('onboarding.eatsMoreOnWeekends')}</Text>
         <Switch
-          value={values.skipsBreakfast}
-          onValueChange={(v) => set('skipsBreakfast', v)}
+          value={values.eatsMoreOnWeekends}
+          onValueChange={(next) => set('eatsMoreOnWeekends', next)}
           trackColor={{ true: '#86efac', false: '#d1d5db' }}
-          thumbColor={values.skipsBreakfast ? COLORS.brand : '#f9fafb'}
+          thumbColor={values.eatsMoreOnWeekends ? COLORS.brand : '#f9fafb'}
         />
       </View>
-      <Text className="text-sm text-gray-700">{t('onboarding.officeDays')}</Text>
-      <View className="flex-row flex-wrap gap-2">
-        {officeDayOptions.map((day) => {
-          const selected = values.officeDays.includes(day);
-          return (
-            <Chip
-              key={day}
-              label={t(`weekdaysShort.${day}`)}
-              selected={selected}
-              onPress={() =>
-                set(
-                  'officeDays',
-                  selected ? values.officeDays.filter((d) => d !== day) : [...values.officeDays, day]
-                )
-              }
-            />
-          );
-        })}
-      </View>
+      <Text className="text-xs text-gray-500">{t('onboarding.weekendHint')}</Text>
+      {!values.skipsLunch && (
+        <>
+          <Text className="text-sm text-gray-700">{t('onboarding.officeDays')}</Text>
+          <View className="flex-row flex-wrap gap-2">
+            {officeDayOptions.map((day) => {
+              const selected = values.officeDays.includes(day);
+              return (
+                <Chip
+                  key={day}
+                  label={t(`weekdaysShort.${day}`)}
+                  selected={selected}
+                  onPress={() => set('officeDays', toggleDay(values.officeDays, day))}
+                />
+              );
+            })}
+          </View>
+        </>
+      )}
       <Text className={`text-sm ${has('mealTimes') ? 'text-meat' : 'text-gray-700'}`}>
         {t('onboarding.mealTimes')}
       </Text>
@@ -291,6 +318,21 @@ export function RoutineSection(props: ProfileSectionProps) {
       {has('mealTimes') && (
         <Text className="text-xs text-meat">{t('onboarding.mealOrderHint')}</Text>
       )}
+      <Text className="text-sm text-gray-700">{t('onboarding.weighInDays')}</Text>
+      <Text className="text-xs text-gray-500">{t('onboarding.weighInHint')}</Text>
+      <View className="flex-row flex-wrap gap-2">
+        {WEEKDAYS.map((day) => {
+          const selected = values.weighInDays.includes(day);
+          return (
+            <Chip
+              key={day}
+              label={t(`weekdaysShort.${day}`)}
+              selected={selected}
+              onPress={() => set('weighInDays', toggleDay(values.weighInDays, day))}
+            />
+          );
+        })}
+      </View>
     </Card>
   );
 }

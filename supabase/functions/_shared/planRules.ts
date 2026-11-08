@@ -14,18 +14,44 @@ export const MIN_PORTION = 0.5;
 export const MAX_PORTION = 2;
 export const PORTION_STEP = 0.25;
 
-const SLOT_SHARES_SKIP_BREAKFAST: Record<MealSlot, number> = {
-  breakfast: 0,
-  lunch: 0.4,
-  snack: 0.2,
-  dinner: 0.4,
-};
-const SLOT_SHARES_WITH_BREAKFAST: Record<MealSlot, number> = {
+const BASE_SHARES: Record<MealSlot, number> = {
   breakfast: 0.25,
   lunch: 0.3,
   snack: 0.15,
   dinner: 0.3,
 };
+
+/**
+ * Share of the daily food target for each slot. A skipped meal is 0 and the
+ * remaining shares are scaled so they still add up to 1. Snack is never skipped.
+ */
+export function slotShares(
+  profile: Pick<PlanningProfile, 'skips_breakfast' | 'skips_lunch' | 'skips_dinner'>
+): Record<MealSlot, number> {
+  const raw: Record<MealSlot, number> = {
+    breakfast: profile.skips_breakfast ? 0 : BASE_SHARES.breakfast,
+    lunch: profile.skips_lunch ? 0 : BASE_SHARES.lunch,
+    snack: BASE_SHARES.snack,
+    dinner: profile.skips_dinner ? 0 : BASE_SHARES.dinner,
+  };
+  const sum = raw.breakfast + raw.lunch + raw.snack + raw.dinner;
+  if (sum <= 0) return { breakfast: 0, lunch: 0, snack: 1, dinner: 0 };
+  return {
+    breakfast: raw.breakfast / sum,
+    lunch: raw.lunch / sum,
+    snack: raw.snack / sum,
+    dinner: raw.dinner / sum,
+  };
+}
+
+/**
+ * Friday and Saturday get 25% more food and the other days 10% less, so the
+ * week still adds up to seven even days. 5 × 0.9 + 2 × 1.25 = 7.
+ */
+export function weekendDayFactor(day: Weekday, eatsMoreOnWeekends: boolean): number {
+  if (!eatsMoreOnWeekends) return 1;
+  return day === 'friday' || day === 'saturday' ? 1.25 : 0.9;
+}
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -93,8 +119,9 @@ export interface SlotSpec {
 }
 
 export function buildSlots(profile: PlanningProfile, weekStart: string): SlotSpec[] {
-  const shares = profile.skips_breakfast ? SLOT_SHARES_SKIP_BREAKFAST : SLOT_SHARES_WITH_BREAKFAST;
+  const shares = slotShares(profile);
   const target = dailyFoodTarget(profile);
+  const eatsMore = profile.eats_more_on_weekends;
   const kosher = isKosher(profile);
   const slots: SlotSpec[] = [];
 
@@ -111,7 +138,7 @@ export function buildSlots(profile: PlanningProfile, weekStart: string): SlotSpe
         minutes: parseTimeToMinutes(profile.meal_times[slot]),
         kind: takeaway ? 'takeaway' : 'recipe',
         shabbat,
-        budget: Math.round(target * shares[slot]),
+        budget: Math.round(target * shares[slot] * weekendDayFactor(day, eatsMore)),
       });
     }
   });
@@ -297,15 +324,16 @@ export function roundPortion(value: number): number {
   return Math.min(MAX_PORTION, Math.max(MIN_PORTION, stepped));
 }
 
-/** Sizes portions so each day lands as close as possible to the daily food target. */
+/** Sizes portions so each day lands as close as possible to that day's slot budgets. */
 export function buildDays(choices: SlotChoice[], profile: PlanningProfile): PlannedDay[] {
-  const target = dailyFoodTarget(profile);
   const days: PlannedDay[] = [];
 
   for (const day of WEEKDAYS) {
     const dayChoices = choices.filter((c) => c.spec.day === day);
     if (dayChoices.length === 0) continue;
 
+    const dayTarget =
+      dayChoices.reduce((sum, choice) => sum + choice.spec.budget, 0) || dailyFoodTarget(profile);
     const takeawayTotal = dayChoices
       .filter((c) => c.spec.kind === 'takeaway')
       .reduce((sum, c) => sum + c.spec.budget, 0);
@@ -313,7 +341,7 @@ export function buildDays(choices: SlotChoice[], profile: PlanningProfile): Plan
       (c): c is SlotChoice & { recipe: Recipe } => c.recipe !== null
     );
     const baseTotal = recipeChoices.reduce((sum, c) => sum + c.spec.budget, 0);
-    const factor = baseTotal > 0 ? (target - takeawayTotal) / baseTotal : 1;
+    const factor = baseTotal > 0 ? (dayTarget - takeawayTotal) / baseTotal : 1;
     const portions = recipeChoices.map((c) => roundPortion((c.spec.budget / c.recipe.calories) * factor));
 
     const totalFor = (ps: number[]): number =>
@@ -321,7 +349,7 @@ export function buildDays(choices: SlotChoice[], profile: PlanningProfile): Plan
 
     // Nudge single portions by one step while that moves the day closer to target.
     for (let iteration = 0; iteration < 8; iteration++) {
-      const error = Math.abs(totalFor(portions) - target);
+      const error = Math.abs(totalFor(portions) - dayTarget);
       let best: { index: number; value: number; error: number } | null = null;
       for (let index = 0; index < portions.length; index++) {
         for (const delta of [-PORTION_STEP, PORTION_STEP]) {
@@ -329,7 +357,7 @@ export function buildDays(choices: SlotChoice[], profile: PlanningProfile): Plan
           if (value < MIN_PORTION || value > MAX_PORTION) continue;
           const candidate = [...portions];
           candidate[index] = value;
-          const candidateError = Math.abs(totalFor(candidate) - target);
+          const candidateError = Math.abs(totalFor(candidate) - dayTarget);
           if (candidateError < error && (!best || candidateError < best.error)) {
             best = { index, value, error: candidateError };
           }
@@ -368,7 +396,7 @@ export function buildDays(choices: SlotChoice[], profile: PlanningProfile): Plan
     days.push({
       date: dayChoices[0].spec.date,
       weekday: day,
-      target_calories: target,
+      target_calories: dayTarget,
       total_calories: totalFor(portions),
       meals,
     });

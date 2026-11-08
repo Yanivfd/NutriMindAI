@@ -1,5 +1,5 @@
 import { WEEKDAYS } from '../../supabase/functions/_shared/types.ts';
-import type { MealSlot } from '../../supabase/functions/_shared/types.ts';
+import type { MealSlot, Weekday } from '../../supabase/functions/_shared/types.ts';
 
 import { addDays, weekdayOf } from './week.ts';
 
@@ -13,6 +13,15 @@ const WATER_END_HOUR = 21;
 const WATER_EVERY_HOURS = 2;
 const SHABBAT_HOUR = 9;
 const WEIGH_IN_HOUR = 8;
+
+/** Suggested weigh-in days: twice a week, Sunday and Wednesday, at 08:00. */
+export const DEFAULT_WEIGH_IN_DAYS: Weekday[] = ['sunday', 'wednesday'];
+
+/** Keeps only real weekdays, in Sunday-to-Saturday order, with no duplicates. */
+export function normalizeWeighInDays(days: readonly string[] | null | undefined): Weekday[] {
+  const chosen = new Set(days ?? []);
+  return WEEKDAYS.filter((day) => chosen.has(day));
+}
 const CHECK_IN_HOUR = 21;
 
 export interface ReminderSwitches {
@@ -124,13 +133,14 @@ function shabbatReminders(now: Date, meals: ReminderMealInput[]): PlannedReminde
   return reminders;
 }
 
-function weightReminders(now: Date): PlannedReminder[] {
+function weightReminders(now: Date, days: readonly Weekday[]): PlannedReminder[] {
   const reminders: PlannedReminder[] = [];
+  const chosen = new Set(days);
   const today = dateKey(now);
   for (let offset = 0; offset <= 7; offset += 1) {
     const date = addDays(today, offset);
     const weekday = weekdayOf(date);
-    if (weekday !== 'sunday' && weekday !== 'wednesday') continue;
+    if (!chosen.has(weekday)) continue;
     const at = atLocal(date, `${String(WEIGH_IN_HOUR).padStart(2, '0')}:00`);
     if (!inHorizon(now, at)) continue;
     reminders.push({
@@ -196,6 +206,8 @@ export function buildReminders(input: {
   switches: ReminderSwitches;
   hasPlan: boolean;
   meals: ReminderMealInput[];
+  /** Days for the 08:00 weigh-in. Defaults to Sunday and Wednesday. */
+  weighInDays?: readonly Weekday[];
 }): PlannedReminder[] {
   const reminders: PlannedReminder[] = [];
   if (input.switches.meals) {
@@ -216,7 +228,9 @@ export function buildReminders(input: {
     }
   }
   if (input.switches.water) reminders.push(...waterReminders(input.now));
-  if (input.switches.weight) reminders.push(...weightReminders(input.now));
+  if (input.switches.weight) {
+    reminders.push(...weightReminders(input.now, input.weighInDays ?? DEFAULT_WEIGH_IN_DAYS));
+  }
   if (input.switches.checkIn) reminders.push(...checkInReminders(input.now, input.meals));
   return reminders.sort((a, b) => a.at.getTime() - b.at.getTime());
 }

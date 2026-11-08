@@ -144,6 +144,22 @@ test('weigh-in is Sunday and Wednesday at 08:00', () => {
   assert.equal(planned[1]?.at.getTime(), new Date(2026, 9, 11, 8, 0).getTime());
 });
 
+test('weigh-in follows the days the user picked', () => {
+  const planned = buildReminders({
+    now: new Date(2026, 9, 5, 12, 0, 0, 0),
+    language: 'en',
+    kosher: false,
+    switches: { meals: false, shopping: false, water: false, weight: true, checkIn: false },
+    hasPlan: false,
+    meals: [],
+    weighInDays: ['friday'],
+  });
+  assert.deepEqual(
+    planned.map((item) => item.id),
+    ['weight:2026-10-09']
+  );
+});
+
 test('a takeaway is reminded 20 minutes before, and a meal beyond 7 days is not', () => {
   const planned = buildReminders({
     now: new Date(2026, 9, 5, 12, 0, 0, 0),

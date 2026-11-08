@@ -7,6 +7,9 @@ export interface ProfileRow {
   daily_calorie_target: number;
   weekly_cheat_bank: number;
   skips_breakfast: boolean;
+  skips_lunch: boolean;
+  skips_dinner: boolean;
+  eats_more_on_weekends: boolean;
   office_days: PlanningProfile['office_days'];
   kosher_level: PlanningProfile['kosher_level'];
   meat_dairy_wait_hours: number;
@@ -20,7 +23,8 @@ export interface ProfileRow {
 }
 
 export const PROFILE_PLANNING_COLUMNS =
-  'daily_calorie_target, weekly_cheat_bank, skips_breakfast, office_days, kosher_level, ' +
+  'daily_calorie_target, weekly_cheat_bank, skips_breakfast, skips_lunch, skips_dinner, ' +
+  'eats_more_on_weekends, office_days, kosher_level, ' +
   'meat_dairy_wait_hours, preferred_cuisines, disliked_recipe_ids, disliked_ingredients, ' +
   'breakfast_time, lunch_time, snack_time, dinner_time';
 
@@ -30,6 +34,9 @@ export function toPlanningProfile(row: ProfileRow): PlanningProfile {
     daily_calorie_target: row.daily_calorie_target,
     weekly_cheat_bank: row.weekly_cheat_bank,
     skips_breakfast: row.skips_breakfast,
+    skips_lunch: row.skips_lunch,
+    skips_dinner: row.skips_dinner,
+    eats_more_on_weekends: row.eats_more_on_weekends,
     office_days: row.office_days,
     kosher_level: row.kosher_level,
     meat_dairy_wait_hours: row.meat_dairy_wait_hours,
