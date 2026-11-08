@@ -11,7 +11,7 @@ function tabIcon(active: IconName, inactive: IconName) {
     return (
       <MaterialCommunityIcons
         name={props.focused ? active : inactive}
-        color={props.color}
+        color={typeof props.color === 'number' ? undefined : (props.color ?? undefined)}
         size={props.size}
       />
     );

@@ -1,7 +1,10 @@
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { useState } from 'react';
-import { Alert, View } from 'react-native';
+import { Alert, Pressable, View } from 'react-native';
 
+import { pickerQuery, replaceMealInPlan } from '@/lib/dishPicker';
+import type { PickerDish } from '@/lib/dishPicker';
+import { localizedTitle } from '@/lib/format';
 import { plannedMealCalories } from '@/lib/mealLog';
 import { useLanguage, useT } from '@/lib/i18n';
 import { COLORS } from '@/lib/theme';
@@ -9,11 +12,20 @@ import { clampSnackText, MAX_SNACK_WORDS, wordCount } from '@/lib/words';
 import {
   useDeleteMealLog,
   useEstimateSnackCalories,
+  useReplacePlannedMeal,
   useUpsertMealLog,
 } from '@/services/menuApi';
 import type { MealLog, RecipeRow } from '@/types/db';
-import type { KosherLevel, PlannedMeal } from '@/types/plan';
+import type {
+  Cuisine,
+  DislikedIngredient,
+  KosherLevel,
+  PlannedMeal,
+  Weekday,
+  WeeklyPlanPayload,
+} from '@/types/plan';
 
+import { DishPicker } from './DishPicker';
 import { MealCard } from './MealCard';
 import { Text } from './Text';
 import { Button, Chip, Field } from './ui';
@@ -24,6 +36,14 @@ interface MealCheckInProps {
   meal: PlannedMeal;
   recipe: RecipeRow | undefined;
   kosherLevel: KosherLevel;
+  waitHours: number;
+  weekday: Weekday;
+  dayMeals: readonly PlannedMeal[];
+  plan: WeeklyPlanPayload;
+  recipes: ReadonlyMap<string, RecipeRow> | undefined;
+  dislikedRecipeIds: readonly string[];
+  dislikedIngredients: readonly DislikedIngredient[];
+  preferredCuisines: readonly Cuisine[];
   log: MealLog | undefined;
   onOpenRecipe: (recipeId: string, portion: number) => void;
 }
@@ -55,6 +75,11 @@ export function MealCheckIn(props: MealCheckInProps) {
   const [tip, setTip] = useState('');
   const [invalid, setInvalid] = useState(false);
   const [estimateFailed, setEstimateFailed] = useState(false);
+  const [pickerOpen, setPickerOpen] = useState(false);
+  const [savingPlanId, setSavingPlanId] = useState<string | null>(null);
+  const [savingAteId, setSavingAteId] = useState<string | null>(null);
+  const [pickerError, setPickerError] = useState(false);
+  const replaceMeal = useReplacePlannedMeal();
 
   const footer =
     planned === null ? undefined : (
@@ -86,6 +111,10 @@ export function MealCheckIn(props: MealCheckInProps) {
               },
             }
           );
+        }}
+        onCookElse={() => {
+          setPickerError(false);
+          setPickerOpen(true);
         }}
         onOpenOther={() => {
           const other = props.log?.status === 'other' ? props.log : undefined;
@@ -177,14 +206,94 @@ export function MealCheckIn(props: MealCheckInProps) {
       />
     );
 
+  const planDish = (dish: PickerDish) => {
+    const next = replaceMealInPlan(
+      props.plan,
+      props.date,
+      props.meal.slot,
+      dish.recipe,
+      props.recipes ?? new Map()
+    );
+    if (!next) {
+      setPickerError(true);
+      return;
+    }
+    setPickerError(false);
+    setSavingPlanId(dish.recipe.id);
+    replaceMeal.mutate(next, {
+      onSuccess: () => {
+        setSavingPlanId(null);
+        setPickerOpen(false);
+      },
+      onError: () => {
+        setSavingPlanId(null);
+        setPickerError(true);
+      },
+    });
+  };
+
+  const ateDish = (dish: PickerDish) => {
+    setPickerError(false);
+    setSavingAteId(dish.recipe.id);
+    upsert.mutate(
+      {
+        loggedOn: props.date,
+        slot: props.meal.slot,
+        status: 'other',
+        calories: dish.calories,
+        note: localizedTitle(dish.recipe, language),
+      },
+      {
+        onSuccess: () => {
+          setSavingAteId(null);
+          setPickerOpen(false);
+          setChoosing(false);
+          setFormOpen(false);
+        },
+        onError: () => {
+          setSavingAteId(null);
+          setPickerError(true);
+        },
+      }
+    );
+  };
+
   return (
-    <MealCard
-      meal={props.meal}
-      recipe={props.recipe}
-      kosherLevel={props.kosherLevel}
-      onOpenRecipe={props.onOpenRecipe}
-      footer={footer}
-    />
+    <>
+      <MealCard
+        meal={props.meal}
+        recipe={props.recipe}
+        kosherLevel={props.kosherLevel}
+        onOpenRecipe={props.onOpenRecipe}
+        footer={footer}
+      />
+      {planned !== null && (
+        <DishPicker
+          visible={pickerOpen}
+          recipes={[...(props.recipes?.values() ?? [])]}
+          query={pickerQuery({
+            meal: props.meal,
+            weekday: props.weekday,
+            dayMeals: props.dayMeals,
+            kosherLevel: props.kosherLevel,
+            waitHours: props.waitHours,
+            dislikedRecipeIds: props.dislikedRecipeIds,
+            dislikedIngredients: props.dislikedIngredients,
+            preferredCuisines: props.preferredCuisines,
+          })}
+          meal={props.meal}
+          savingPlanId={savingPlanId}
+          savingAteId={savingAteId}
+          error={pickerError}
+          onClose={() => {
+            if (savingPlanId || savingAteId) return;
+            setPickerOpen(false);
+          }}
+          onPlan={planDish}
+          onAte={ateDish}
+        />
+      )}
+    </>
   );
 }
 
@@ -201,6 +310,7 @@ function CheckInBody(props: {
   estimating: boolean;
   failed: boolean;
   onAteThis: () => void;
+  onCookElse: () => void;
   onOpenOther: () => void;
   onChange: () => void;
   onClear: () => void;
@@ -283,19 +393,24 @@ function CheckInBody(props: {
     );
   } else {
     body = (
-      <View className="flex-row flex-wrap gap-2">
-        <Chip
-          label={t('checkIn.ateThis')}
-          icon="check"
-          selected={false}
-          onPress={props.onAteThis}
-        />
-        <Chip
-          label={t('checkIn.somethingElse')}
-          icon="pencil-outline"
-          selected={false}
-          onPress={props.onOpenOther}
-        />
+      <View className="gap-2">
+        <View className="flex-row flex-wrap gap-2">
+          <Chip
+            label={t('checkIn.ateThis')}
+            icon="check"
+            selected={false}
+            onPress={props.onAteThis}
+          />
+          <Chip
+            label={t('checkIn.somethingElse')}
+            icon="pencil-outline"
+            selected={false}
+            onPress={props.onOpenOther}
+          />
+        </View>
+        <Pressable accessibilityRole="button" onPress={props.onCookElse} className="self-start py-1">
+          <Text className="text-sm font-semibold text-brand-700">{t('dishPicker.open')}</Text>
+        </Pressable>
       </View>
     );
   }

@@ -120,7 +120,9 @@ export default function GroceryScreen() {
         refreshControl={
           <RefreshControl
             refreshing={planQuery.isRefetching}
-            onRefresh={() => planQuery.refetch()}
+            onRefresh={() => {
+              void planQuery.refetch();
+            }}
             colors={[COLORS.brand]}
           />
         }

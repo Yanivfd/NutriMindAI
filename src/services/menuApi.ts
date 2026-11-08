@@ -407,6 +407,28 @@ export function useDeleteMealLog(weekStart: string) {
   });
 }
 
+/** Saves a week after one slot was swapped for a dish the user picked. */
+export function useReplacePlannedMeal() {
+  const userId = useUserId();
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationKey: ['replace-meal'],
+    mutationFn: async (plan: WeeklyPlanPayload): Promise<SavedPlan> => {
+      const { data, error } = await supabase
+        .from('weekly_plans')
+        .update({ plan_json: plan })
+        .eq('user_id', userId)
+        .eq('week_start_date', plan.week_start_date)
+        .select('id, plan_json')
+        .single();
+      if (error) throw error;
+      return { id: data.id as string, plan: data.plan_json as WeeklyPlanPayload };
+    },
+    onSuccess: (saved) =>
+      queryClient.setQueryData(queryKeys.weeklyPlan(userId, saved.plan.week_start_date), saved),
+  });
+}
+
 /** Result of estimate-snack-calories: calories plus an optional coaching tip (not saved). */
 export interface SnackEstimate {
   calories: number;

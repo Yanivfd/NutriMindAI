@@ -20,6 +20,7 @@ import {
   useCheatLogs,
   useGenerateWeek,
   useMealLogs,
+  useProfile,
   useRecipes,
   useWeeklyPlan,
 } from '@/services/menuApi';
@@ -151,6 +152,7 @@ export default function DashboardScreen() {
   const { data: cheatLogs } = useCheatLogs(weekStart);
   const { data: mealLogs } = useMealLogs(weekStart);
   const { data: recipes } = useRecipes();
+  const { data: profile } = useProfile();
   const generate = useGenerateWeek();
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
 
@@ -261,6 +263,14 @@ export default function DashboardScreen() {
                 meal={meal}
                 recipe={meal.type === 'recipe' ? recipes?.get(meal.recipe_id) : undefined}
                 kosherLevel={plan.kosher_level}
+                waitHours={plan.meat_dairy_wait_hours}
+                weekday={activeDay.weekday}
+                dayMeals={activeDay.meals}
+                plan={plan}
+                recipes={recipes}
+                dislikedRecipeIds={profile?.disliked_recipe_ids ?? []}
+                dislikedIngredients={profile?.disliked_ingredients ?? []}
+                preferredCuisines={profile?.preferred_cuisines ?? []}
                 log={dayLogs.find((log) => log.slot === meal.slot)}
                 onOpenRecipe={(id, portion) =>
                   router.push({
@@ -298,7 +308,9 @@ export default function DashboardScreen() {
         refreshControl={
           <RefreshControl
             refreshing={planQuery.isRefetching}
-            onRefresh={() => planQuery.refetch()}
+            onRefresh={() => {
+              void planQuery.refetch();
+            }}
             colors={[COLORS.brand]}
           />
         }

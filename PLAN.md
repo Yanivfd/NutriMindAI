@@ -63,14 +63,13 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
   `{ calories, tip }` in one Gemini call (tip in he/en from app language). Shown under
   the estimate in meal check-in and treat-bank "other" before save. Display-only (not
   stored on `meal_logs`). Disclaimer: coaching estimate, not medical advice.
-- **Cook something else (dish picker)** — from a meal card (or check-in "something else"),
-  open a browsable list of other recipes the user can cook instead — instant ideas, not
-  free-text. Filter by slot (`lunch` / `dinner` / `snack`), kashrut, and roughly the
-  remaining calorie budget; show photo, title, kcal, prep time. Tap a dish to either
-  **replace the planned meal** for that slot (update the week plan + portion) or **log it
-  as eaten** with known macros (prefer this over typing). Distinct from dislike → opaque
-  AI swap, and from **Pick-your-dishes week planner** (whole week upfront). Reuses the
-  recipes catalog; no Gemini required for the list itself.
+- **Cook something else (dish picker)** — ✅ shipped: the meal card keeps **I ate this** and
+  **I ate something else** (free text). A smaller **Pick another dish** link opens a browsable
+  list (photo, title, kcal at the sized portion, prep time). Filtered by slot, kashrut, Shabbat,
+  meat/dairy wait, dislikes, and roughly the slot's calorie budget (`src/lib/dishPicker.ts`).
+  **Use in my plan** rewrites that slot and rebuilds the grocery list (no Gemini). **I ate this**
+  on a row logs the sized calories and the dish name. Distinct from dislike → opaque AI swap,
+  and from **Pick-your-dishes week planner**.
 - **Meal overflow handling** — when user logs a meal significantly over daily calorie budget, the planner automatically adjusts future meals in the same week to rebalance toward the weekly target (more aggressive deficit the following days or weekend). Keeps the week on track without guilt.
 - **Weight-based calorie recalculation** — if user's weight trend shows consistent loss/plateau over 2–3 weeks, the app auto-recalculates the calorie target using Mifflin–St Jeor and updated weight. Notifies user of the new daily target and applies it to the next week's plan.
 - **Personalized eating guidelines** — after 2–3 weeks of data (meals, weight, cheat logs), Gemini generates a custom "eat / avoid" rules card based on actual history: "You're under goal when you skip coffee swaps" or "Dinners work better than lunch swaps for you." Stores in a new `eating_guidelines` table and refreshes weekly.
@@ -99,9 +98,9 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | Done | Aggressiveness / deficit pace | S | H | `deficit_pace` + onboarding/settings picker |
 | Done | Visual overflow alert (day strip) | S | M | Red day circle + overage pill + red ring; rebalance later |
 | Done | Immediate tip on manual dish | S | H | Same Gemini call as calories; tip card in check-in + bank other |
+| Done | Cook something else (dish picker) | M | H | Browse recipes; replace the slot or log known calories. No Gemini |
 | P1 | Weekend eating preference | S–M | M | Replaces Shabbat question; one answer for all users; planner tweak |
 | P1 | Recipe complexity & diet prefs | M | H | Better week fit from day one; onboarding + recipe filter |
-| P1 | Cook something else (dish picker) | M | H | Browse recipes for a slot; replace plan or log with known macros; no Gemini for list |
 | P1 | Free-text planning notes | S | M | Cheap Gemini context; no silent calorie math from prose |
 | P1 | Dynamic calories from weight logs | M | H | Phase 1: recalc after weigh-in when distance-to-goal shifts; apply next week |
 | Later | Suggested + editable calorie target | S | ? | Deferred — value unclear; revisit if users ask for doctor/dietitian overrides |
@@ -117,7 +116,7 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | P3 | Google Keep native checklist | L | M | Keep API / OAuth; real checkboxes (share sheet cannot do this) |
 | P3 | Supermarket cart integration | L | H | Partner/API dependency; defer until grocery export is loved |
 
-**Suggested next slice:** Cook something else (dish picker), or weekend eating preference.
+**Suggested next slice:** Weekend eating preference, or free-text planning notes.
 
 ### Personalized calorie targets (brainstorm — not started)
 

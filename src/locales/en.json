@@ -285,6 +285,16 @@
     "invalidCalories": "Enter a number from 0 to 5000.",
     "eatenCaption": "Logged so far. Meals you haven't checked aren't counted yet."
   },
+  "dishPicker": {
+    "open": "Pick another dish",
+    "title": "Pick another dish",
+    "hint": "Dishes near this meal's %{kcal} kcal, that fit your rules.",
+    "relaxedHint": "Nothing was close to this meal's calories, so here are other dishes for this slot.",
+    "empty": "No other dishes fit this meal.",
+    "planThis": "Use in my plan",
+    "ateThis": "I ate this",
+    "meta": "%{kcal} kcal · %{minutes} min · ×%{portion}"
+  },
   "profile": {
     "title": "Profile",
     "language": "Language",
