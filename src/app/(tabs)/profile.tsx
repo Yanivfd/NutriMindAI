@@ -192,6 +192,14 @@ export default function ProfileScreen() {
                 .join(', ')}
             </Text>
           </View>
+          {profile.planning_notes?.trim() ? (
+            <View className="gap-1">
+              <Text className="text-gray-700">{t('profile.planningNotes')}</Text>
+              <Text className="text-sm text-gray-900" numberOfLines={3}>
+                {profile.planning_notes.trim()}
+              </Text>
+            </View>
+          ) : null}
           <Text className="text-xs text-gray-500">{t('profile.settingsApplyHint')}</Text>
           <Button
             label={t('profile.editSettings')}

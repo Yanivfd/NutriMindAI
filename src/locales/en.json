@@ -187,6 +187,10 @@
     "cuisines": "Which kitchens do you want?",
     "cuisinesHint": "The week prefers these. Other dishes still fill a slot when nothing else fits.",
     "cuisineRequired": "Pick at least one kitchen.",
+    "planningNotesTitle": "Planning notes",
+    "planningNotes": "Anything else for your meals?",
+    "planningNotesHint": "For example night shifts, foods you like, or simple cooking. This guides the next week's dishes. It does not change your calorie target.",
+    "planningNotesPlaceholder": "I work nights and prefer simple meals",
     "cuisineNames": {
       "israeli": "Israeli",
       "mizrahi": "Mizrahi",
@@ -316,6 +320,7 @@
     "editSettings": "Edit settings",
     "settingsApplyHint": "Changes apply to the next week you create.",
     "kitchens": "Kitchens",
+    "planningNotes": "Planning note",
     "blockedTitle": "Foods to skip",
     "blockedDishes": "Dishes",
     "blockedIngredients": "Ingredients",

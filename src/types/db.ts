@@ -45,6 +45,8 @@ export interface Profile {
   snack_time: string;
   dinner_time: string;
   office_days: Weekday[];
+  /** Optional note for the next week's dishes. Does not change the calorie target. */
+  planning_notes: string;
   smoking: SmokingStatus;
   coffee_black_cups: number;
   coffee_milk_cups: number;

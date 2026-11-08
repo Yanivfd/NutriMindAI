@@ -127,10 +127,14 @@ supabase/templates  Sign-in email (he/en)
 7. **Release build:** a signed Android build, with EAS (`npx eas-cli@latest build -p android`) or
    locally.
 
-**Before the next Play release:** the hosted project does not have
-`20261108000010_meal_flexibility.sql` yet (skip lunch/dinner, eat more on weekends, weigh-in days).
+**Before the next Play release:** the hosted project does not have these migrations yet:
+
+- `20261108000010_meal_flexibility.sql` — skip lunch/dinner, eat more on weekends, weigh-in days
+- `20261108000011_planning_notes.sql` — optional planning note
+
 Run `npx supabase db push` first, then redeploy `generate-weekly-menu` and `apply-dislikes`.
-Saving a profile on production fails until that migration is applied.
+Saving a profile on production fails until those migrations are applied. The planning note
+only affects the next week generated with Gemini. It does not change the calorie target.
 
 ## Known limitations
 

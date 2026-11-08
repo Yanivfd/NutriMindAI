@@ -86,6 +86,28 @@ export interface PlanningProfile {
   /** Ingredient names the user asked never to see again. Match is on name_en. */
   disliked_ingredients: DislikedIngredient[];
   meal_times: Record<MealSlot, string>;
+  /**
+   * Optional free-text meal preferences. Gemini may use them when choosing dishes.
+   * Calorie targets and portion math ignore this field.
+   */
+  planning_notes?: string;
+}
+
+/** Soft planning notes are capped so a long paste cannot dominate the meal prompt. */
+export const PLANNING_NOTES_MAX = 500;
+
+/**
+ * Trims a planning note for storage and for the meal model.
+ * Empty, blank, and non-text values become ''.
+ */
+export function normalizePlanningNotes(value: unknown): string {
+  if (typeof value !== 'string') return '';
+  const cleaned = value
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, ' ')
+    .replace(/[ \t]*\n[ \t]*/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+  return Array.from(cleaned).slice(0, PLANNING_NOTES_MAX).join('');
 }
 
 /** An ingredient the user does not want, stored in both languages for the profile list. */

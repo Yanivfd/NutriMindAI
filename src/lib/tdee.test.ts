@@ -170,6 +170,20 @@ test('buildProfileInput reports each invalid field', () => {
   assert.deepEqual(result.errors.sort(), ['birthDate', 'heightCm', 'mealTimes', 'sex']);
 });
 
+test('buildProfileInput stores a planning note without changing calories', () => {
+  const plain = buildProfileInput(validForm, TODAY);
+  const noted = buildProfileInput(
+    { ...validForm, planningNotes: '  night shifts, simple meals \n\n\n please  ' },
+    TODAY
+  );
+  assert.ok(plain.ok && noted.ok);
+  assert.equal(noted.input.planning_notes, 'night shifts, simple meals\n\nplease');
+  assert.equal(noted.input.daily_calorie_target, plain.input.daily_calorie_target);
+  const blank = buildProfileInput({ ...validForm, planningNotes: '   ' }, TODAY);
+  assert.ok(blank.ok);
+  assert.equal(blank.input.planning_notes, '');
+});
+
 test('buildProfileInput requires at least one kitchen', () => {
   const result = buildProfileInput({ ...validForm, cuisines: [] }, TODAY);
   assert.ok(!result.ok);

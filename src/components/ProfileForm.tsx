@@ -408,6 +408,30 @@ export function KashrutSection(props: ProfileSectionProps) {
   );
 }
 
+/** Optional note for the whole week. Not part of kashrut. */
+export function PlanningNotesSection(props: ProfileSectionProps) {
+  const t = useT();
+  const { values } = props;
+  const { set } = formHelpers(props);
+
+  return (
+    <Card className="gap-2">
+      <SectionTitle>{t('onboarding.planningNotesTitle')}</SectionTitle>
+      <Field
+        label={t('onboarding.planningNotes')}
+        value={values.planningNotes}
+        onChangeText={(next) => set('planningNotes', next)}
+        placeholder={t('onboarding.planningNotesPlaceholder')}
+        hint={t('onboarding.planningNotesHint')}
+        multiline
+        numberOfLines={4}
+        maxLength={500}
+        style={{ minHeight: 96, textAlignVertical: 'top' }}
+      />
+    </Card>
+  );
+}
+
 /** All sections on one page (used by Settings; onboarding shows them one per step). */
 export function ProfileForm(props: ProfileSectionProps) {
   return (
@@ -417,6 +441,7 @@ export function ProfileForm(props: ProfileSectionProps) {
       <ActivitySection {...props} />
       <RoutineSection {...props} />
       <KashrutSection {...props} />
+      <PlanningNotesSection {...props} />
     </View>
   );
 }

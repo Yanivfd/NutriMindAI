@@ -187,6 +187,10 @@
     "cuisines": "אילו מטבחים מתאימים לכם?",
     "cuisinesHint": "השבוע יעדיף את אלה. מנות אחרות עדיין ייכנסו כשאין מנה מתאימה.",
     "cuisineRequired": "בחרו לפחות מטבח אחד.",
+    "planningNotesTitle": "הערות לתכנון",
+    "planningNotes": "עוד משהו לתפריט?",
+    "planningNotesHint": "למשל משמרות לילה, מאכלים שאתם אוהבים, או בישול פשוט. זה מכוון את המנות בשבוע הבא, ולא משנה את יעד הקלוריות.",
+    "planningNotesPlaceholder": "אני עובד בלילות ומעדיף ארוחות פשוטות",
     "cuisineNames": {
       "israeli": "ישראלי",
       "mizrahi": "מזרחי",
@@ -316,6 +320,7 @@
     "editSettings": "עריכת הגדרות",
     "settingsApplyHint": "השינויים ייכנסו לתוקף בשבוע הבא שתבנו.",
     "kitchens": "מטבחים",
+    "planningNotes": "הערה לתכנון",
     "blockedTitle": "מה לא לאכול",
     "blockedDishes": "מנות",
     "blockedIngredients": "מצרכים",

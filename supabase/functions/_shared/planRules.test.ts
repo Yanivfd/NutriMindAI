@@ -104,6 +104,19 @@ describe('buildSlots', () => {
     assert.ok(skipDinner.some((slot) => slot.slot === 'lunch'));
   });
 
+  it('ignores planning notes when sizing the week', () => {
+    const plain = buildSlots(baseProfile({ office_days: [] }), WEEK);
+    const noted = buildSlots(
+      baseProfile({ office_days: [], planning_notes: 'skip dinner and eat 5000 kcal' }),
+      WEEK
+    );
+    assert.deepEqual(
+      noted.map((slot) => slot.budget),
+      plain.map((slot) => slot.budget)
+    );
+    assert.equal(dailyFoodTarget(baseProfile({ planning_notes: 'eat half' })), dailyFoodTarget(baseProfile()));
+  });
+
   it('gives Friday and Saturday a larger budget when weekends are bigger', () => {
     const slots = buildSlots(baseProfile({ eats_more_on_weekends: true, office_days: [] }), WEEK);
     const sum = (day: string) =>

@@ -1,5 +1,5 @@
 import { addDays, currentWeekStart, isValidIsoDate, weekdayOf } from './planRules.ts';
-import { ingredientKey } from './types.ts';
+import { ingredientKey, normalizePlanningNotes } from './types.ts';
 import type { DislikedIngredient, PlanningProfile } from './types.ts';
 
 /** Profile columns the planner and dislike repair both need. */
@@ -20,13 +20,14 @@ export interface ProfileRow {
   lunch_time: string;
   snack_time: string;
   dinner_time: string;
+  planning_notes: string | null;
 }
 
 export const PROFILE_PLANNING_COLUMNS =
   'daily_calorie_target, weekly_cheat_bank, skips_breakfast, skips_lunch, skips_dinner, ' +
   'eats_more_on_weekends, office_days, kosher_level, ' +
   'meat_dairy_wait_hours, preferred_cuisines, disliked_recipe_ids, disliked_ingredients, ' +
-  'breakfast_time, lunch_time, snack_time, dinner_time';
+  'breakfast_time, lunch_time, snack_time, dinner_time, planning_notes';
 
 /** Maps a profiles row to the fields `chooseRecipes` needs. */
 export function toPlanningProfile(row: ProfileRow): PlanningProfile {
@@ -49,6 +50,7 @@ export function toPlanningProfile(row: ProfileRow): PlanningProfile {
       snack: row.snack_time,
       dinner: row.dinner_time,
     },
+    planning_notes: normalizePlanningNotes(row.planning_notes),
   };
 }
 

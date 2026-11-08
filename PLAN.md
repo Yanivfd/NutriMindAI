@@ -90,6 +90,11 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
   the profile reminder and in the routine step). Local DB has the migration;
   production still needs `npx supabase db push`, then a redeploy of
   `generate-weekly-menu` and `apply-dislikes`, before the next Play release.
+  Planning notes (`20261108000011_planning_notes.sql`) need the same push.
+- **Free-text planning notes** — ✅ shipped: its own onboarding step and settings card, after kashrut.
+  The next generated week sends the note to Gemini as a soft dish preference (simpler
+  cooking, schedule, foods to lean toward). Portion math and the calorie target ignore
+  it. The deterministic fallback planner also ignores it. Blank notes are omitted.
 - **Notification preferences** — in the user profile, let the user turn each notification type on or off. The same choices are also part of the onboarding questions at the start, so they set preferences before using the app; they can change them later in profile.
 - **Photo meal scan (AI plate analysis)** — user takes a photo of what they are about to eat; Gemini (vision) estimates the dish and macros (calories, protein, carbs, fat, portion size). Compare to remaining daily budget and personal targets. Optionally return short coaching tips such as "don't eat that," "eat just a spoon of that," "half portion," or "fits your budget — go ahead." Log confirmed estimates into the day (or cheat bank when applicable). Clear disclaimer: estimate only, not lab nutrition facts. Camera + gallery pick; privacy: send image only with user action, minimize retention.
 - **Watch history** — let the user open past weeks. Today the week switcher is only this week and next week (`WeekOffset` `0 | 1`); older plans stay in the database with no screen. Read-only week view: planned meals, check-ins (including typed notes), calories eaten vs target, treat-bank entries, and any weight logged that week. Grocery for that week can be viewed; checkmarks stay on the current list. No new tables — read `weekly_plans`, `meal_logs`, `cheat_logs`, and `weight_logs`. Empty state when that week was never generated. Past weeks cannot be edited or regenerated. The weekly nutritionist card can link to the week it describes. Weight chart on the profile stays as it is (ongoing weigh-ins, not this browser).
@@ -108,7 +113,7 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | Done | Cook something else (dish picker) | M | H | Browse recipes; replace the slot or log known calories. No Gemini |
 | Done | Weekend eating preference | S–M | M | Fri–Sat +25%, other days −10%. Skip lunch/dinner and weigh-in days shipped with it |
 | P1 | Recipe complexity & diet prefs | M | H | Better week fit from day one; onboarding + recipe filter |
-| P1 | Free-text planning notes | S | M | Cheap Gemini context; no silent calorie math from prose |
+| Done | Free-text planning notes | S | M | Optional note; Gemini dish choice only. Calories stay in code |
 | P1 | Dynamic calories from weight logs | M | H | Phase 1: recalc after weigh-in when distance-to-goal shifts; apply next week |
 | Later | Suggested + editable calorie target | S | ? | Deferred — value unclear; revisit if users ask for doctor/dietitian overrides |
 | P2 | Weight-trend auto-adjust (2–3 weeks) | M | H | Phase 2 of calorie adaptation; needs enough `weight_logs` history |
@@ -123,7 +128,7 @@ Platform: **Android only** for now (no iOS config, local builds via Android Stud
 | P3 | Google Keep native checklist | L | M | Keep API / OAuth; real checkboxes (share sheet cannot do this) |
 | P3 | Supermarket cart integration | L | H | Partner/API dependency; defer until grocery export is loved |
 
-**Suggested next slice:** Recipe complexity and diet preferences, or free-text planning notes.
+**Suggested next slice:** Recipe complexity and diet preferences.
 
 ### Personalized calorie targets (brainstorm — not started)
 
@@ -146,9 +151,9 @@ Goal: feel more like a coach, still clearly "estimate, not medical advice."
    meal check-ins): if weight is flat, nudge food target down a little; if losing
    too fast, raise it. Highest "true personalization" without labs.
    Same as "Weight-based calorie recalculation" above (phase 2; phase 1 is P1).
-4. **Free-text lifestyle / food notes** (P1) — optional box: night shifts, vegetarian,
-   "I walk a lot," hated foods. Use for **meal planning constraints** (rules +
-   Gemini context), not as a silent medical calorie recalculation from prose.
+4. **Free-text lifestyle / food notes** (Done) — optional box: night shifts, vegetarian,
+   "I walk a lot," hated foods. Sent as Gemini dish context only. Calorie math stays
+   in code. The fallback planner does not read the note.
 5. **Blood tests / labs (later, careful — out of scope for v2)** — high liability and privacy cost.
    Prefer structured flags ("thyroid issue — talk to doctor") or
    "my doctor set my calories" override. If free-text/PDF ever exists: use only
@@ -208,7 +213,7 @@ Goal: feel more like a coach, still clearly "estimate, not medical advice."
 - `chooseRecipes` (`_shared/planRules.ts`) is the single gatekeeper: kashrut/Shabbat rules are never relaxed; max 3 uses per recipe per week and no repeat within a day are relaxed only when nothi[...]
 - Models are tried in order: `GEMINI_MODEL` (default `gemini-3.8-flash`), then `GEMINI_FALLBACK_MODELS` (default `gemini-3.7-flash,gemini-3.5-flash,gemini-flash-latest`), one attempt each, within[...]
 - If every model fails or `GEMINI_API_KEY` is unset, the same rules build a deterministic plan (`source: 'fallback'`).
-- Only calorie targets, slot times and the recipe catalog are sent to Gemini (no age, weight or other profile data).
+- Gemini receives calorie slot targets, slot times, the recipe catalog, kitchen and kashrut flags, and the optional planning note. It does not receive age, weight, or other profile fields. The note cannot change the calorie target; portions stay in code. If Gemini is unavailable, the fallback planner ignores the note.
 - Request body `{ week_start_date? }` must be the current or next Sunday (Asia/Jerusalem). Response: `{ plan_id, plan: WeeklyPlanPayload }`. Errors: 401 `UNAUTHORIZED`, 400 `INVALID_WEEK`, 409 `P[...]
 - Tests: `npm run test:functions` (Node's built-in runner; Deno not required). Typecheck: `npm run typecheck`.
 

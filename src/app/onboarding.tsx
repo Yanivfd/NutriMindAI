@@ -8,6 +8,7 @@ import {
   ActivitySection,
   HabitsSection,
   KashrutSection,
+  PlanningNotesSection,
   RoutineSection,
 } from '@/components/ProfileForm';
 import type { ProfileSectionProps } from '@/components/ProfileForm';
@@ -37,6 +38,7 @@ const STEPS: WizardStep[] = [
   { Section: ActivitySection, fields: [] },
   { Section: RoutineSection, fields: ['mealTimes', 'skippedMeals'] },
   { Section: KashrutSection, fields: ['cuisines'] },
+  { Section: PlanningNotesSection, fields: [] },
   { Section: null, fields: [] },
 ];
 
